@@ -9,4 +9,5 @@ export const values = writable(CFStore.values);
 export const defaults = readable(CFStore.defaults);
 export const erros = writable(CFStore.defaults);
 export const menu = readable(CFStore.menu);
-export const translation = writable(CFStore.translation);
+export const titles = readable(CFStore.titles);
+export const translation = readable(CFStore.translation);

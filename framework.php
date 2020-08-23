@@ -135,7 +135,6 @@ class Framework
      */
     public function scripts()
     {
-
         wp_enqueue_script('cf', $this->url . "app/build/bundle.js", ['jquery'], $this->version, true);
     }
 
@@ -167,7 +166,8 @@ class Framework
             'values' => $this->get_values(),
             'errors' => $this->get_errors(),
             'defaults' => $this->get_defaults(),
-            'translation' => $this->translation
+            'translation' => $this->translation,
+            'titles' => $this->args['titles']
         ];
 
         wp_localize_script('cf', 'CFStore', $data);

@@ -1,8 +1,14 @@
 {
   "version": 3,
   "file": "bundle.css",
-  "sources": [],
-  "sourcesContent": [],
+  "sources": [
+    "../App.svelte",
+    "../Header.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\n    import Header from '../components/Header/Header.svelte'\n</script>\n\n<svelte:head>\n  <link href=\"https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css\" rel=\"stylesheet\">\n  <link href=\"https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700\" rel=\"stylesheet\">\n</svelte:head>\n\n<style>\n    div {\n        --cf-brand: #4c47ff;\n        --cf-primary-text: #23282d;\n        --cf-secondary-text: #7d7d7d;\n\n        float: none;\n        display: block;\n        width: 900px;\n        margin: 0 auto;\n        padding: 20px 0;\n        position: relative;\n    }\n</style>\n\n<div>\n    <Header></Header>\n</div>",
+    "<script>\n    import {titles} from '../../store'\n</script>\n\n<style>\n    h1 {\n        color: var(--cf-primary-text);\n        float: left;\n        margin: 20px 0;\n        line-height: normal;\n        font-family: Josefin Sans,sans-serif;\n        font-weight: 700;\n        font-size: 29px;\n    }\n</style>\n\n<header>\n    <h1>{$titles.page}</h1>\n</header>"
+  ],
   "names": [],
-  "mappings": ""
+  "mappings": "AAUI,GAAG,cAAC,CAAC,AACD,UAAU,CAAE,OAAO,CACnB,iBAAiB,CAAE,OAAO,CAC1B,mBAAmB,CAAE,OAAO,CAE5B,KAAK,CAAE,IAAI,CACX,OAAO,CAAE,KAAK,CACd,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,CAAC,CAAC,IAAI,CACd,OAAO,CAAE,IAAI,CAAC,CAAC,CACf,QAAQ,CAAE,QAAQ,AACtB,CAAC;AChBD,EAAE,eAAC,CAAC,AACA,KAAK,CAAE,IAAI,iBAAiB,CAAC,CAC7B,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CAAC,CAAC,CACd,WAAW,CAAE,MAAM,CACnB,WAAW,CAAE,OAAO,CAAC,IAAI,CAAC,UAAU,CACpC,WAAW,CAAE,GAAG,CAChB,SAAS,CAAE,IAAI,AACnB,CAAC"
 }
