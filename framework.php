@@ -63,7 +63,7 @@ class Framework
      * 
      * @since 1.0.0
      * @access public
-     * @param array $args The current inctance arguments.
+     * @param array $args Current inctance arguments.
      * @return void
      */
     public function __construct($args)
@@ -135,6 +135,8 @@ class Framework
      */
     public function scripts()
     {
+
+        wp_enqueue_script('cf', $this->url . "app/build/bundle.js", ['jquery'], $this->version, true);
     }
 
     /**
@@ -142,11 +144,11 @@ class Framework
      *
      * @since 1.0.0
      * @access public 
-     * 
      * @return void
      */
     public function styles()
     {
+        wp_enqueue_style('cf', $this->url . "app/build/bundle.css");
     }
 
     /**
@@ -158,6 +160,17 @@ class Framework
      */
     public function app_state()
     {
+        $data = [
+            'id' => $this->args['id'],
+            'menu' => $this->args['menu'],
+            'sections' => $this->args['sections'],
+            'values' => $this->get_values(),
+            'errors' => $this->get_errors(),
+            'defaults' => $this->get_defaults(),
+            'translation' => $this->translation
+        ];
+
+        wp_localize_script('cf', 'CFStore', $data);
     }
 
     /**
