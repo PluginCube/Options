@@ -1,5 +1,6 @@
 <script>
-    import Header from '../components/Header/Header.svelte'
+    import Header from './Header/Header.svelte'
+    import Navigation from './Navigation/Navigation.svelte'
 </script>
 
 <svelte:head>
@@ -20,8 +21,20 @@
         padding: 20px 0;
         position: relative;
     }
+
+    main {
+        float: left;
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 5px;
+        position: relative;
+    }
 </style>
 
 <div>
-    <Header></Header>
+    <Header />
+    
+    <main>
+        <Navigation />
+    </main>
 </div>
