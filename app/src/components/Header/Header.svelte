@@ -1,5 +1,5 @@
 <script>
-    import {titles} from '../../store'
+    import {titles} from 'store'
 </script>
 
 <style>

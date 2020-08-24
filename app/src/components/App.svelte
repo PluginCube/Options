@@ -1,6 +1,7 @@
 <script>
     import Header from './Header/Header.svelte'
     import Navigation from './Navigation/Navigation.svelte'
+    import Content from './Content/Content.svelte'
 </script>
 
 <svelte:head>
@@ -36,5 +37,6 @@
     
     <main>
         <Navigation />
+        <Content />
     </main>
 </div>

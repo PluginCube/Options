@@ -14,11 +14,16 @@
 
 <style>
     nav {
-        width: 175px;
+        width: 180px;
         margin: 0;
         padding: 20px 0;
         float: left;
         box-sizing: border-box;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
     }
 </style>
 
