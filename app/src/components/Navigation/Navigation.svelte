@@ -1,5 +1,5 @@
 <script>
-    import {menu} from '../../store'
+    import { menu } from 'store'
     
     import Section from './Item/Section.svelte'
     import Link from './Item/Link.svelte'

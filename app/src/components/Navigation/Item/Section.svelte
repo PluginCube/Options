@@ -1,5 +1,5 @@
 <script>
-    import { activeSection } from '../../../store'
+    import { activeSection } from 'store'
 
     export let id
     export let title
