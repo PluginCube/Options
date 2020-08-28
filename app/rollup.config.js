@@ -23,6 +23,10 @@ export default {
 					find: 'store',
 					replacement: path.resolve(rootDir, 'src/store')
 				},
+				{
+					find: 'methods',
+					replacement: path.resolve(rootDir, 'src/methods')
+				},
 			]
 		}),
 		svelte({

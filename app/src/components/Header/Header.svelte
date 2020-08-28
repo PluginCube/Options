@@ -1,5 +1,6 @@
 <script>
-    import {titles} from 'store'
+    import {titles, notifications} from 'store'
+    import Notification from './Notification.svelte'
 </script>
 
 <style>
@@ -12,8 +13,24 @@
         font-weight: 700;
         font-size: 29px;
     }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        transition: all .3s;
+        position: fixed;
+        float: right;
+        width: inherit;
+        right: 50px;
+    }
 </style>
 
 <header>
     <h1>{$titles.page}</h1>
+
+    <ul>
+        {#each $notifications as item}
+            <Notification {...item}/>
+        {/each}
+    </ul>
 </header>

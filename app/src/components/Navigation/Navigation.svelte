@@ -1,6 +1,8 @@
 <script>
     import { menu } from 'store'
-    
+
+    import Save from './Save.svelte'
+
     import Section from './Item/Section.svelte'
     import Link from './Item/Link.svelte'
     import Separator from './Item/Separator.svelte'
@@ -33,4 +35,6 @@
             <svelte:component this={types[item.type]} {...item}/>
         {/each}
     </ul>
+    
+    <Save />
 </nav>

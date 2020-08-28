@@ -41,6 +41,15 @@ class Framework
     private $path;
 
     /**
+     * AJAX Class.
+     *
+     * @since 1.0.0
+     * @access public
+     * @var object
+     */
+    public $AJAX;
+
+    /**
      * Translated strings for localization.
      *
      * @since 1.0.0
@@ -63,7 +72,9 @@ class Framework
      * 
      * @since 1.0.0
      * @access public
+     * 
      * @param array $args Current inctance arguments.
+     * 
      * @return void
      */
     public function __construct($args)
@@ -71,22 +82,30 @@ class Framework
         $this->path = trailingslashit(str_replace('\\', '/', dirname( __FILE__ )));
         $this->url = site_url(str_replace(str_replace('\\', '/', ABSPATH ), '', $this->path));
 
+        // Require files
+        require_once $this->path . 'ajax.php';
+
+        // Instance args
         $this->args = wp_parse_args($args, [
             'capability' => 'manage_options',
             'menu_icon' => '',
             'menu_position' => 99,            
         ]);
 
-        
+        // Translation file
         $this->translation = include $this->path . "/translation.php";
         
+        // Admin page
         add_action('_admin_menu', [$this, "add_admin_page"]);
         
+        // Enqueue assets
         if ($this->in_view()) {
             add_action('admin_enqueue_scripts', [$this, "styles"]);
             add_action('admin_enqueue_scripts', [$this, "scripts"]);
             add_action('admin_enqueue_scripts', [$this, "app_state"]);
         }
+        
+        $this->AJAX = new AJAX($this);
     }
 
     /**
@@ -167,7 +186,8 @@ class Framework
             'errors' => $this->get_errors(),
             'defaults' => $this->get_defaults(),
             'translation' => $this->translation,
-            'titles' => $this->args['titles']
+            'titles' => $this->args['titles'],
+            'nonce' => wp_create_nonce('cf'),
         ];
 
         wp_localize_script('cf', 'CFStore', $data);
@@ -228,9 +248,9 @@ class Framework
 
         foreach ($this->args['sections'] as $section) {
             foreach ($section['fields'] as $field) {
-                if ($field['validate']) {
+                if (isset($field['validate'])) {
                     $value = $values[$section['id']][$field['id']];
-                    $result = call_user_func($validate, $value);
+                    $result = call_user_func($field['validate'], $value);
                     
                     if( ! empty($result) ) {
                         $errors[$section['id']][$field['id']] = $result;
@@ -240,17 +260,6 @@ class Framework
         }
 
         return $errors;
-    }
-
-    /**
-     * Save the values.
-     * 
-     * @since 1.0.0
-     * @access public 
-     * @return void
-     */
-    public function save()
-    {
     }
 }
 
