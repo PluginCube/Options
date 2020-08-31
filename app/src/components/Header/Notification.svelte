@@ -1,10 +1,10 @@
 <script>
-
     export let id;
-    export let style = 'success';
+    export let style;
     export let message;
 
-    import {removeNotification} from 'methods'
+    import { fade, fly } from 'svelte/transition'
+    import { removeNotification } from 'methods'
 
     let close = () => {
         removeNotification(id);
@@ -48,7 +48,7 @@
     }
 </style>
 
-<li class={style}>
+<li in:fly="{{ x: 15, duration: 500 }}" out:fade class={style}>
     <span>{message}</span>
     <i on:click={close} class="dashicons dashicons-dismiss"></i>
 </li>

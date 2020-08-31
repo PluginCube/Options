@@ -30,23 +30,25 @@ export const save = async (values = false) => {
             pushNotification(get(store.translation).data_saved);
         } else {
             store.errors.set(result.data.errors);
+            pushNotification(get(store.translation).validation_error, 'error');
         }
 
         return result;
     } catch (error) {
-        console.log(error);
-
-        pushNotification(get(store.translation).error);
+        pushNotification(get(store.translation).error, 'error');
     }
 }
 
-export const pushNotification = (message) => {
+export const pushNotification = (message, style = 'success') => {
     let notifications = get(store.notifications);
-    let id = Math.random().toString(36).substring(7);
-    
-    notifications = [...notifications, {message, id}];
 
-    store.notifications.set(notifications);
+    let id = Math.random().toString(36).substring(7);
+
+    store.notifications.set([...notifications, {message, id, style}]);
+    
+    setTimeout(() => {
+        removeNotification(id)
+    }, 3500);
 }
 
 export const removeNotification = (id) => {
