@@ -1,5 +1,5 @@
-import { get } from 'svelte/store';
 import * as store from 'store'
+import { get } from 'svelte/store';
 
 export const ajax = async (method, data = {}, type = 'POST') => {
     return await jQuery.ajax({
@@ -41,10 +41,18 @@ export const save = async (values = false) => {
 }
 
 export const pushNotification = (message) => {
-    let items = get(store.notifications);
+    let notifications = get(store.notifications);
     let id = Math.random().toString(36).substring(7);
     
-    items = [...items, {message, id}];
+    notifications = [...notifications, {message, id}];
+
+    store.notifications.set(notifications);
+}
+
+export const removeNotification = (id) => {
+    let items = get(store.notifications);
+    
+    items = items.filter(item => item.id !== id);
 
     store.notifications.set(items);
 }

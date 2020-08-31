@@ -1,46 +1,50 @@
 <script>
+
     export let id;
     export let style = 'success';
     export let message;
 
-    let close = () => {
+    import {removeNotification} from 'methods'
 
+    let close = () => {
+        removeNotification(id);
     }
 </script>
 
 <style>
     li {
         float: right;
-        padding: 0 13px;
-        border-radius: 3px;
+        padding: 0 20px;
+        border-radius: 22px;
         text-align: center;
-        font-weight: 700;
+        font-weight: 500;
         line-height: 35px;
     }
 
     span {
-        margin-right: 15px;
+        margin-right: 10px;
     }
 
     i {
-        font-size: 16px;
+        font-size: 12px;
         line-height: inherit;
         cursor: pointer;
+        margin-right: -5px;
     }
 
     li.success {
-        background: #bae1c7;
-        color: #31c061;
+        background: #d4ebdc;
+        color: #219b4a;
     }
     
     li.error {
-        background: #f1b3b3b5;
-        color: #e35f5f;
+        background: #f1dfdf;
+        color: #c84f4f;
     }
     
     li.info {
-        background: #d8d8d8;
-        color: #9fa0a0;
+        background: #dce3e9;
+        color: #6d7e97;
     }
 </style>
 

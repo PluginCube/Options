@@ -262,6 +262,3 @@ class Framework
         return $errors;
     }
 }
-
-// Dev-only
-require_once dirname(__FILE__) . "/sample.php";
