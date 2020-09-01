@@ -51,9 +51,18 @@ $sample = new CiraPress\Framework([
                     'default' => 'This is the input field.',
                     'description' => 'This is the description field, good for additional info.',
                     'options' => [
-                        'placeholder' => 'Text field ...',
+                        'placeholder' => 'Insert here ...',
                     ]
-                ]
+                ],
+                    'textarea' => [
+                        'type' => 'textarea',
+                        'title' => 'Textarea',
+                        'default' => 'This is the textarea field.',
+                        'description' => 'This is the description field, good for additional info.',
+                        'options' => [
+                            'placeholder' => 'Insert here ...',
+                        ]
+                    ]    
             ],
         ]
     ]
