@@ -1,7 +1,7 @@
 <?php
 
 $sample = new CiraPress\Framework([
-    'id' => 'cirapress',
+    'id' => 'cirapress2',
     'titles' =>
     [
         'page' => 'Cira',
@@ -40,21 +40,24 @@ $sample = new CiraPress\Framework([
     ],
     'sections' => 
     [
-        [
-            'id' => 'general',
+        'general' => [
             'title' => 'General',
             'description' => 'This is my section.',
             'fields' =>
             [
-                [
-                    'id' => 'text',
+                'text' => [
                     'type' => 'text',
                     'title' => 'Text',
                     'default' => 'This is the input field.',
                     'description' => 'This is the description field, good for additional info.',
                     'options' => [
                         'placeholder' => 'Text field ...',
-                    ]
+                    ],
+                    'validate' => function ($val) {
+                        $errors = [];
+                        if ($val === 'xxx') $errors[] = 'you fucked up this field';
+                        return $errors;            
+                    }
                 ]
             ],
         ]

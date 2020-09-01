@@ -204,12 +204,12 @@ class Framework
     {
         $defaults = [];
 
-        foreach ($this->args['sections'] as $section) {
-            $defaults[$section['id']] = [];
+        foreach ($this->args['sections'] as $id => $section) {
+            $defaults[$id] = [];
 
-            foreach ($section['fields'] as $field) {
+            foreach ($section['fields'] as $fid => $field) {
                 if(isset($field['default'])){
-                    $defaults[$section['id']][$field['id']] = $field['default'];
+                    $defaults[$id][$fid] = $field['default'];
                 }
             }
         }
@@ -246,19 +246,54 @@ class Framework
         $errors = [];
         is_array($values) ?: $values = $this->get_values();
 
-        foreach ($this->args['sections'] as $section) {
-            foreach ($section['fields'] as $field) {
+        foreach ($this->args['sections'] as $id => $section) {
+            foreach ($section['fields'] as $fid => $field) {
                 if (isset($field['validate'])) {
-                    $value = $values[$section['id']][$field['id']];
+                    $value = $values[$id][$fid];
                     $result = call_user_func($field['validate'], $value);
                     
                     if( ! empty($result) ) {
-                        $errors[$section['id']][$field['id']] = $result;
+                        $errors[$id][$fid] = $result;
                     }
                 }
             }
         }
 
         return $errors;
+    }
+
+    /**
+     * Sanitize the values.
+     * 
+     * @since 1.0.0
+     * @access public 
+     * @return array
+     */
+    public function sanitize($values)
+    {
+        $types = [
+            'text' => 'sanitize_text_field',
+            'textarea' => 'sanitize_textarea_field',
+            'editor' => 'wp_filter_post_kses',
+            'color' => 'sanitize_text_field',
+            'image' => 'sanitize_url',
+            'icon' => 'sanitize_html_class',
+            'select' => 'sanitize_key',
+            'switch' => function ($val) {
+                return filter_var($val, FILTER_VALIDATE_BOOLEAN);
+            },
+        ];
+
+        foreach ($values as $section => &$fields) {
+            foreach ($fields as $id => &$value) {
+                $field = $this->args['sections'][$section]['fields'][$id];
+                $sanitize = isset($field['sanitize']) ? $field['sanitize'] : $types[$field['type']];
+                
+                $value = call_user_func($sanitize, $value);
+            }
+        }
+        
+
+        return $values;
     }
 }

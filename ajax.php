@@ -45,9 +45,10 @@ class AJAX
         }
         
         $method = isset($_REQUEST['method']) ? $_REQUEST['method'] : false;
+        $data = isset($_REQUEST['data']) ? $_REQUEST['data'] : false;
 
         if ($method && method_exists($this, $method)) {
-            $this->$method();
+            $this->$method($data);
         }
     }
 
@@ -84,11 +85,23 @@ class AJAX
      * @access public
      * @return void
      */
-    public function save()
+    public function save($data)
     {
-        $this->respond(true, [
-            'values' => $this->parent->get_values(),
-            'errors' => $this->parent->get_errors()
-        ]);
+        $errors = $this->parent->get_errors($data['values']);
+        
+        if (! empty($errors)) {
+            $this->respond(false, [
+                'values' => $data['values'],
+                'errors' => $errors
+            ]);    
+        } else {
+            $values = $this->parent->sanitize($data['values']);
+            update_option($this->parent->args['id'], $values);
+
+            $this->respond(true, [
+                'values' => $values,
+                'errors' => $errors
+            ]);    
+        }
     }
 }

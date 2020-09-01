@@ -24,7 +24,7 @@
 <section>
     <h2>{title}</h2>
 
-    {#each fields as field}
-        <Field  {...field} bind:value={$values[id][field['id']]}/>
+    {#each Object.entries(fields) as [fid, field]}
+        <Field  {...field} bind:value={$values[id][fid]}/>
     {/each}
 </section>

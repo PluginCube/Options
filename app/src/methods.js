@@ -30,6 +30,7 @@ export const save = async (values = false) => {
             pushNotification(get(store.translation).data_saved);
         } else {
             store.errors.set(result.data.errors);
+            console.log(result.data.errors);
             pushNotification(get(store.translation).validation_error, 'error');
         }
 
@@ -46,9 +47,11 @@ export const pushNotification = (message, style = 'success') => {
 
     store.notifications.set([...notifications, {message, id, style}]);
     
+    let timer = style == 'success' ? 3000: 6000;
+    
     setTimeout(() => {
         removeNotification(id)
-    }, 3500);
+    }, timer);
 }
 
 export const removeNotification = (id) => {

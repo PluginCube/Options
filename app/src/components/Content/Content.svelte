@@ -14,9 +14,9 @@
 </style>
 
 <div>
-    {#each $sections as section}
-        {#if $activeSection == section.id}
-            <Section {... section}/>   
+    {#each Object.entries($sections) as [id, section]}
+        {#if $activeSection == id}
+            <Section {id} {... section}/>   
         {/if}
     {/each}    
 </div>
