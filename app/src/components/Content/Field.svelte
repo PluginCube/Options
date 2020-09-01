@@ -6,11 +6,14 @@
 	export let options = {}
     export let errors = undefined
     
-	import Text from './Controls/Text.svelte';
-	
-	let types = {
-		'text': Text
-	}
+	import controls from './Controls/*.svelte';
+    
+    let types = [];
+
+    controls.forEach(component => {
+        let name = component.name.charAt(0).toLowerCase() + component.name.slice(1)
+        types[name] = component;
+    });
 </script>
 
 
