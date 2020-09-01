@@ -7,7 +7,7 @@
     export let errors = undefined
     
 	import controls from './Controls/*.svelte';
-    
+
     let types = [];
 
     controls.forEach(component => {

@@ -1,7 +1,7 @@
 <?php
 
 $sample = new CiraPress\Framework([
-    'id' => 'cirapress2',
+    'id' => 'cirapress3',
     'titles' =>
     [
         'page' => 'Cira',
@@ -54,15 +54,21 @@ $sample = new CiraPress\Framework([
                         'placeholder' => 'Insert here ...',
                     ]
                 ],
-                    'textarea' => [
-                        'type' => 'textarea',
-                        'title' => 'Textarea',
-                        'default' => 'This is the textarea field.',
-                        'description' => 'This is the description field, good for additional info.',
-                        'options' => [
-                            'placeholder' => 'Insert here ...',
-                        ]
-                    ]    
+                'textarea' => [
+                    'type' => 'textarea',
+                    'title' => 'Textarea',
+                    'default' => 'This is the textarea field.',
+                    'description' => 'This is the description field, good for additional info.',
+                    'options' => [
+                        'placeholder' => 'Insert here ...',
+                    ]
+                ],
+                'switch' => [
+                    'type' => 'switch',
+                    'title' => 'Switch',
+                    'default' => true,
+                    'description' => 'This is the description field, good for additional info.',
+                ]
             ],
         ]
     ]
