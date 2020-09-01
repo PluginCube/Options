@@ -1,10 +1,11 @@
 <script>
-	export let type;
-	export let value;
-	export let title = null;
-	export let description = null;
-	export let options = {};
-	
+	export let type
+	export let value
+	export let title = null
+	export let description = undefined
+	export let options = {}
+    export let errors = undefined
+    
 	import Text from './Controls/Text.svelte';
 	
 	let types = {
@@ -41,6 +42,10 @@
         float: left;
         width: 50%;
     }
+
+    main p {
+        color: red;
+    }
 </style>
 
 <div>
@@ -55,6 +60,12 @@
     </header>
 
     <main>
-		<svelte:component this={types[type]} bind:value bind:options/>
+        <svelte:component this={types[type]} bind:value bind:options/>
+
+        {#if errors}
+            {#each errors as error}
+                <p>{error}</p>   
+            {/each}
+        {/if}
 	</main>
 </div>

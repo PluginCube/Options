@@ -7,6 +7,13 @@
     import { values, errors } from 'store'
     import Field from './Field.svelte'
 
+    $: returnErrors = (fid) => {
+        if ($errors[id] && $errors[id][fid]) {
+            return $errors[id][fid];
+        }
+
+        return false;
+    }
 </script>
 
 <style>
@@ -25,6 +32,6 @@
     <h2>{title}</h2>
 
     {#each Object.entries(fields) as [fid, field]}
-        <Field  {...field} bind:value={$values[id][fid]}/>
+        <Field errors={returnErrors(fid)} {...field} bind:value={$values[id][fid]}/>
     {/each}
 </section>

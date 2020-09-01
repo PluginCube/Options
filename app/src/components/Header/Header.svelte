@@ -15,6 +15,7 @@
     }
 
     ul {
+        z-index: 9999999;
         margin: 0;
         padding: 0;
         transition: all .3s;

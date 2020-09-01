@@ -26,6 +26,7 @@ export const save = async (values = false) => {
         
         if (result.success) {
             store.values.set(result.data.values);
+            store.errors.set(result.data.errors);
 
             pushNotification(get(store.translation).data_saved);
         } else {

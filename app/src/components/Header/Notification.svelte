@@ -13,12 +13,15 @@
 
 <style>
     li {
-        float: right;
         padding: 0 20px;
         border-radius: 22px;
         text-align: center;
         font-weight: 500;
         line-height: 35px;
+        z-index: 9999999;
+        display: block;
+        width: fit-content;
+        margin-left: auto;
     }
 
     span {

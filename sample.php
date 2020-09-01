@@ -52,12 +52,7 @@ $sample = new CiraPress\Framework([
                     'description' => 'This is the description field, good for additional info.',
                     'options' => [
                         'placeholder' => 'Text field ...',
-                    ],
-                    'validate' => function ($val) {
-                        $errors = [];
-                        if ($val === 'xxx') $errors[] = 'you fucked up this field';
-                        return $errors;            
-                    }
+                    ]
                 ]
             ],
         ]
