@@ -49,7 +49,6 @@ $sample = new CiraPress\Framework([
                     'type' => 'text',
                     'title' => 'Text',
                     'default' => 'This is the input field.',
-                    'description' => 'This is the description field, good for additional info.',
                     'options' => [
                         'placeholder' => 'Insert here ...',
                     ]
@@ -58,17 +57,20 @@ $sample = new CiraPress\Framework([
                     'type' => 'textarea',
                     'title' => 'Textarea',
                     'default' => 'This is the textarea field.',
-                    'description' => 'This is the description field, good for additional info.',
                     'options' => [
                         'placeholder' => 'Insert here ...',
                     ]
+                ],
+                'color' => [
+                    'type' => 'color',
+                    'title' => 'Color',
+                    'default' => '#555555',
                 ],
                 'switch' => [
                     'type' => 'switch',
                     'title' => 'Switch',
                     'default' => true,
-                    'description' => 'This is the description field, good for additional info.',
-                ]
+                ],
             ],
         ]
     ]

@@ -29,6 +29,10 @@
         margin-top: 20px;
         position: relative;
     }
+
+    :global(div#wpfooter) {
+        display: none;
+    }
 </style>
 
 <div>
