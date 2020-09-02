@@ -11,6 +11,7 @@
         line-height: normal;
         font-family: Josefin Sans,sans-serif;
         font-weight: bold;
+        font-size: 27px;
     }
 
     ul {

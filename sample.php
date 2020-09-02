@@ -71,6 +71,11 @@ $sample = new CiraPress\Framework([
                     'title' => 'Switch',
                     'default' => true,
                 ],
+                'image' => [
+                    'type' => 'image',
+                    'title' => 'Image',
+                    'default' => '',
+                ],
             ],
         ]
     ]

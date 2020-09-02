@@ -19,9 +19,9 @@
     h2 {
         color: var(--cf-primary-text);
         text-transform: capitalize;
-        margin: 0 0 40px;
-        font-size: 24px;
-        line-height: 24px;
+        margin: 0 0 30px;
+        font-size: 23px;
+        line-height: 23px;
         font-family: 'Josefin Sans', sans-serif;
         font-weight: bold;
     }

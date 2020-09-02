@@ -154,6 +154,9 @@ class Framework
      */
     public function scripts()
     {
+        wp_enqueue_editor();
+        wp_enqueue_media();
+        
         wp_enqueue_script('cf', $this->url . "app/build/bundle.js", ['jquery'], $this->version, true);
     }
 

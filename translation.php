@@ -10,5 +10,6 @@ return [
     'import'            =>      esc_html__( 'Import' , 'cf-domain' ),
     'download_data'     =>      esc_html__( 'Download Data' , 'cf-domain' ),
     'no_file_selected'  =>      esc_html__( 'No file selected!' , 'cf-domain' ),
-    'from_library'      =>      esc_html__( 'From Library' , 'cf-domain' )
+    'image_url'         =>      esc_html__( 'Image URL' , 'cf-domain' ),
+    'from_library'      =>      esc_html__( 'From Library' , 'cf-domain' ),
 ];

@@ -5,17 +5,14 @@
 
 <style>
     button {
-        height: 32px;
-        line-height: 30px;
+        height: 34px;
         text-align: center;
         transition: all 0.2s;
-        border-radius: 5px;
+        border-radius: 3px;
         font-size: 12px;
-        margin-top: 85px;
-        float: left;
         background: var(--cf-primary-text);
         color: #fff;
-        padding: 0px 5px;
+        padding: 0px 12px;
         border: none;
         cursor: pointer;
         outline: none;

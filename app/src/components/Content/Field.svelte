@@ -21,7 +21,7 @@
     div {
         float: left;
         width: 100%;
-        padding: 35px 0px;
+        padding: 30px 0px;
     }
 
     header {
