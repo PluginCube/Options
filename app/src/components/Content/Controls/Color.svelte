@@ -13,7 +13,7 @@
         value = `rgba(${r}, ${g}, ${b}, ${a})`
     }
 
-    $: style = `background-color; ${value}`
+    $: style = `background-color: ${value}`
 </script>
 
 <style>
