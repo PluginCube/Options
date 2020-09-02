@@ -1,7 +1,6 @@
 <script>
     export let id
     export let title
-    export let description = null
     export let fields
 
     import { values, errors } from 'store'

@@ -21,7 +21,7 @@
     div {
         float: left;
         width: 100%;
-        padding: 30px 0px;
+        padding: 35px 0px;
     }
 
     header {
@@ -37,7 +37,7 @@
         font-size: 12px;
         line-height: 22px;
         font-weight: 400;
-        color: var(--cf-primary-text);
+        color: var(--cf-secondary-text);
         margin: 15px 0px 0px 0px;
     }
 

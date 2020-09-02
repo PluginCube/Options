@@ -10,8 +10,7 @@
         margin: 20px 0;
         line-height: normal;
         font-family: Josefin Sans,sans-serif;
-        font-weight: 700;
-        font-size: 29px;
+        font-weight: bold;
     }
 
     ul {

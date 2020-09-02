@@ -13,7 +13,7 @@
     div {
         --cf-brand: #4c47ff;
         --cf-primary-text: #23282d;
-        --cf-secondary-text: #7d7d7d;
+        --cf-secondary-text: #666666;
 
         float: none;
         display: block;
@@ -26,8 +26,7 @@
     main {
         float: left;
         width: 100%;
-        margin-top: 10px;
-        border-radius: 5px;
+        margin-top: 20px;
         position: relative;
     }
 </style>

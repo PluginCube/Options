@@ -6,7 +6,7 @@
 <style>
 	textarea {
 		min-width: 230px;
-		padding: 4px 12px;
+		padding: 6px 12px;
 		font-size: 13px;
 		border: none;
 		box-shadow: 0px 0px 20px rgba(0,0,0, 0.05);
