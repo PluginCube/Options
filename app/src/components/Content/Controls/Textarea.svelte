@@ -9,8 +9,8 @@
 		padding: 6px 12px;
 		font-size: 13px;
 		border: none;
-		box-shadow: 0px 0px 20px rgba(0,0,0, 0.05);
-		border-radius: 5px;
+		box-shadow: var(--cf-box-shadow);
+		border-radius: var(--cf-border-radius);
 	}
 </style>
 

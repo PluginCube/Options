@@ -76,6 +76,23 @@ $sample = new CiraPress\Framework([
                     'title' => 'Image',
                     'default' => '',
                 ],
+                'select' => [
+                    'type' => 'select',
+                    'title' => 'Select',
+                    'default' => 'two',
+                    'options' => [
+                        'items' => [
+                            [
+                                'value' => 'one',
+                                'label' => 'One'
+                            ],
+                            [
+                                'value' => 'two',
+                                'label' => 'Two'
+                            ]
+                        ]
+                    ]
+                ],
             ],
         ]
     ]

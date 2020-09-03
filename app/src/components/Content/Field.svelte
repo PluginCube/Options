@@ -6,14 +6,22 @@
 	export let options = {}
     export let errors = undefined
     
-	import controls from './Controls/*.svelte';
+    import Text from './Controls/Text.svelte'
+    import Textarea from './Controls/Textarea.svelte'
+    import Switch from './Controls/Switch.svelte'
+    import Select from './Controls/Select.svelte'
+    import Image from './Controls/Image.svelte'
+    import Color from './Controls/Color.svelte'
 
-    let types = [];
-
-    controls.forEach(component => {
-        let name = component.name.charAt(0).toLowerCase() + component.name.slice(1)
-        types[name] = component;
-    });
+    let types = {
+        'text': Text,
+        'textarea': Textarea,
+        'switch': Switch,
+        'select': Select,
+        'image': Image,
+        'color': Color
+    };
+    
 </script>
 
 

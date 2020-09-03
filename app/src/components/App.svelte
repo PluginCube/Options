@@ -14,6 +14,8 @@
         --cf-brand: #4c47ff;
         --cf-primary-text: #23282d;
         --cf-secondary-text: #666666;
+        --cf-box-shadow: 0px 0px 10px rgba(0,0,0, 0.03);
+        --cf-border-radius: 5px;
 
         float: none;
         display: block;

@@ -28,10 +28,10 @@
     div {
         position: absolute;
         margin-left: 50px;
-        border-radius: 5px;
+        border-radius: 3px;
         overflow: hidden;
         margin-bottom: 40px;
-        box-shadow: 0px 0px 20px rgba(0,0,0, 0.1);
+        box-shadow: 0px 0px 30px rgba(0,0,0, 0.1);
     }
 </style>
 
