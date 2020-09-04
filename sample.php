@@ -83,15 +83,20 @@ $sample = new CiraPress\Framework([
                     'options' => [
                         'items' => [
                             [
-                                'value' => 'one',
-                                'label' => 'One'
+                                'id' => 'one',
+                                'text' => 'One'
                             ],
                             [
-                                'value' => 'two',
-                                'label' => 'Two'
+                                'id' => 'two',
+                                'text' => 'Two'
                             ]
                         ]
                     ]
+                ],
+                'icon' => [
+                    'type' => 'icon',
+                    'title' => 'Icon',
+                    'default' => 'building-3-line',
                 ],
             ],
         ]
