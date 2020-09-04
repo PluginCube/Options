@@ -25,6 +25,6 @@
 
 <Text bind:value options={{placeholder: $translation.image_url}}/>
 
-<Button on:click={select} style="margin-top: 15px">
+<button on:click={select} style="margin-top: 15px" class="button button-small">
     {$translation.from_library}
-</Button>
+</button>

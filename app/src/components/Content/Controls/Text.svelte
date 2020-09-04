@@ -1,13 +1,12 @@
 <script>
 	export let value;
 	export let options;
-	import Fxds from 'svelte-select';
-
 </script>
 
 <style>
 	input {
-		min-width: 230px;
+		width: 260px;
+		max-width: 100%;
 		padding: 4px 12px;
 		font-size: 13px;
 		border: none;
