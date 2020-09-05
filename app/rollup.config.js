@@ -4,6 +4,7 @@ import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import { terser } from 'rollup-plugin-terser'
 import alias from '@rollup/plugin-alias'
+import json from '@rollup/plugin-json'
 
 const production = !process.env.ROLLUP_WATCH;
 const rootDir = path.resolve(__dirname);
@@ -17,6 +18,7 @@ export default {
 		file: 'build/bundle.js'
 	},
 	plugins: [
+		json(),
 		alias({
 			entries: [
 				{

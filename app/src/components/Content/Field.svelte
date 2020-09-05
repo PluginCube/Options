@@ -12,6 +12,7 @@
     import Select from './Controls/Select.svelte'
     import Image from './Controls/Image.svelte'
     import Color from './Controls/Color.svelte'
+    import Icon from './Controls/Icon.svelte';
 
     let types = {
         'text': Text,
@@ -19,7 +20,8 @@
         'switch': Switch,
         'select': Select,
         'image': Image,
-        'color': Color
+        'color': Color,
+        'icon': Icon
     };
     
 </script>
