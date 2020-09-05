@@ -1,6 +1,5 @@
 <script>
     export let value;
-    export let options;
 
     import Box from './Icon/Box.svelte'
     import ClickOutside from 'svelte-click-outside'
@@ -14,9 +13,10 @@
 
 <style>
     button {
-        width: 36px;
-        line-height: 35px;
-        background-color: #ffffffe6;
+        width: 40px;
+        height: 40px;
+        line-height: 39px;
+        background-color: #ffffff;
         text-align: center;
         font-size: 14px;
         cursor: pointer;
@@ -26,6 +26,7 @@
         border: none;
         outline: none;
         float: left;
+        box-sizing: border-box;
     }
 </style>
 

@@ -2,26 +2,30 @@
     export let value;
 
     import { categories } from '@iconify/json/json/ri.json'
-    import { onMount, onDestroy } from 'svelte';
+    import { onMount, onDestroy, afterUpdate } from 'svelte'
+    
+    import Header from './Header.svelte'
+
     import PerfectScrollbar from 'perfect-scrollbar';
     import 'perfect-scrollbar/css/perfect-scrollbar.css'
 
     let box;
     let ps;
-    let icons = [];
+    let style = "fill";
+    let category = "System";
 
-    Object.keys(categories).forEach(cat => {
-        categories[cat].forEach(icon => {
-            icons.push('ri-' + icon);
-        });
-    });
-
-    $: filtered = icons.filter(x => {
-        return x.includes('fill')
+    $: filtered = categories[category].filter(x => {
+        return x.includes(style)
     })
+
+    $: icons = filtered.map(i => 'ri-' + i);
 
     onMount(() => {
         ps = new PerfectScrollbar(box);
+    });
+
+    afterUpdate(() => {
+        ps.update();
     });
 
     onDestroy(() => {
@@ -33,44 +37,55 @@
 <style>
     div {
         position: absolute;
-        margin-left: 50px;
-        overflow: hidden;
+        margin-left: 85px;
         margin-bottom: 40px;
         box-shadow: var(--cf-box-shadow);
         border-radius: var(--cf-border-radius);
         background: white;
-        width: 200px;
-        padding: 10px;
-        height: 300px;
-        overflow-y: auto;
-        box-sizing: content-box;
-
+        width: 220px;
+        max-height: 260px;
+        overflow: hidden;
     }
 
-    div span {
+    ul {
+        border-radius: var(--cf-border-radius);
+        background: white;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+        max-height: 210px;
+        position: relative;
+    }
+
+    div ul li {
         float: left;
-        margin: 3px;
-        width: calc(25% - 8px);
+        margin: 4px;
+        width: calc(25% - 10px);
         text-align: center;
-        line-height: 37px;
+        line-height: 38px;
         font-size: 14px;
         color: var(--cf-primary-text);
         border: 1px solid #eeeeee;
-        border-radius: 3px;
+        border-radius: var(--cf-border-radius);
         transition: all 0.1s;
         cursor: pointer;
+        padding-top: 1px;
     }
 
-    div span:hover {
-        background-color: #eeeeee;
+    div ul li:hover {
+        background-color: #eeeeeeba;
     }
 </style>
 
 
-<div bind:this={box}>
-    {#each filtered as icon}
-        <span on:click={() => {value = icon}}>
-            <i class={icon}></i>  
-        </span>
-    {/each}
+<div>
+    <Header bind:style bind:category categories={Object.keys(categories)}/>
+
+    <ul bind:this={box}>
+        {#each icons as icon}
+            <li on:click={() => {value = icon}}>
+                <i class={icon}></i>  
+            </li>
+        {/each}
+    </ul>
 </div>    
