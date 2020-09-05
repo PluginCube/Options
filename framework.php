@@ -157,7 +157,7 @@ class Framework
         wp_enqueue_editor();
         wp_enqueue_media();
         
-        wp_enqueue_script('cf', $this->url . "app/build/bundle.js", ['jquery'], $this->version, true);
+        wp_enqueue_script('cf', $this->url . "app/dist/bundle.js", ['jquery'], $this->version, true);
     }
 
     /**
@@ -169,8 +169,9 @@ class Framework
      */
     public function styles()
     {
-        wp_enqueue_style('cf', $this->url . "app/build/bundle.css");
-        wp_enqueue_style('cf-extra', $this->url . "app/build/extra.css");
+        if (file_exists($this->url . "app/dist/bundle.css")) {
+            wp_enqueue_style('cf', $this->url . "app/dist/bundle.css");
+        }
     }
 
     /**
