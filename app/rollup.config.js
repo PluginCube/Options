@@ -4,6 +4,7 @@ import resolve from '@rollup/plugin-node-resolve'
 import commonjs from '@rollup/plugin-commonjs'
 import { terser } from 'rollup-plugin-terser'
 import alias from '@rollup/plugin-alias'
+import css from "rollup-plugin-css-only";
 import json from '@rollup/plugin-json'
 
 const production = !process.env.ROLLUP_WATCH;
@@ -19,6 +20,7 @@ export default {
 	},
 	plugins: [
 		json(),
+		css({ output: "build/extra.css" }),
 		alias({
 			entries: [
 				{

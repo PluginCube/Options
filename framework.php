@@ -170,6 +170,7 @@ class Framework
     public function styles()
     {
         wp_enqueue_style('cf', $this->url . "app/build/bundle.css");
+        wp_enqueue_style('cf-extra', $this->url . "app/build/extra.css");
     }
 
     /**
