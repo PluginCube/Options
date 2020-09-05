@@ -1,7 +1,7 @@
 <?php
 
 $sample = new CiraPress\Framework([
-    'id' => 'cirapress3',
+    'id' => 'cirapress0',
     'titles' =>
     [
         'page' => 'Cira',
@@ -45,28 +45,59 @@ $sample = new CiraPress\Framework([
             'description' => 'This is my section.',
             'fields' =>
             [
-                
+                'text' => [
+                    'type' => 'text',
+                    'title' => 'Text',
+                    'default' => 'This is the input field.',
+                    'options' => [
+                        'placeholder' => 'Insert here ...',
+                    ]
+                ],
+                'textarea' => [
+                    'type' => 'textarea',
+                    'title' => 'Textarea',
+                    'default' => 'This is the textarea field.',
+                    'options' => [
+                        'placeholder' => 'Insert here ...',
+                    ]
+                ],
+                'color' => [
+                    'type' => 'color',
+                    'title' => 'Color',
+                    'default' => '#555555',
+                ],
+                'switch' => [
+                    'type' => 'switch',
+                    'title' => 'Switch',
+                    'default' => true,
+                ],
+                'image' => [
+                    'type' => 'image',
+                    'title' => 'Image',
+                    'default' => '',
+                ],
+                'select' => [
+                    'type' => 'select',
+                    'title' => 'Select',
+                    'default' => 'two',
+                    'options' => [
+                        'items' => [
+                            [
+                                'id' => 'one',
+                                'text' => 'One'
+                            ],
+                            [
+                                'id' => 'two',
+                                'text' => 'Two'
+                            ]
+                        ]
+                    ]
+                ],
                 'icon' => [
                     'type' => 'icon',
                     'title' => 'Icon',
                     'default' => 'building-3-line',
                 ],
-                'icons' => [
-                    'type' => 'icon',
-                    'title' => 'Icon',
-                    'default' => 'building-3-line',
-                ],
-                'icosssn' => [
-                    'type' => 'icon',
-                    'title' => 'Icon',
-                    'default' => 'building-3-line',
-                ],
-                'ison' => [
-                    'type' => 'icon',
-                    'title' => 'Icon',
-                    'default' => 'building-3-line',
-                ],
-
             ],
         ]
     ]

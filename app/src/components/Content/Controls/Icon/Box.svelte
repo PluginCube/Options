@@ -1,9 +1,11 @@
 <script>
     export let value;
 
-    import { categories } from '@iconify/json/json/ri.json'
     import { onMount, onDestroy, afterUpdate } from 'svelte'
-    
+    import { fade } from 'svelte/transition'
+
+    import { categories } from '@iconify/json/json/ri.json'
+
     import Header from './Header.svelte'
 
     import PerfectScrollbar from 'perfect-scrollbar';
@@ -12,7 +14,7 @@
     let box;
     let ps;
     let style = "fill";
-    let category = "System";
+    let category = "Others";
 
     $: filtered = categories[category].filter(x => {
         return x.includes(style)
@@ -37,7 +39,7 @@
 <style>
     div {
         position: absolute;
-        margin-left: 85px;
+        margin-left: 65px;
         margin-bottom: 40px;
         box-shadow: var(--cf-box-shadow);
         border-radius: var(--cf-border-radius);
@@ -78,7 +80,7 @@
 </style>
 
 
-<div>
+<div transition:fade={{duration: 50}}>
     <Header bind:style bind:category categories={Object.keys(categories)}/>
 
     <ul bind:this={box}>
@@ -88,4 +90,4 @@
             </li>
         {/each}
     </ul>
-</div>    
+</div>
