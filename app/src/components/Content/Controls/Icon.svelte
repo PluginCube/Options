@@ -14,16 +14,35 @@
 
     Object.keys(categories).forEach(cat => {
         categories[cat].forEach(icon => {
-            icons.push(icon);
+            icons.push('ri-' + icon);
         });
     });
 
     $: filtered = icons.filter(x => {
         return x.includes('fill')
     })
+
+    let toggle = () => {
+        show = !show;
+    }
 </script>
 
 <style>
+    button {
+        width: 36px;
+        line-height: 35px;
+        background-color: #ffffffe6;
+        text-align: center;
+        font-size: 14px;
+        cursor: pointer;
+        color: var(--cf-primary-text);
+        border-radius: var(--cf-border-radius);
+        box-shadow: var(--cf-box-shadow);
+        border: none;
+        outline: none;
+        float: left;
+    }
+
     div {
         position: absolute;
         margin-left: 50px;
@@ -43,31 +62,39 @@
     div span {
         float: left;
         margin: 3px;
-        width: calc(20% - 8px);
+        width: calc(25% - 8px);
         text-align: center;
-        line-height: 30px;
+        line-height: 37px;
         font-size: 14px;
         color: var(--cf-primary-text);
         border: 1px solid #eeeeee;
         border-radius: 3px;
+        transition: all 0.1s;
+        cursor: pointer;
+    }
+
+    div span:hover {
+        background-color: #eeeeee;
     }
 </style>
 
 
 <ClickOutside on:clickoutside={() => {show = false}}>
-    <span on:click={() => {show = !show}}>
+
+    <button on:click={toggle}>
         {#if value}
             <i class={value}></i>
         {:else}
-            {$translation.select}
+            <i class="ri-add-fill"></i>
         {/if}
-    </span>
+    </button>
+    
 
     {#if show}
         <div>
             {#each filtered as icon}
-                <span>
-                    <i class="ri-{icon}"></i>  
+                <span on:click={() => {value = icon; toggle()}}>
+                    <i class={icon}></i>  
                 </span>
             {/each}
         </div>    
