@@ -6,7 +6,7 @@
 <style>
 	textarea {
 		max-width: 100%;
-		width: 300px;
+		width: 280px;
 		padding: 6px 12px;
 		font-size: 13px;
 		border: none;

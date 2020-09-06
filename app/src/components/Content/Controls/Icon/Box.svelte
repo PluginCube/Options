@@ -49,6 +49,7 @@
         width: 220px;
         max-height: 260px;
         overflow: hidden;
+        z-index: 9999;
     }
 
     ul {
