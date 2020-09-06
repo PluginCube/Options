@@ -9,6 +9,11 @@
     let toggle = () => {
         show = !show;
     }
+
+    let update = (e) => {
+        value = e.detail;
+        toggle();
+    }
 </script>
 
 <style>
@@ -43,6 +48,6 @@
     
 
     {#if show}
-        <Box bind:value />
+        <Box {value} on:update={update} />
     {/if}
 </ClickOutside>

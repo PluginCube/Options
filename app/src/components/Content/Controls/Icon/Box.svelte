@@ -1,7 +1,6 @@
 <script>
-    export let value;
+    import { onMount, onDestroy, afterUpdate, createEventDispatcher } from 'svelte'
 
-    import { onMount, onDestroy, afterUpdate } from 'svelte'
     import { fade } from 'svelte/transition'
 
     import { categories } from '@iconify/json/json/ri.json'
@@ -13,8 +12,11 @@
 
     let box;
     let ps;
+    
     let style = "fill";
     let category = "Others";
+
+    const dispatch = createEventDispatcher();
 
     $: filtered = categories[category].filter(x => {
         return x.includes(style)
@@ -85,7 +87,7 @@
 
     <ul bind:this={box}>
         {#each icons as icon}
-            <li on:click={() => {value = icon}}>
+            <li on:click={() => dispatch('update', icon)}>
                 <i class={icon}></i>  
             </li>
         {/each}
