@@ -19,22 +19,25 @@
         });
     }
 
-    onMount(() => {
-        let options = {
-            selector: '#' + id,
-            menubar: false,
-            plugins: wp.editor.getDefaultSettings().tinymce.plugins + ',image',
-            toolbar1: "formatselect,alignleft,aligncenter,alignright,alignjustify,bold,italic,bullist,numlist,image,link,fullscreen",
-            wpeditimage_html5_captions: true,
-            branding: false,
-            init_instance_callback : initEditor
-        };
+    let options = {
+        selector: '#' + id,
+        menubar: false,
+        plugins: wp.editor.getDefaultSettings().tinymce.plugins + ',image',
+        toolbar1: "formatselect,alignleft,aligncenter,alignright,alignjustify,bold,italic,bullist,numlist,image,link,fullscreen",
+        wpeditimage_html5_captions: true,
+        branding: false,
+        init_instance_callback : initEditor
+    };
 
-        tinymce.init(options);
+
+    onMount(() => {
+        setTimeout(() => tinymce.init(options), 300);
     });
 
     onDestroy(() => {
-        editor.destroy();
+        if (editor) {
+            editor.destroy();
+        }
     });
 </script>
 

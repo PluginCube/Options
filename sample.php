@@ -116,6 +116,11 @@ $sample = new CiraPress\Framework([
                                     'placeholder' => 'Insert here ...',
                                 ]
                             ],
+                            'editor' => [
+                                'type' => 'editor',
+                                'title' => 'Editor',
+                                'default' => 'hello <i>world</i>',
+                            ],           
                             'textarea' => [
                                 'type' => 'textarea',
                                 'title' => 'Textarea',
