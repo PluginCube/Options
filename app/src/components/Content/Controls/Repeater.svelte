@@ -1,13 +1,11 @@
 <script>
-	export let value;
+	export let value = [];
     export let options;
     export let errors;
 
     import { translation } from 'store'
 
     import Field from '../Field.svelte'
-
-    console.log(options);
 
     let activeItem;
 
@@ -37,13 +35,16 @@
 <style lang="scss">
     ul {
         margin-bottom: 30px;
+        margin-top: 0;
+        padding: 0;
+        float: left;
+        width: 100%;
 
         li {
             box-shadow: var(--cf-box-shadow);
             background: #fff;
             border-radius: var(--cf-border-radius);
             margin-bottom: 12px;
-            width: fit-content;
             width: 100%;
             overflow: hidden;
             margin-right: auto;
@@ -96,19 +97,20 @@
             }
 
             main {
-                padding: 10px 20px;
+                padding: 20px;
                 border-top: 1px solid #f1f1f1;
                 float: left;
                 width: 100%;
                 box-sizing: border-box;
+                --cf-box-shadow: 0px 2px 3px rgba(0,0,0, 0.05);
 
                 button {
-                    margin: 10px 0px;
+                    margin: 15px 0px 10px;
                     background: #ff4a4a;
                     border: none;
-                    line-height: 23px;
-                    height: 25px;
-                    padding: 0px 9px;
+                    line-height: 1;
+                    height: 24px;
+                    padding: 0px 8px;
                     color: #ffffff;
                     border-radius: 3px;
                     font-size: 12px;

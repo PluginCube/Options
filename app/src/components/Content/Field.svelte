@@ -66,15 +66,19 @@
     }
 
     .mini {
-        padding: 10px 0px;
+        padding: 0px 0px 30px 0px;
 
-        main, header {
+        main {
             float: left;
-            width: 100%;
-            margin-bottom: 15px;
+            width: fit-content;
+            max-width: 100%;
         }
         
         header {
+            float: left;
+            width: fit-content;
+            min-width: 50px;
+            margin-bottom: 15px;
             color: var(--cf-secondary-text);
         }
     }

@@ -23,8 +23,14 @@
     }
 </script>
 
+<style>
+    button {
+        margin-top: 15px !important;
+    }
+</style>
+
 <Text bind:value options={{placeholder: $translation.image_url}}/>
 
-<button on:click={select} style="margin-top: 15px" class="button button-small button-primary">
+<button on:click={select} class="button button-small">
     {$translation.from_library}
 </button>

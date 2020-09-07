@@ -48,7 +48,7 @@
             box-shadow: var(--cf-box-shadow) !important;
             border-radius: var(--cf-border-radius);
             overflow: hidden;
-            border: var(--cf-control-border);
+            border: var(--cf-control-border) !important;
         }
 
         .mce-container iframe {

@@ -1,7 +1,7 @@
 <?php
 
 $sample = new CiraPress\Framework([
-    'id' => 'cirapress05',
+    'id' => 'cirapress08',
     'titles' =>
     [
         'page' => 'Cira',
@@ -106,31 +106,39 @@ $sample = new CiraPress\Framework([
                 'repeater' => [
                     'type' => 'repeater',
                     'title' => 'Repeater',
-                    'default' => [
-                        [
-                            'title' => 'Hello world',
-                            'switch' => false
-                        ],
-                        [
-                            'title' => 'Second item',
-                            'switch' => true
-                        ]
-                    ],
                     'options' => [
                         'fields' => [
-                            'title' => [
+                            'text' => [
                                 'type' => 'text',
-                                'title' => 'Title',
-                                'default' => 'New Item',
+                                'title' => 'Text',
+                                'default' => 'This is the input field.',
                                 'options' => [
                                     'placeholder' => 'Insert here ...',
-                                ]            
-                            ],            
+                                ]
+                            ],
+                            'textarea' => [
+                                'type' => 'textarea',
+                                'title' => 'Textarea',
+                                'default' => 'This is the textarea field.',
+                                'options' => [
+                                    'placeholder' => 'Insert here ...',
+                                ]
+                            ],
+                            'color' => [
+                                'type' => 'color',
+                                'title' => 'Color',
+                                'default' => '#555555',
+                            ],
                             'switch' => [
                                 'type' => 'switch',
                                 'title' => 'Switch',
                                 'default' => true,
-                            ]
+                            ],
+                            'image' => [
+                                'type' => 'image',
+                                'title' => 'Image',
+                                'default' => '',
+                            ],
                         ],
                     ]
                 ],

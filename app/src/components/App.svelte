@@ -20,7 +20,7 @@
 
         float: none;
         display: block;
-        width: 900px;
+        width: 850px;
         margin: 0 auto;
         padding: 20px 0;
         position: relative;
