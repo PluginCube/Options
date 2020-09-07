@@ -157,7 +157,7 @@ class Framework
         wp_enqueue_editor();
         wp_enqueue_media();
         
-        wp_enqueue_script('cf', $this->url . "app/dist/bundle.js", ['jquery', 'wp-tinymce'], $this->version, true);
+        wp_enqueue_script('cf', $this->url . "app/dist/bundle.js", ['jquery', 'wp-tinymce', 'jquery-ui-sortable'], $this->version, true);
     }
 
     /**

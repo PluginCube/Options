@@ -62,3 +62,25 @@ export const removeNotification = (id) => {
 
     store.notifications.set(items);
 }
+
+export const arrayMove = (arr, from, to) => {
+    while (from < 0) {
+        from += arr.length;
+    }
+
+    while (to < 0) {
+        to += arr.length;
+    }
+
+    if (to >= arr.length) {
+        var k = to - arr.length + 1;
+        while (k--) {
+            arr.push(undefined);
+        }
+    }
+    
+    arr.splice(to, 0, arr.splice(from, 1)[0]);
+    
+    return arr;
+};
+    

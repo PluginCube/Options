@@ -3,11 +3,15 @@
     export let options;
     export let errors;
 
+    import { onDestroy, onMount } from 'svelte'
+    import { arrayMove } from 'methods'
     import { translation } from 'store'
 
     import Field from '../Field.svelte'
 
     let activeItem;
+    let list;
+    let sortable;
 
     let toggleItem = (item) => {
         activeItem === item ? activeItem = null : activeItem = item
@@ -30,6 +34,25 @@
             value = value.filter(i => i !== activeItem)
         }
     }
+
+    onMount(() => {
+        sortable = jQuery(list).sortable({
+            handle: 'header > svg',
+            start: function( event, ui ) {
+                jQuery(this).attr('data-previndex', ui.item.index());
+            },
+            update: function( event, ui ) {
+                let from = parseInt(jQuery(this).attr('data-previndex'));
+                let to = ui.item.index();
+
+                value = arrayMove(value, from, to);
+            }
+        });
+    });
+
+    onDestroy(() => {
+        jQuery(list).sortable('destroy');
+    });
 </script>
 
 <style lang="scss">
@@ -121,8 +144,8 @@
     }
 </style>
 
-<ul>
-    {#each value as item, i}
+<ul bind:this={list}>
+    {#each value as item, i (item)}
         <li>
             <header on:click={() => toggleItem(item)}>
                 <svg viewBox="0 0 10 10">
