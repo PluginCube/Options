@@ -53,6 +53,12 @@
     onDestroy(() => {
         jQuery(list).sortable('destroy');
     });
+
+    beforeUpdate(() => {
+        if (typeof value == 'undefined') {
+            value = [];
+        }
+    })
 </script>
 
 <style lang="scss">
