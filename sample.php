@@ -116,35 +116,17 @@ $sample = new CiraPress\Framework([
                                     'placeholder' => 'Insert here ...',
                                 ]
                             ],
-                            'editor' => [
-                                'type' => 'editor',
-                                'title' => 'Editor',
-                                'default' => 'hello <i>world</i>',
-                            ],           
-                            'textarea' => [
-                                'type' => 'textarea',
-                                'title' => 'Textarea',
-                                'default' => 'This is the textarea field.',
-                                'options' => [
-                                    'placeholder' => 'Insert here ...',
-                                ]
-                            ],
-                            'color' => [
-                                'type' => 'color',
-                                'title' => 'Color',
-                                'default' => '#555555',
-                            ],
-                            'switch' => [
-                                'type' => 'switch',
-                                'title' => 'Switch',
-                                'default' => true,
-                            ],
-                            'image' => [
-                                'type' => 'image',
-                                'title' => 'Image',
-                                'default' => '',
-                            ],
                         ],
+                    ]
+                ],
+                'image_select' => [
+                    'type' => 'editor',
+                    'title' => 'Editor',
+                    'default' => 'two',
+                    'option' => [
+                        [
+                            'img' => ''
+                        ]
                     ]
                 ],
             ],

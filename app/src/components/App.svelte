@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700" rel="stylesheet">
 </svelte:head>
 
-<style>
+<style lang="scss">
     div {
         --cf-brand: #4c47ff;
         --cf-primary-text: #23282d;
@@ -29,12 +29,18 @@
     main {
         float: left;
         width: 100%;
-        margin-top: 15px;
+        margin-top: 25px;
         position: relative;
     }
 
-    :global(div#wpfooter) {
-        display: none;
+    :global {
+        #wpcontent {
+            padding: 0px;
+        }
+        
+        div#wpfooter {
+            display: none;
+        }
     }
 </style>
 

@@ -7,7 +7,7 @@
     h1 {
         color: var(--cf-primary-text);
         float: left;
-        margin: 20px 0;
+        margin: 15px 0 15px 0;
         line-height: normal;
         font-family: Josefin Sans,sans-serif;
         font-weight: bold;

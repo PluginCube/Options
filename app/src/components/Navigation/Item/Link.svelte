@@ -21,11 +21,10 @@
         transition: .3s;
         position: relative;
         height: 34px;
-        line-height: 34px;
-        padding: 2px 10px;
+        line-height: 37px;
+        padding: 0px 12px;
         box-sizing: border-box;
-        border-radius: 3px;
-        color: inherit;
+        border-radius: var(--cf-border-radius);
         text-decoration: none;
         float: left;
         font-family: Josefin Sans,sans-serif;
@@ -35,9 +34,10 @@
 
     i {
         float: left;
-        margin-right: 15px;
-        font-size: 18px;
-        margin-top: -2px;
+        margin-right: 14px;
+        font-size: 17px;
+        margin-top: 0px;
+        line-height: 34px;
     }
 </style>
 

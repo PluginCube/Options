@@ -19,7 +19,7 @@
     h2 {
         color: var(--cf-primary-text);
         text-transform: capitalize;
-        margin: 0 0 30px;
+        margin: 0 0 35px;
         font-size: 23px;
         line-height: 23px;
         font-family: 'Josefin Sans', sans-serif;

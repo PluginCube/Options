@@ -7,9 +7,9 @@
     div {
         display: block;
         float: right;
-        width: calc(100% - 180px);
+        width: calc(100% - 185px);
         box-sizing: border-box;
-        padding: 25px 0 25px 90px;
+        padding: 25px 0 25px 75px;
     }
 </style>
 

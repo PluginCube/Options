@@ -3,7 +3,7 @@
     export let options;
     export let errors;
 
-    import { onDestroy, onMount } from 'svelte'
+    import { onDestroy, onMount, beforeUpdate } from 'svelte'
     import { arrayMove } from 'methods'
     import { translation } from 'store'
 

@@ -16,7 +16,7 @@
 
 <style>
     nav {
-        width: 180px;
+        width: 185px;
         margin: 0;
         padding: 20px 0;
         float: left;

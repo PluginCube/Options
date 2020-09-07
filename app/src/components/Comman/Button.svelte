@@ -5,11 +5,11 @@
 
 <style>
     button {
-        height: 34px;
+        height: 33px;
         text-align: center;
         transition: all 0.2s;
-        border-radius: 3px;
         font-size: 12px;
+        border-radius: var(--cf-border-radius);
         background: var(--cf-primary-text);
         color: #fff;
         padding: 0px 12px;
