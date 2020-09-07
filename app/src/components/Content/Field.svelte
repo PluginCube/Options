@@ -5,7 +5,8 @@
 	export let description = undefined
 	export let options = {}
     export let errors = undefined
-    
+    export let mini;
+
     import Text from './Controls/Text.svelte'
     import Textarea from './Controls/Textarea.svelte'
     import Switch from './Controls/Switch.svelte'
@@ -14,6 +15,7 @@
     import Color from './Controls/Color.svelte'
     import Icon from './Controls/Icon.svelte';
     import Editor from './Controls/Editor.svelte';
+    import Repeater from './Controls/Repeater.svelte';
 
     let types = {
         'text': Text,
@@ -23,13 +25,14 @@
         'image': Image,
         'color': Color,
         'icon': Icon,
-        'editor': Editor
+        'editor': Editor,
+        'repeater': Repeater
     };
     
 </script>
 
 
-<style>
+<style lang="scss">
     div {
         float: left;
         width: 100%;
@@ -61,9 +64,23 @@
     main p {
         color: red;
     }
+
+    .mini {
+        padding: 10px 0px;
+
+        main, header {
+            float: left;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        
+        header {
+            color: var(--cf-secondary-text);
+        }
+    }
 </style>
 
-<div>
+<div class:mini>
     <header>
         {#if title}
             <span>{title}</span>
@@ -75,7 +92,7 @@
     </header>
 
     <main>
-        <svelte:component this={types[type]} bind:value bind:options/>
+        <svelte:component this={types[type]} {errors} bind:value bind:options/>
 
         {#if errors}
             {#each errors as error}

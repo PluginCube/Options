@@ -9,7 +9,7 @@
 		width: 280px;
 		padding: 6px 12px;
 		font-size: 13px;
-		border: none;
+		border: var(--cf-control-border);
 		box-shadow: var(--cf-box-shadow);
 		border-radius: var(--cf-border-radius);
 	}

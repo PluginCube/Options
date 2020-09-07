@@ -28,7 +28,7 @@
         color: var(--cf-primary-text);
         border-radius: var(--cf-border-radius);
         box-shadow: var(--cf-box-shadow);
-        border: none;
+        border: var(--cf-control-border);
         outline: none;
         float: left;
         box-sizing: border-box;

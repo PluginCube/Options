@@ -9,7 +9,7 @@
 		max-width: 100%;
 		padding: 4px 12px;
 		font-size: 13px;
-		border: none;
+		border: var(--cf-control-border);
 		box-shadow: var(--cf-box-shadow);
 		border-radius: var(--cf-border-radius);
 	}

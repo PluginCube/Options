@@ -44,6 +44,7 @@
         margin-left: 65px;
         margin-bottom: 40px;
         box-shadow: var(--cf-box-shadow);
+        border: var(--cf-control-border);
         border-radius: var(--cf-border-radius);
         background: white;
         width: 220px;
@@ -70,7 +71,7 @@
         line-height: 38px;
         font-size: 14px;
         color: var(--cf-primary-text);
-        border: 1px solid #eeeeee;
+        border: var(--cf-control-border);
         border-radius: var(--cf-border-radius);
         transition: all 0.1s;
         cursor: pointer;

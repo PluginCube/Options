@@ -287,6 +287,9 @@ class Framework
             'switch' => function ($val) {
                 return filter_var($val, FILTER_VALIDATE_BOOLEAN);
             },
+            'repeater' => function ($val) {
+                return $val;
+            },
         ];
 
         foreach ($values as $section => &$fields) {

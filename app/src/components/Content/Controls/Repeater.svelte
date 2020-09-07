@@ -1,0 +1,154 @@
+<script>
+	export let value;
+    export let options;
+    export let errors;
+
+    import { translation } from 'store'
+
+    import Field from '../Field.svelte'
+
+    console.log(options);
+
+    let activeItem;
+
+    let toggleItem = (item) => {
+        activeItem === item ? activeItem = null : activeItem = item
+    }
+
+    let addItem = () => {
+        let item = {};
+
+        Object.keys(options.fields).forEach(id => {
+            let field = options.fields[id]
+            let value = field['default'] ? field['default'] : null
+            item[id] = value
+        });
+
+        value = [...value, item]
+    }
+
+    let removeItem = () => {
+        if (confirm($translation.confirm)) {
+            value = value.filter(i => i !== activeItem)
+        }
+    }
+</script>
+
+<style lang="scss">
+    ul {
+        margin-bottom: 30px;
+
+        li {
+            box-shadow: var(--cf-box-shadow);
+            background: #fff;
+            border-radius: var(--cf-border-radius);
+            margin-bottom: 12px;
+            width: fit-content;
+            width: 100%;
+            overflow: hidden;
+            margin-right: auto;
+            border: var(--cf-control-border);
+            
+            header {
+                padding: 0px 15px;
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+                float: left;
+                box-sizing: border-box;
+                line-height: 45px;
+                height: 45px;
+                cursor: pointer;
+
+                svg {
+                    width: 12px;
+                    height: 12px;
+                    display: block;
+                    fill: #b2b2b2;
+                    flex-shrink: 0;
+                    backface-visibility: hidden;
+                    margin-top: 16px;
+                    margin-right: 10px;
+                    cursor: move;
+                    float: left;
+                }
+
+                span {
+                    font-weight: 600;
+                    font-size: 13px;
+                    color: var(--cf-primary-text);
+                    top: 0px;
+                    line-height: 43px;
+                    position: relative;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    width: 200px;
+                    float: left;
+                    overflow: hidden;
+                }
+
+                i {
+                    float: right;
+                    line-height: inherit;
+                    font-size: 14px;
+                    color: #b2b2b2;
+                }
+            }
+
+            main {
+                padding: 10px 20px;
+                border-top: 1px solid #f1f1f1;
+                float: left;
+                width: 100%;
+                box-sizing: border-box;
+
+                button {
+                    margin: 10px 0px;
+                    background: #ff4a4a;
+                    border: none;
+                    line-height: 23px;
+                    height: 25px;
+                    padding: 0px 9px;
+                    color: #ffffff;
+                    border-radius: 3px;
+                    font-size: 12px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+</style>
+
+<ul>
+    {#each value as item, i}
+        <li>
+            <header on:click={() => toggleItem(item)}>
+                <svg viewBox="0 0 10 10">
+                    <path d="M3,2 C2.44771525,2 2,1.55228475 2,1 C2,0.44771525 2.44771525,0 3,0 C3.55228475,0 4,0.44771525 4,1 C4,1.55228475 3.55228475,2 3,2 Z M3,6 C2.44771525,6 2,5.55228475 2,5 C2,4.44771525 2.44771525,4 3,4 C3.55228475,4 4,4.44771525 4,5 C4,5.55228475 3.55228475,6 3,6 Z M3,10 C2.44771525,10 2,9.55228475 2,9 C2,8.44771525 2.44771525,8 3,8 C3.55228475,8 4,8.44771525 4,9 C4,9.55228475 3.55228475,10 3,10 Z M7,2 C6.44771525,2 6,1.55228475 6,1 C6,0.44771525 6.44771525,0 7,0 C7.55228475,0 8,0.44771525 8,1 C8,1.55228475 7.55228475,2 7,2 Z M7,6 C6.44771525,6 6,5.55228475 6,5 C6,4.44771525 6.44771525,4 7,4 C7.55228475,4 8,4.44771525 8,5 C8,5.55228475 7.55228475,6 7,6 Z M7,10 C6.44771525,10 6,9.55228475 6,9 C6,8.44771525 6.44771525,8 7,8 C7.55228475,8 8,8.44771525 8,9 C8,9.55228475 7.55228475,10 7,10 Z"></path>
+                </svg>
+
+                <span>{item[Object.keys(item)[0]]}</span>
+
+                <i class={activeItem === item ? "ri-arrow-up-s-fill" : "ri-arrow-down-s-fill"}></i>
+            </header>
+
+            {#if activeItem === item}
+                <main>
+                    {#each Object.keys(item) as fid}
+                        {#if options.fields[fid]}
+                            <Field mini={true} errors={errors[fid]} {...options.fields[fid]} bind:value={value[i][fid]}/>
+                        {/if}
+                    {/each}
+                    
+                    <button on:click={removeItem}>
+                        {$translation.remove}
+                    </button>
+                </main>
+            {/if}
+        </li>
+    {/each}    
+</ul>
+
+<button on:click={addItem} class="button button-small button-primary">
+    {$translation.add_item}
+</button>

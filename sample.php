@@ -1,7 +1,7 @@
 <?php
 
 $sample = new CiraPress\Framework([
-    'id' => 'cirapress01',
+    'id' => 'cirapress05',
     'titles' =>
     [
         'page' => 'Cira',
@@ -96,12 +96,43 @@ $sample = new CiraPress\Framework([
                 'icon' => [
                     'type' => 'icon',
                     'title' => 'Icon',
-                    'default' => 'building-3-line',
+                    'default' => 'ri-building-3-line',
                 ],
                 'editor' => [
                     'type' => 'editor',
                     'title' => 'Editor',
                     'default' => 'hello <i>world</i>',
+                ],
+                'repeater' => [
+                    'type' => 'repeater',
+                    'title' => 'Repeater',
+                    'default' => [
+                        [
+                            'title' => 'Hello world',
+                            'switch' => false
+                        ],
+                        [
+                            'title' => 'Second item',
+                            'switch' => true
+                        ]
+                    ],
+                    'options' => [
+                        'fields' => [
+                            'title' => [
+                                'type' => 'text',
+                                'title' => 'Title',
+                                'default' => 'New Item',
+                                'options' => [
+                                    'placeholder' => 'Insert here ...',
+                                ]            
+                            ],            
+                            'switch' => [
+                                'type' => 'switch',
+                                'title' => 'Switch',
+                                'default' => true,
+                            ]
+                        ],
+                    ]
                 ],
             ],
         ]
