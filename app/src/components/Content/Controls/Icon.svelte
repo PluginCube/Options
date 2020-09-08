@@ -18,9 +18,9 @@
 
 <style>
     button {
-        width: 40px;
-        height: 40px;
-        line-height: 39px;
+        width: 38px;
+        height: 38px;
+        line-height: 36px;
         background-color: #ffffff;
         text-align: center;
         font-size: 14px;

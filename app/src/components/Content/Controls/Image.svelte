@@ -31,6 +31,6 @@
 
 <Text bind:value options={{placeholder: $translation.image_url}}/>
 
-<button on:click={select} class="button button-small">
+<button on:click={select} class="button button-primary button-small">
     {$translation.from_library}
 </button>

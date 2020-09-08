@@ -73,6 +73,7 @@
 
     .mini {
         padding: 0px 0px 30px 0px;
+        min-height: 34px;
 
         main {
             float: left;

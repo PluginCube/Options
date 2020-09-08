@@ -1,7 +1,7 @@
 <?php
 
 $sample = new CiraPress\Framework([
-    'id' => 'cirapress09',
+    'id' => 'cirapress10',
     'titles' =>
     [
         'page' => 'Cira',
@@ -116,6 +116,21 @@ $sample = new CiraPress\Framework([
                                     'placeholder' => 'Insert here ...',
                                 ]
                             ],
+                            'color' => [
+                                'type' => 'color',
+                                'title' => 'Color',
+                                'default' => '#555555',
+                            ],
+                            'switch' => [
+                                'type' => 'switch',
+                                'title' => 'Switch',
+                                'default' => true,
+                            ],
+                            'icon' => [
+                                'type' => 'icon',
+                                'title' => 'Icon',
+                                'default' => 'ri-building-3-line',
+                            ],            
                         ],
                     ]
                 ],
