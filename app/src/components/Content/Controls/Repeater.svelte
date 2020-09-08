@@ -63,7 +63,7 @@
 
 <style lang="scss">
     ul {
-        margin-bottom: 30px;
+        margin-bottom: 10px;
         margin-top: 0;
         padding: 0;
         float: left;
@@ -180,6 +180,6 @@
     {/each}    
 </ul>
 
-<button on:click={addItem} class="button button-small button-primary">
+<button on:click={addItem} class="button button-small">
     {$translation.add_item}
 </button>

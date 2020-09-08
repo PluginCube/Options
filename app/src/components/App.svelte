@@ -29,7 +29,7 @@
     main {
         float: left;
         width: 100%;
-        margin-top: 25px;
+        margin-top: 20px;
         position: relative;
     }
 

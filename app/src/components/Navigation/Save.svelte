@@ -3,7 +3,7 @@
     import { save } from 'methods'
 
     import Button from '../Comman/Button.svelte'
-    let style = 'margin: 55px 7px; width: 178px;'
+    let style = 'margin: 55px 8px; width: 177px;'
     let disabled = false
 
     let handleSave = async () => {
