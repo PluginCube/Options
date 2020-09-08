@@ -152,6 +152,10 @@ $sample = new CiraPress\Framework([
                         ],
                     ],
                 ],
+                'export' => [
+                    'type' => 'export',
+                    'title' => 'Export',
+                ],
             ],
         ],
     ],

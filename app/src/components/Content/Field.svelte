@@ -13,10 +13,11 @@
     import Select from './Controls/Select.svelte'
     import Image from './Controls/Image.svelte'
     import Color from './Controls/Color.svelte'
-    import Icon from './Controls/Icon.svelte';
-    import Editor from './Controls/Editor.svelte';
-    import Repeater from './Controls/Repeater.svelte';
-    import RadioImage from './Controls/RadioImage.svelte';
+    import Icon from './Controls/Icon.svelte'
+    import Editor from './Controls/Editor.svelte'
+    import Repeater from './Controls/Repeater.svelte'
+    import RadioImage from './Controls/RadioImage.svelte'
+    import Export from './Controls/Export.svelte'
 
     let types = {
         'text': Text,
@@ -28,7 +29,8 @@
         'icon': Icon,
         'editor': Editor,
         'repeater': Repeater,
-        'radio-image': RadioImage
+        'radio-image': RadioImage,
+        'export': Export
     };
     
 </script>
