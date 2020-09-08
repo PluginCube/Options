@@ -16,6 +16,7 @@
     import Icon from './Controls/Icon.svelte';
     import Editor from './Controls/Editor.svelte';
     import Repeater from './Controls/Repeater.svelte';
+    import RadioImage from './Controls/RadioImage.svelte';
 
     let types = {
         'text': Text,
@@ -26,7 +27,8 @@
         'color': Color,
         'icon': Icon,
         'editor': Editor,
-        'repeater': Repeater
+        'repeater': Repeater,
+        'radio-image': RadioImage
     };
     
 </script>

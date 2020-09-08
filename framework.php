@@ -284,6 +284,7 @@ class Framework
             'image' => 'sanitize_url',
             'icon' => 'sanitize_html_class',
             'select' => 'sanitize_key',
+            'radio-image' => 'sanitize_key',
             'switch' => function ($val) {
                 return filter_var($val, FILTER_VALIDATE_BOOLEAN);
             },

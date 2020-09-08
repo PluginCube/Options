@@ -1,7 +1,7 @@
 <?php
 
 $sample = new CiraPress\Framework([
-    'id' => 'cirapress08',
+    'id' => 'cirapress09',
     'titles' =>
     [
         'page' => 'Cira',
@@ -119,17 +119,40 @@ $sample = new CiraPress\Framework([
                         ],
                     ]
                 ],
-                'image_select' => [
-                    'type' => 'editor',
-                    'title' => 'Editor',
-                    'default' => 'two',
-                    'option' => [
-                        [
-                            'img' => ''
-                        ]
-                    ]
+                'radio_image' => [
+                    'type' => 'radio-image',
+                    'title' => 'Radio Image',
+                    'default' => 'b',
+                    'options' => [
+                        'items' => [
+                            [
+                                'img' => 'http://localhost:8080/images/gle_c-salt.gif',
+                                'id' => 'a',
+                                'label' => 'Layout A'
+                            ],
+                            [
+                                'img' => 'http://localhost:8080/images/gle_c-salt-s.gif',
+                                'id' => 'b',
+                                'label' => 'Layout B'
+                            ],
+                            [
+                                'img' => 'http://localhost:8080/images/gle_hncs.gif',
+                                'id' => 'c',
+                                'label' => 'Layout C'
+                            ],
+                            [
+                                'img' => 'http://localhost:8080/images/gle_pbc.gif',
+                                'id' => 'd',
+                                'label' => 'Layout D'
+                            ],
+                            [
+                                'img' => 'http://localhost:8080/images/gle_s-c-salt.gif',
+                                'id' => 'e',
+                            ],                            
+                        ],
+                    ],
                 ],
             ],
-        ]
-    ]
+        ],
+    ],
 ]);
