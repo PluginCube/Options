@@ -1,6 +1,10 @@
 <script>
 	export let value = false;
 
+    if (typeof value == 'string') {
+        value = JSON.parse(value);
+    }
+
     let toggle = () => {
         value = !value;
     }
