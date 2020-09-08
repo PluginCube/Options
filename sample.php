@@ -175,6 +175,13 @@ $sample = new CiraPress\Framework([
                     'type' => 'import',
                     'title' => 'Import',
                 ],
+                'html' => [
+                    'type' => 'html',
+                    'title' => 'HTML',
+                    'options' => [
+                        'content' => '<h3>hello world!</h3>'
+                    ]
+                ],
             ],
         ],
     ],

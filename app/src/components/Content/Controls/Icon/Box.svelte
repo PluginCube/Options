@@ -14,7 +14,7 @@
     let ps;
     
     let style = "fill";
-    let category = "Others";
+    let category = "Design";
 
     const dispatch = createEventDispatcher();
 

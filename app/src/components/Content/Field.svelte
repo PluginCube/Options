@@ -19,6 +19,7 @@
     import RadioImage from './Controls/RadioImage.svelte'
     import Export from './Controls/Export.svelte'
     import Import from './Controls/Import.svelte'
+    import HTML from './Controls/HTML.svelte'
 
     let types = {
         'text': Text,
@@ -32,7 +33,8 @@
         'repeater': Repeater,
         'radio-image': RadioImage,
         'export': Export,
-        'import': Import
+        'import': Import,
+        'html': HTML
     };
     
 </script>
