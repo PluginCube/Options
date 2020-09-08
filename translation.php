@@ -9,9 +9,10 @@ return [
     'remove'            =>      esc_html__( 'Remove' , 'cf-domain' ),
     'import'            =>      esc_html__( 'Import' , 'cf-domain' ),
     'download_data'     =>      esc_html__( 'Download Data' , 'cf-domain' ),
-    'no_file_selected'  =>      esc_html__( 'No file selected!' , 'cf-domain' ),
+    'override_warning'  =>      esc_html__( 'This will override your current settings. Are You Sure?' , 'cf-domain' ),
     'image_url'         =>      esc_html__( 'Image URL' , 'cf-domain' ),
     'from_library'      =>      esc_html__( 'From Library' , 'cf-domain' ),
     'select'            =>      esc_html__( 'Select' , 'cf-domain' ),
     'search'            =>      esc_html__( 'Search' , 'cf-domain' ),
+    'select_file'       =>      esc_html__( 'Select file' , 'cf-domain' ),
 ];

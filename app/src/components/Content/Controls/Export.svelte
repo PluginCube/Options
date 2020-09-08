@@ -30,6 +30,6 @@
 <style>
 </style>
 
-<button class="button" on:click={download}>
+<button class="button button-primary" on:click={download}>
     {$translation.download_data}
 </button>
