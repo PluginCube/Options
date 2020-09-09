@@ -6,6 +6,8 @@
     import Navigation from './Navigation/Navigation.svelte'
     import Content from './Content/Content.svelte'
 
+    import 'remixicon/fonts/remixicon.css'
+    
     onMount(() => {
         let hash = location.hash.slice(1);
 
@@ -18,7 +20,6 @@
 </script>
 
 <svelte:head>
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700" rel="stylesheet">
 </svelte:head>
 

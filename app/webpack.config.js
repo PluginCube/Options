@@ -41,14 +41,23 @@ module.exports = {
 			{
 				test: /\.css$/,
 				use: [
-					/**
-					 * MiniCssExtractPlugin doesn't support HMR.
-					 * For developing, use 'style-loader' instead.
-					 * */
-					prod ? MiniCssExtractPlugin.loader : 'style-loader',
+					MiniCssExtractPlugin.loader,
 					'css-loader'
 				]
-			}
+			},
+			{
+				test: /\.(png|jpe?g|gif|woff|woff2|eot|ttf|svg)$/i,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							esModule: false,
+							outputPath: 'assets',
+							publicPath: './assets'
+						}
+					},
+				],
+			},		
 		]
 	},
 	mode,
@@ -58,5 +67,6 @@ module.exports = {
 		})
 	],
 	devtool: prod ? false: 'source-map',
-	watch
+	watch,
+	stats: { children: false }
 };

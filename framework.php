@@ -169,7 +169,8 @@ class Framework
      */
     public function styles()
     {
-        if (file_exists($this->url . "app/dist/bundle.css")) {
+        
+        if (file_exists($this->path . "app/dist/bundle.css")) {
             wp_enqueue_style('cf', $this->url . "app/dist/bundle.css");
         }
     }
