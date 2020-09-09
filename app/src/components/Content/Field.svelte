@@ -21,6 +21,7 @@
     import Import from './Controls/Import.svelte'
     import HTML from './Controls/HTML.svelte'
     import Preset from './Controls/Preset.svelte'
+    import Multicolor from './Controls/Multicolor.svelte'
 
     let types = {
         'text': Text,
@@ -36,7 +37,8 @@
         'export': Export,
         'import': Import,
         'html': HTML,
-        'preset': Preset
+        'preset': Preset,
+        'multicolor': Multicolor
     };
     
 </script>

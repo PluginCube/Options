@@ -1,7 +1,7 @@
 <?php
 
 $sample = new CiraPress\Framework([
-    'id' => 'cirapress10',
+    'id' => 'cirapress11',
     'titles' =>
     [
         'page' => 'Cira',
@@ -210,5 +210,37 @@ $sample = new CiraPress\Framework([
                 ],
             ],
         ],
+        'appearance' => [
+            'title' => 'Appearance',
+            'description' => 'This is my section.',
+            'fields' =>
+            [
+                'multicolor' => [
+                    'type' => 'multicolor',
+                    'title' => 'Multicolor',
+                    'default' => [
+                        'link'    => '#0088cc',
+                        'hover'   => '#00aaff',
+                        'active'  => '#00ffff',                
+                    ],
+                    'options' => [
+                        'choices' => [
+                            [
+                                'id' => 'link',
+                                'title' => 'Link'
+                            ],
+                            [
+                                'id' => 'hover',
+                                'title' => 'Hover'
+                            ],
+                            [
+                                'id' => 'active',
+                                'title' => 'Active'
+                            ]
+                        ]
+                    ]
+                ]
+            ]
+        ]
     ],
 ]);

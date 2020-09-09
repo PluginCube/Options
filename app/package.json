@@ -26,6 +26,7 @@
     "svelte-color": "https://github.com/cirapress/svelte-color",
     "svelte-loader": "2.13.3",
     "svelte-preprocess": "^4.2.1",
+    "svelte-tooltip": "^1.2.0",
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.0"
   }

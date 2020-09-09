@@ -1,6 +1,7 @@
 <script>
     import { translation, values } from 'store'
     import { save } from 'methods'
+    import merge from 'deepmerge'
 
     let reader;
 
@@ -17,7 +18,7 @@
             reader = new FileReader();
 
             reader.onload = (event) => {
-                let data = JSON.parse(event.target.result);
+                let data = merge($values, JSON.parse(event.target.result));
 
                 if( confirm($translation.override_warning) ){
                     values.set(data);
@@ -51,7 +52,7 @@
 <label>
     <input on:change={fileSelected} type="file" accept="application/json"/>
 
-    <span class="button button-primary" type="input">
+    <span class="button button-primary button-small" type="input">
         {$translation.select_file}
     </span>
 </label>

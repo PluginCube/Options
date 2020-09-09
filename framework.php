@@ -298,7 +298,9 @@ class Framework
                 $field = $this->args['sections'][$section]['fields'][$id];
                 $sanitize = isset($field['sanitize']) ? $field['sanitize'] : $types[$field['type']];
                 
-                $value = call_user_func($sanitize, $value);
+                if ($sanitize) {
+                    $value = call_user_func($sanitize, $value);
+                }
             }
         }
         

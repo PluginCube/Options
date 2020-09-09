@@ -1,7 +1,20 @@
 <script>
+    import { onMount } from 'svelte'
+    import { activeSection, sections } from 'store'
+
     import Header from './Header/Header.svelte'
     import Navigation from './Navigation/Navigation.svelte'
     import Content from './Content/Content.svelte'
+
+    onMount(() => {
+        let hash = location.hash.slice(1);
+
+        if (hash) {
+            activeSection.set(hash);
+        } else {
+            activeSection.set(Object.keys($sections)[0]);
+        }
+    });
 </script>
 
 <svelte:head>

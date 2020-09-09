@@ -32,6 +32,7 @@
         overflow: hidden;
         margin-bottom: 40px;
         box-shadow: 0px 0px 30px rgba(0,0,0, 0.1);
+        z-index: 9999;
     }
 </style>
 
