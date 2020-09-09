@@ -11,7 +11,7 @@
 
 		li {
 			float: left;
-			max-width: calc(25% - 10px);
+			max-width: calc(33% - 10px);
 			margin: 5px 10px 5px 0px;
 			box-sizing: border-box;
 			display: block;

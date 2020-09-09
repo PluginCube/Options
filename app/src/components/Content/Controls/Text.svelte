@@ -12,6 +12,7 @@
 		border: var(--cf-control-border) !important;
     	box-shadow: var(--cf-box-shadow) !important;
 		border-radius: var(--cf-border-radius);
+		margin: 0;
 	}
 </style>
 

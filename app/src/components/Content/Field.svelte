@@ -9,6 +9,7 @@
 
     import Text from './Controls/Text.svelte'
     import Textarea from './Controls/Textarea.svelte'
+    import Number from './Controls/Number.svelte'
     import Switch from './Controls/Switch.svelte'
     import Select from './Controls/Select.svelte'
     import Image from './Controls/Image.svelte'
@@ -26,6 +27,7 @@
     let types = {
         'text': Text,
         'textarea': Textarea,
+        'number': Number,
         'switch': Switch,
         'select': Select,
         'image': Image,

@@ -1,7 +1,7 @@
 <?php
 
 $sample = new CiraPress\Framework([
-    'id' => 'cirapress11',
+    'id' => 'cirapress12',
     'titles' =>
     [
         'page' => 'Cira',
@@ -179,7 +179,7 @@ $sample = new CiraPress\Framework([
                     'type' => 'html',
                     'title' => 'HTML',
                     'options' => [
-                        'content' => '<h3>hello world!</h3>'
+                        'content' => '<i>hello world!</i>'
                     ]
                 ],
                 'preset' => [
@@ -238,6 +238,14 @@ $sample = new CiraPress\Framework([
                                 'title' => 'Active'
                             ]
                         ]
+                    ]
+                ],
+                'number' => [
+                    'type' => 'number',
+                    'title' => 'Number',
+                    'default' => 23,
+                    'options' => [
+                        'placeholder' => 'Width'
                     ]
                 ]
             ]
