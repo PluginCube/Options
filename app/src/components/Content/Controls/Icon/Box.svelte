@@ -3,7 +3,7 @@
 
     import { fade } from 'svelte/transition'
 
-    import { categories } from '@iconify/json/json/ri.json'
+    import categories from './tags.json'
 
     import Header from './Header.svelte'
 
@@ -14,15 +14,22 @@
     let ps;
     
     let style = "fill";
-    let category = "Design";
+    let category = "Weather";
 
     const dispatch = createEventDispatcher();
 
-    $: filtered = categories[category].filter(x => {
-        return x.includes(style)
-    })
 
-    $: icons = filtered.map(i => 'ri-' + i);
+    $: icons = Object.keys(categories[category]).map(i => {
+        let icon;
+
+        if (category == 'Editor') {
+            icon = `ri-${i}`;
+        } else {
+            icon = `ri-${i}-${style}`;
+        }
+
+        return icon;
+    });
 
     onMount(() => {
         ps = new PerfectScrollbar(box);
