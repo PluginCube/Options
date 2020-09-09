@@ -6,13 +6,13 @@
 <style lang="scss">
 	ul {
 		float: left;
-		margin: -5px;
+		margin: -5px -10px -5px 0px;
 		padding: 0;
 
 		li {
 			float: left;
 			max-width: calc(25% - 10px);
-			margin: 5px 10px 10px 0px;
+			margin: 5px 10px 5px 0px;
 			box-sizing: border-box;
 			display: block;
 			padding: 0;

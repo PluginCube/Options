@@ -182,6 +182,32 @@ $sample = new CiraPress\Framework([
                         'content' => '<h3>hello world!</h3>'
                     ]
                 ],
+                'preset' => [
+                    'type' => 'preset',
+                    'title' => 'Presets',
+                    'options' => [
+                        'presets' => [
+                            [
+                                'title' => 'Dark',
+                                'img' => 'http://localhost:8080/wp-content/themes/twentytwenty/screenshot.png',
+                                'data' => [
+                                    'general' => [
+                                        'text' => 'Dark theme import successfuly.'
+                                    ]
+                                ]
+                            ],
+                            [
+                                'title' => 'Minimal',
+                                'img' => 'http://localhost:8080/wp-content/themes/twentyseventeen/screenshot.png',
+                                'data' => [
+                                    'general' => [
+                                        'text' => 'Minimal theme import successfuly.'
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ]
+                ],
             ],
         ],
     ],

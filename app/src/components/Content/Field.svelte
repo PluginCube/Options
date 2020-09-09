@@ -20,6 +20,7 @@
     import Export from './Controls/Export.svelte'
     import Import from './Controls/Import.svelte'
     import HTML from './Controls/HTML.svelte'
+    import Preset from './Controls/Preset.svelte'
 
     let types = {
         'text': Text,
@@ -34,7 +35,8 @@
         'radio-image': RadioImage,
         'export': Export,
         'import': Import,
-        'html': HTML
+        'html': HTML,
+        'preset': Preset
     };
     
 </script>
