@@ -17,6 +17,11 @@
             float: left;
             margin-right: 10px;
             color: var(--cf-secondary-text);
+            
+            &:global .tooltip{
+                box-shadow: var(--cf-box-shadow);
+                visibility: visible;
+            }
         }
     }
 </style>

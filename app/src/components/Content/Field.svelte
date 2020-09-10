@@ -23,6 +23,7 @@
     import HTML from './Controls/HTML.svelte'
     import Preset from './Controls/Preset.svelte'
     import Multicolor from './Controls/Multicolor.svelte'
+    import MiniInput from './Controls/MiniInput.svelte'
 
     let types = {
         'text': Text,
@@ -40,7 +41,8 @@
         'import': Import,
         'html': HTML,
         'preset': Preset,
-        'multicolor': Multicolor
+        'multi-color': Multicolor,
+        'mini-input': MiniInput
     };
     
 </script>

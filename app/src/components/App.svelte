@@ -19,10 +19,6 @@
     });
 </script>
 
-<svelte:head>
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700" rel="stylesheet">
-</svelte:head>
-
 <style lang="scss">
     div {
         --cf-brand: #4c47ff;
@@ -56,6 +52,8 @@
             display: none;
         }
     }
+
+    @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700");
 </style>
 
 <div>

@@ -216,8 +216,8 @@ $sample = new CiraPress\Framework([
             'fields' =>
             [
                 'multicolor' => [
-                    'type' => 'multicolor',
-                    'title' => 'Multicolor',
+                    'type' => 'multi-color',
+                    'title' => 'Multi Color',
                     'default' => [
                         'link'    => '#0088cc',
                         'hover'   => '#00aaff',
@@ -246,6 +246,15 @@ $sample = new CiraPress\Framework([
                     'default' => 23,
                     'options' => [
                         'placeholder' => 'Width'
+                    ]
+                ],
+                'miniinput' => [
+                    'type' => 'mini-input',
+                    'title' => 'Mini Input',
+                    'default' => 23,
+                    'options' => [
+                        'icon' => 'ri-font-size-2',
+                        'placeholder' => 'Size',
                     ]
                 ]
             ]
