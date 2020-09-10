@@ -1,7 +1,7 @@
 <?php
 
 $sample = new CiraPress\Framework([
-    'id' => 'cirapress14',
+    'id' => 'cirapress15',
     'titles' =>
     [
         'page' => 'Cira',
@@ -81,14 +81,14 @@ $sample = new CiraPress\Framework([
                     'title' => 'Select',
                     'default' => 'two',
                     'options' => [
-                        'items' => [
+                        'choices' => [
                             [
                                 'id' => 'one',
-                                'text' => 'One'
+                                'title' => 'One'
                             ],
                             [
                                 'id' => 'two',
-                                'text' => 'Two'
+                                'title' => 'Two'
                             ]
                         ]
                     ]
@@ -156,7 +156,7 @@ $sample = new CiraPress\Framework([
                     'title' => 'Radio Image',
                     'default' => 'b',
                     'options' => [
-                        'items' => [
+                        'choices' => [
                             [
                                 'img' => 'http://localhost:8080/images/gle_c-salt.gif',
                                 'id' => 'a',
@@ -313,11 +313,15 @@ $sample = new CiraPress\Framework([
                             ],
                             [
                                 'id' => 'justify',
-                                'title' => 'justify',
+                                'title' => 'Justify',
                                 'icon' => 'ri-align-justify'
                             ]
                         ]
                     ]
+                ],
+                'typography' => [
+                    'type' => 'typography',
+                    'title' => 'Typography',
                 ],
             ]
         ]

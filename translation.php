@@ -15,4 +15,11 @@ return [
     'select'            =>      esc_html__( 'Select' , 'cf-domain' ),
     'search'            =>      esc_html__( 'Search' , 'cf-domain' ),
     'select_file'       =>      esc_html__( 'Select file' , 'cf-domain' ),
+    'size'              =>      esc_html__( 'Size' , 'cf-domain' ),
+    'line_height'       =>      esc_html__( 'Line Height' , 'cf-domain' ),
+    'left'              =>      esc_html__( 'Left' , 'cf-domain' ),
+    'right'             =>      esc_html__( 'Right' , 'cf-domain' ),
+    'center'            =>      esc_html__( 'Center' , 'cf-domain' ),
+    'justify'           =>      esc_html__( 'Justify' , 'cf-domain' ),
+    'spacing'           =>      esc_html__( 'spacing' , 'cf-domain' ),
 ];

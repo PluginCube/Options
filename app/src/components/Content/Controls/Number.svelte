@@ -2,11 +2,22 @@
     export let value;
     export let options;
 
+    if (typeof value == 'string') {
+        value = parseInt(value);
+    }
+
     let increase = () => {
+        if (! value) {
+            value = 0;
+        }
         value = value + 1;
     }
 
     let decrease = () => {
+        if (! value) {
+            value = 0;
+        }
+
         value = value - 1;
     }
 </script>
@@ -40,7 +51,6 @@
             font-size: 15px;
             position: absolute;
             right: -1px;
-            background: #f8f8f8;
             width: 20px;
             text-align: center;
             border: 1px solid #eee;
@@ -52,10 +62,12 @@
 
             &:first-of-type{
                 top: -1px;
+                border-top: 0;
             }
 
             &:last-of-type {
-                bottom: -3px;
+                bottom: -2px;
+                border-top: 0;
             }
         }
     }

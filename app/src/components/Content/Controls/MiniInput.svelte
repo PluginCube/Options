@@ -1,10 +1,13 @@
 <script>
-    export let value = 0;
-    export let options;
+    export let value = '';
+    export let options = {};
 
-    let icon = options.icon ? options.icon : 'ri-page-separator';
-    
-    delete(options.icon)
+    import merge from 'deepmerge'
+
+    $: options = merge({
+        icon: 'ri-page-separator',
+        type: 'text'
+    }, options)
 </script>
 
 <style lang="scss">
@@ -34,7 +37,7 @@
 
         input {
             float: left;
-            width: 110px;
+            width: 125px;
             max-width: 100%;
             padding: 4px 12px;
             font-size: 13px;
@@ -48,6 +51,6 @@
 </style>
 
 <div>
-    <i class={icon}></i>    
-    <input type="number" bind:value {...options}>
+    <i class={options.icon}></i>   
+    <input bind:value {...options}>
 </div>

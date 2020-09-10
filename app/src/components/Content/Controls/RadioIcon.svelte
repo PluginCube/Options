@@ -49,7 +49,6 @@
 
                 .tooltip{
                     box-shadow: var(--cf-box-shadow);
-                    visibility: visible;
                 } 
             } 
         }

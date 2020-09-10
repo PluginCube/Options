@@ -22,7 +22,7 @@
     let options = {
         selector: '#' + id,
         menubar: false,
-        plugins: wp.editor.getDefaultSettings().tinymce.plugins + ',image',
+        plugins: 'charmap,colorpicker,hr,lists,paste,tabfocus,textcolor,fullscreen,wordpress,wpautoresize,wpeditimage,wpemoji,wpgallery,wplink,wptextpattern,image',
         toolbar1: "formatselect,alignleft,aligncenter,alignright,alignjustify,bold,italic,bullist,numlist,image,link,fullscreen",
         wpeditimage_html5_captions: true,
         branding: false,

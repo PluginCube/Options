@@ -2,7 +2,7 @@
     export let value = {};
     export let options;
 
-    import {onMount, beforeUpdate} from 'svelte'
+    import { beforeUpdate } from 'svelte'
 
     import MiniInput from './MiniInput.svelte'
     
@@ -28,7 +28,7 @@
 <ul>
     {#each options.choices as choice}
         <li>
-            <MiniInput bind:value={value[choice.id]} options={choice} />
+            <MiniInput bind:value={value[choice.id]} bind:options={choice} />
         </li>
     {/each}
 </ul>

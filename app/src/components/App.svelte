@@ -58,7 +58,8 @@
 
 <div>
     <Header />
-    
+    {@debug window} 
+
     <main>
         <Navigation />
         <Content />

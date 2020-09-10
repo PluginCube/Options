@@ -41,11 +41,11 @@
 </style>
 
 <ul>
-	{#each options.items as item}
-		<li class:selected={item.id === value} on:click={() => {value = item.id}}>
-			<img src={item.img} alt={item.label ? item.label : 'No Caption'}>
-			{#if item.label}
-				<span>{item.label}</span>
+	{#each options.choices as choice}
+		<li class:selected={choice.id === value} on:click={() => {value = choice.id}}>
+			<img src={choice.img} alt={choice.label ? choice.label : 'No Caption'}>
+			{#if choice.label}
+				<span>{choice.label}</span>
 			{/if}
 		</li>
 	{/each}	

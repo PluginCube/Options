@@ -19,9 +19,9 @@
 </style>
 
 <select bind:value={value}>
-    {#each options.items as item}
-        <option value={item.id}>
-            {item.text}
+    {#each options.choices as choice}
+        <option value={choice.id}>
+            {choice.title}
         </option>
     {/each}
 </select>

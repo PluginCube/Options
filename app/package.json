@@ -2,11 +2,10 @@
   "name": "cirapress-framework",
   "version": "1.0.0",
   "description": "",
-  "main": "rollup.config.js",
   "scripts": {
     "postinstall": "cd ./node_modules/svelte-color && npm install && npm run build",
     "build": "cross-env NODE_ENV=production webpack",
-    "dev": "cross-env NODE_ENV=development webpack"
+    "dev": "webpack"
   },
   "keywords": [],
   "author": "",

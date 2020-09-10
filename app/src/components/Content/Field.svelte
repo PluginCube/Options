@@ -7,25 +7,26 @@
     export let errors = undefined
     export let mini;
 
-    import Text from './Controls/Text.svelte'
-    import Textarea from './Controls/Textarea.svelte'
-    import Number from './Controls/Number.svelte'
-    import Switch from './Controls/Switch.svelte'
-    import Select from './Controls/Select.svelte'
-    import Image from './Controls/Image.svelte'
-    import Color from './Controls/Color.svelte'
-    import Icon from './Controls/Icon.svelte'
-    import Editor from './Controls/Editor.svelte'
-    import Repeater from './Controls/Repeater.svelte'
-    import RadioImage from './Controls/RadioImage.svelte'
-    import Export from './Controls/Export.svelte'
-    import Import from './Controls/Import.svelte'
-    import HTML from './Controls/HTML.svelte'
-    import Preset from './Controls/Preset.svelte'
-    import Multicolor from './Controls/Multicolor.svelte'
-    import MiniInput from './Controls/MiniInput.svelte'
-    import MultiMiniInput from './Controls/MultiMiniInput.svelte'
-    import RadioIcon from './Controls/RadioIcon.svelte'
+    import Text from './Controls/Text'
+    import Textarea from './Controls/Textarea'
+    import Number from './Controls/Number'
+    import Switch from './Controls/Switch'
+    import Select from './Controls/Select'
+    import Image from './Controls/Image'
+    import Color from './Controls/Color'
+    import Icon from './Controls/Icon'
+    import Editor from './Controls/Editor'
+    import Repeater from './Controls/Repeater'
+    import RadioImage from './Controls/RadioImage'
+    import Export from './Controls/Export'
+    import Import from './Controls/Import'
+    import HTML from './Controls/HTML'
+    import Preset from './Controls/Preset'
+    import Multicolor from './Controls/Multicolor'
+    import MiniInput from './Controls/MiniInput'
+    import MultiMiniInput from './Controls/MultiMiniInput'
+    import RadioIcon from './Controls/RadioIcon'
+    import Typography from './Controls/Typography'
 
     let types = {
         'text': Text,
@@ -47,6 +48,7 @@
         'mini-input': MiniInput,
         'multi-mini-input' :MultiMiniInput,
         'radio-icon': RadioIcon,
+        'typography': Typography
     };
     
 </script>

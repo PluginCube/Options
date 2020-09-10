@@ -1,7 +1,7 @@
 import App from './components/App.svelte';
 
-window.onload = () => {
-	var app = new App({
-		target: document.getElementById('cf')
-	});
-}
+const app = new App({
+	target: document.getElementById('cf')
+});
+
+export default app;
