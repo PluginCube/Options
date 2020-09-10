@@ -19,7 +19,7 @@ $sample = new CiraPress\Framework([
             'type' => 'section',
             'id' => 'appearance',
             'title' => 'Appearance',
-            'icon' => 'ri-pantone-fill'
+            'icon' => 'ri-pencil-ruler-fill'
         ],
         [
             'type' => 'section',
@@ -35,7 +35,7 @@ $sample = new CiraPress\Framework([
             'type' => 'link',
             'url' => 'https://cirapress.com',
             'title' => 'Support',
-            'icon' => 'ri-chat-1-fill'
+            'icon' => 'ri-chat-3-fill'
         ]
     ],
     'sections' => 
@@ -290,7 +290,35 @@ $sample = new CiraPress\Framework([
                             ]
                         ]
                     ]
-                ]    
+                ],
+                'radio_icon' => [
+                    'type' => 'radio-icon',
+                    'title' => 'Radio Icon',
+                    'options' => [
+                        'choices' => [
+                            [
+                                'id' => 'left',
+                                'title' => 'Left',
+                                'icon' => 'ri-align-left'
+                            ],
+                            [
+                                'id' => 'right',
+                                'title' => 'Right',
+                                'icon' => 'ri-align-right'
+                            ],
+                            [
+                                'id' => 'center',
+                                'title' => 'Center',
+                                'icon' => 'ri-align-center'
+                            ],
+                            [
+                                'id' => 'justify',
+                                'title' => 'justify',
+                                'icon' => 'ri-align-justify'
+                            ]
+                        ]
+                    ]
+                ],
             ]
         ]
     ],

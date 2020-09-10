@@ -25,6 +25,7 @@
     import Multicolor from './Controls/Multicolor.svelte'
     import MiniInput from './Controls/MiniInput.svelte'
     import MultiMiniInput from './Controls/MultiMiniInput.svelte'
+    import RadioIcon from './Controls/RadioIcon.svelte'
 
     let types = {
         'text': Text,
@@ -44,7 +45,8 @@
         'preset': Preset,
         'multi-color': Multicolor,
         'mini-input': MiniInput,
-        'multi-mini-input' :MultiMiniInput
+        'multi-mini-input' :MultiMiniInput,
+        'radio-icon': RadioIcon,
     };
     
 </script>

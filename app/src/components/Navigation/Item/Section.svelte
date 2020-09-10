@@ -23,7 +23,7 @@
         transition: .3s;
         position: relative;
         height: 34px;
-        line-height: 37px;
+        line-height: 38px;
         padding: 0px 12px;
         box-sizing: border-box;
         border-radius: var(--cf-border-radius);
@@ -32,6 +32,7 @@
         font-family: Josefin Sans,sans-serif;
         outline: none;
         box-shadow: none;
+        letter-spacing: -.2px;
     }
 
     .active a {
@@ -41,10 +42,11 @@
 
     i {
         float: left;
-        margin-right: 14px;
+        margin-right: 12px;
         font-size: 17px;
         margin-top: 0px;
         line-height: 34px;
+        font-weight: 100;
     }
 </style>
 
