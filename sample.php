@@ -1,7 +1,7 @@
 <?php
 
 $sample = new CiraPress\Framework([
-    'id' => 'cirapress12',
+    'id' => 'cirapress14',
     'titles' =>
     [
         'page' => 'Cira',
@@ -130,7 +130,24 @@ $sample = new CiraPress\Framework([
                                 'type' => 'icon',
                                 'title' => 'Icon',
                                 'default' => 'ri-building-3-line',
-                            ],            
+                            ],
+                            'multi_mini_input' => [
+                                'type' => 'multi-mini-input',
+                                'title' => 'Multi Mini Input',
+                                'options' => [
+                                    'choices' => [
+                                        [
+                                            'id' => 'size',
+                                            'icon' => 'ri-font-size-2',
+                                            'placeholder' => 'Size',        
+                                        ],
+                                        [
+                                            'id' => 'hight',
+                                            'placeholder' => 'Hight',        
+                                        ]
+                                    ]
+                                ]
+                            ]
                         ],
                     ]
                 ],
@@ -215,7 +232,7 @@ $sample = new CiraPress\Framework([
             'description' => 'This is my section.',
             'fields' =>
             [
-                'multicolor' => [
+                'multi_color' => [
                     'type' => 'multi-color',
                     'title' => 'Multi Color',
                     'default' => [
@@ -248,7 +265,7 @@ $sample = new CiraPress\Framework([
                         'placeholder' => 'Width'
                     ]
                 ],
-                'miniinput' => [
+                'mini_input' => [
                     'type' => 'mini-input',
                     'title' => 'Mini Input',
                     'default' => 23,
@@ -256,7 +273,24 @@ $sample = new CiraPress\Framework([
                         'icon' => 'ri-font-size-2',
                         'placeholder' => 'Size',
                     ]
-                ]
+                ],
+                'multi_mini_input' => [
+                    'type' => 'multi-mini-input',
+                    'title' => 'Multi Mini Input',
+                    'options' => [
+                        'choices' => [
+                            [
+                                'id' => 'size',
+                                'icon' => 'ri-font-size-2',
+                                'placeholder' => 'Size',        
+                            ],
+                            [
+                                'id' => 'hight',
+                                'placeholder' => 'Hight',        
+                            ]
+                        ]
+                    ]
+                ]    
             ]
         ]
     ],

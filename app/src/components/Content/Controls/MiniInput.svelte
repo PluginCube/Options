@@ -1,5 +1,5 @@
 <script>
-    export let value;
+    export let value = 0;
     export let options;
 
     let icon = options.icon ? options.icon : 'ri-page-separator';
@@ -21,7 +21,7 @@
             font-size: 14px;
             position: absolute;
             right: 0px;
-            background: #f8f8f8;
+            background: #ffffff;
             width: 32px;
             height: 100%;
             line-height: 34px;
