@@ -3,6 +3,43 @@
     export let options
 
     import SvelteTooltip from 'svelte-tooltip';
+
+    import merge from 'deepmerge'
+
+    $: options = merge({
+        choices: [],
+        multiple: false
+    }, options)
+    
+    $: if (options.multiple) {
+        if (! value) {
+            value = [];
+        }
+    }
+
+    let select = (id) => {
+        if (options.multiple) {
+            if (selected(id)) {
+                value = value.filter(i => i !== id);
+            } else {
+                value = [...value, id]
+            }
+        } else {
+            value = id;
+        }
+    }
+
+    $: selected = (id) => {
+        if (value) {
+            if (options.multiple) {
+                return value.includes(id);
+            } else {
+                return value === id;
+            }
+        }
+        
+        return false;
+    }
 </script>
 
 <style lang="scss">
@@ -57,7 +94,7 @@
 
 <ul>
     {#each options.choices as choice}
-        <li class:selected={value == choice.id} on:click={() => value = choice.id}>
+        <li class={selected(choice.id) ? 'selected': null} on:click={() => select(choice.id)}>
             <SvelteTooltip tip={choice.title} color="#ffffff" top>
                 <i class={choice.icon}></i>
             </SvelteTooltip>

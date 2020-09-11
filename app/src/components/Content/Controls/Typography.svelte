@@ -43,28 +43,30 @@
         placeholder: $translation.spacing
     }
 
-    let alignment = [
-        {
-            id: 'left',
-            title: $translation.left,
-            icon: 'ri-align-left'
-        },
-        {
-            id: 'right',
-            title: $translation.right,
-            icon: 'ri-align-right'
-        },
-        {
-            id: 'center',
-            title: $translation.center,
-            icon: 'ri-align-center'
-        },
-        {
-            id: 'justify',
-            title: $translation.justify,
-            icon: 'ri-align-justify'
-        }
-    ]
+    let alignment = {
+        choices: [
+            {
+                id: 'left',
+                title: $translation.left,
+                icon: 'ri-align-left'
+            },
+            {
+                id: 'right',
+                title: $translation.right,
+                icon: 'ri-align-right'
+            },
+            {
+                id: 'center',
+                title: $translation.center,
+                icon: 'ri-align-center'
+            },
+            {
+                id: 'justify',
+                title: $translation.justify,
+                icon: 'ri-align-justify'
+            }
+        ]
+    };
 </script>
 
 <style lang="scss">
@@ -111,6 +113,6 @@
     </div>
 
     <div class="alignment">
-        <RadioIcon bind:value={value.alignment} options={{choices: alignment}}/>
+        <RadioIcon bind:value={value.alignment} options={alignment}/>
     </div>
 </div>
