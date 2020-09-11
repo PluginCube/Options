@@ -49,11 +49,12 @@
         padding: 0;
         box-shadow: var(--cf-box-shadow);
         border: var(--cf-control-border);
+        border-radius: var(--cf-border-radius);
 
         li {
             float: left;
             margin: 0px;
-            color: var(--cf-secondary-text);
+            color: var(--cf-primary-text);
             line-height: 12px;
 
             &.selected i{

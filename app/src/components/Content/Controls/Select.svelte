@@ -6,6 +6,7 @@
 <style>
     select {
         min-width: 150px;
+        max-width: 100%;
         padding: 4px 12px;
         font-size: 13px;
         border: var(--cf-control-border);

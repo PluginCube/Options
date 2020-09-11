@@ -1,8 +1,5 @@
 <script>
-    export let value = {
-        family: 'Roboto',
-        variant: 'regular',
-    }
+    export let value;
 
     import Select from "./Select";
     import MiniInput from './MiniInput'
@@ -11,6 +8,12 @@
     import { items } from "./Typography/google-fonts.json";
 
     import { translation } from 'store'
+
+
+    $: if (! value) value = {
+        family: 'Roboto',
+        variant: 'regular',
+    };
 
     $: families = items.map(i => {
         return {
@@ -38,9 +41,14 @@
         placeholder: $translation.line_height
     }
 
-    let spacingInput = {
+    let letterSpacingInput = {
         icon: 'ri-text-spacing',
-        placeholder: $translation.spacing
+        placeholder: $translation.letter_spacing
+    }
+
+    let wordSpacingInput = {
+        icon: 'ri-text-direction-l',
+        placeholder: $translation.word_spacing
     }
 
     let alignment = {
@@ -67,17 +75,37 @@
             }
         ]
     };
+
+    let decoration = {
+        multiple: true,
+        choices: [
+            {
+                id: 'underline',
+                title: $translation.underline,
+                icon: 'ri-underline'
+            },
+            {
+                id: 'uppercase',
+                title: $translation.uppercase,
+                icon: 'ri-heading'
+            },
+            {
+                id: 'italic',
+                title: $translation.italic,
+                icon: 'ri-italic'
+            },
+        ]
+    }
 </script>
 
 <style lang="scss">
         div.selects {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
 
             :global {
                 select {
-                    width: 265px;
+                    width: 100%;
                     margin-bottom: 10px;
-                    margin-right: 15px;
                     
                     &:last-of-type {
                         text-transform: capitalize;
@@ -88,14 +116,28 @@
 
         div.mini-inputs {
             float: left;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            margin-right: -10px;
 
             :global {
                 & > div {
                     float: left;
                     margin-right: 10px;
                     margin-bottom: 10px;
+                    width: calc(50% - 12px);
+
+                    input {
+                        padding: 5px 11px;
+                        font-size: 12px;
+                    }
                 }
+            }
+        }
+
+        div.styling {
+            :global > ul:first-child{
+                margin-bottom: 10px;
+                margin-right: 10px;
             }
         }
 </style>
@@ -109,10 +151,12 @@
     <div class="mini-inputs">
         <MiniInput bind:options={sizeInput} bind:value={value.size}/>
         <MiniInput bind:options={lineHeightInput} bind:value={value.line_height}/>
-        <MiniInput bind:options={spacingInput} bind:value={value.letter_spacing}/>
+        <MiniInput bind:options={letterSpacingInput} bind:value={value.letter_spacing}/>
+        <MiniInput bind:options={wordSpacingInput} bind:value={value.word_spacing}/>
     </div>
 
-    <div class="alignment">
+    <div class="styling">
         <RadioIcon bind:value={value.alignment} options={alignment}/>
+        <RadioIcon bind:value={value.decoration} options={decoration}/>
     </div>
 </div>

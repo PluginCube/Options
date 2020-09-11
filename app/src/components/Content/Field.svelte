@@ -102,7 +102,10 @@
             width: fit-content;
             min-width: 50px;
             margin-bottom: 15px;
-            color: var(--cf-secondary-text);
+
+            span {
+                font-size: 13px;
+            }
         }
     }
 </style>

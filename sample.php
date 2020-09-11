@@ -1,7 +1,7 @@
 <?php
 
 $sample = new CiraPress\Framework([
-    'id' => 'cirapress17',
+    'id' => 'cirapress19',
     'titles' =>
     [
         'page' => 'Cira',
@@ -147,7 +147,11 @@ $sample = new CiraPress\Framework([
                                         ]
                                     ]
                                 ]
-                            ]
+                                        ],
+                            'typography' => [
+                                'type' => 'typography',
+                                'title' => 'Typography',
+                            ],        
                         ],
                     ]
                 ],

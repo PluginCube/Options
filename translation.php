@@ -21,5 +21,9 @@ return [
     'right'             =>      esc_html__( 'Right' , 'cf-domain' ),
     'center'            =>      esc_html__( 'Center' , 'cf-domain' ),
     'justify'           =>      esc_html__( 'Justify' , 'cf-domain' ),
-    'spacing'           =>      esc_html__( 'spacing' , 'cf-domain' ),
+    'letter_spacing'    =>      esc_html__( 'Letter Spacing' , 'cf-domain' ),
+    'word_spacing'      =>      esc_html__( 'Word Spacing' , 'cf-domain' ),
+    'underline'         =>      esc_html__( 'Underline' , 'cf-domain' ),
+    'italic'            =>      esc_html__( 'Italic' , 'cf-domain' ),
+    'uppercase'         =>      esc_html__( 'Uppercase' , 'cf-domain' ),
 ];

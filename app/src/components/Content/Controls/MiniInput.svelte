@@ -8,23 +8,25 @@
         icon: 'ri-page-separator',
         type: 'text'
     }, options)
+
+    let input;
 </script>
 
 <style lang="scss">
     div {
         position: relative;
-        float: left;
         border: var(--cf-control-border) !important;
         box-shadow: var(--cf-box-shadow) !important;
         border-radius: var(--cf-border-radius);
         overflow: hidden;
+        width: fit-content;
 
         i {
             float: left;
             font-size: 14px;
             position: absolute;
             right: 0px;
-            background: #ffffff;
+            background: #fff;
             width: 32px;
             height: 100%;
             line-height: 34px;
@@ -32,7 +34,7 @@
             border-left: var(--cf-control-border);
             cursor: pointer;
             padding-right: 1px;
-            color: var(--cf-secondary-text);
+            color: var(--cf-primary-text);
         }
 
         input {
@@ -43,7 +45,7 @@
             font-size: 13px;
             border: none;
             box-shadow: none;
-            border-radius: 0px;
+            border-radius: var(--cf-border-radius);
             margin: 0;
         }
     }
@@ -51,6 +53,6 @@
 </style>
 
 <div>
-    <i class={options.icon}></i>   
-    <input bind:value {...options}>
+    <i class={options.icon} on:click={() => input.focus()}></i>   
+    <input bind:value {...options} bind:this={input}>
 </div>

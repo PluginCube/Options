@@ -16,11 +16,12 @@
 <style lang="scss">
     ul {
         float: left;
-        margin: 0;
+        margin-right: -10px;
 
         li {
             float: left;
             margin: 0px 10px 10px 0px;
+            max-width: calc(50% - 10px);
         }
     }
 </style>
@@ -28,7 +29,7 @@
 <ul>
     {#each options.choices as choice}
         <li>
-            <MiniInput bind:value={value[choice.id]} bind:options={choice} />
+            <MiniInput bind:value={value[choice.id]} options={choice} />
         </li>
     {/each}
 </ul>
