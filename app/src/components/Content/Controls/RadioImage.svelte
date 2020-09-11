@@ -1,6 +1,8 @@
 <script>
 	export let value;
 	export let options;
+
+	import SvelteTooltip from 'svelte-tooltip';
 </script>
 
 <style lang="scss">
@@ -11,13 +13,23 @@
 
 		li {
 			float: left;
-			max-width: calc(33% - 10px);
+			max-width: calc(25% - 10px);
 			margin: 5px 10px 5px 0px;
 			box-sizing: border-box;
 			display: block;
 			padding: 0;
 			cursor: pointer;
 			border-radius: 10px;
+
+            & :global {
+                .tooltip-wrapper {
+                    float: left;
+                }
+
+                .tooltip{
+                    box-shadow: var(--cf-box-shadow);
+                } 
+            } 
 
 			img {
 				float: left;
@@ -34,7 +46,7 @@
 			&.selected img {
 				float: left;
 				box-sizing: border-box;
-				outline: 3px solid #bcbec8;
+				outline: 3px solid #ccc;
 			}
 		}
 	}
@@ -43,10 +55,9 @@
 <ul>
 	{#each options.choices as choice}
 		<li class:selected={choice.id === value} on:click={() => {value = choice.id}}>
-			<img src={choice.img} alt={choice.label ? choice.label : 'No Caption'}>
-			{#if choice.label}
-				<span>{choice.label}</span>
-			{/if}
+			<SvelteTooltip tip={choice.title} color="#ffffff" top>
+				<img src={choice.img} alt={choice.title}>
+			</SvelteTooltip>
 		</li>
 	{/each}	
 </ul>

@@ -79,7 +79,7 @@
 
 <style lang="scss">
     ul {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         margin-top: 0;
         padding: 0;
         float: left;
@@ -197,6 +197,6 @@
 {/if}
 
 
-<button on:click={addItem} class="button button-primary button-small">
+<button on:click={addItem} class="button button-primary">
     {$translation.add_item}
 </button>

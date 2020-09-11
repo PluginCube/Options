@@ -164,22 +164,22 @@ $sample = new CiraPress\Framework([
                             [
                                 'img' => 'http://localhost:8080/images/gle_c-salt.gif',
                                 'id' => 'a',
-                                'label' => 'Layout A'
+                                'title' => 'Layout A'
                             ],
                             [
                                 'img' => 'http://localhost:8080/images/gle_c-salt-s.gif',
                                 'id' => 'b',
-                                'label' => 'Layout B'
+                                'title' => 'Layout B'
                             ],
                             [
                                 'img' => 'http://localhost:8080/images/gle_hncs.gif',
                                 'id' => 'c',
-                                'label' => 'Layout C'
+                                'title' => 'Layout C'
                             ],
                             [
                                 'img' => 'http://localhost:8080/images/gle_pbc.gif',
                                 'id' => 'd',
-                                'label' => 'Layout D'
+                                'title' => 'Layout D'
                             ],
                             [
                                 'img' => 'http://localhost:8080/images/gle_s-c-salt.gif',
