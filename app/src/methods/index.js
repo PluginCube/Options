@@ -84,3 +84,18 @@ export const arrayMove = (arr, from, to) => {
     return arr;
 };
     
+export const visiableFields = (fields, values) => {
+    return Object.keys(fields).filter(i => {
+        let field = fields[i];
+
+        if (field.condition) {
+            let target = values[field.condition[0]];
+            let operation = field.condition[1];
+            let value = field.condition[2];
+
+            return eval(`value ${operation} target`);
+        }
+
+        return true;
+    });
+}

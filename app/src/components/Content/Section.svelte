@@ -4,6 +4,8 @@
     export let fields
 
     import { values, errors } from 'store'
+    import { visiableFields } from "methods"
+
     import Field from './Field.svelte'
 
     $: returnErrors = (fid) => {
@@ -13,6 +15,8 @@
 
         return false;
     }
+
+    $: fids = visiableFields(fields, $values[id]);
 </script>
 
 <style>
@@ -30,7 +34,7 @@
 <section>
     <h2>{title}</h2>
 
-    {#each Object.entries(fields) as [fid, field]}
-        <Field errors={returnErrors(fid)} {...field} bind:value={$values[id][fid]}/>
+    {#each fids as fid (fid)}
+        <Field errors={returnErrors(fid)} {...fields[fid]} bind:value={$values[id][fid]}/>
     {/each}
 </section>

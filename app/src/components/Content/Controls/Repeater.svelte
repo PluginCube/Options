@@ -4,7 +4,7 @@
     export let errors;
 
     import { onDestroy, onMount, beforeUpdate, afterUpdate } from 'svelte'
-    import { arrayMove } from 'methods'
+    import { arrayMove, visiableFields } from 'methods'
     import { translation } from 'store'
 
     import Field from '../Field.svelte'
@@ -16,6 +16,8 @@
     let toggleItem = (item) => {
         activeItem === item ? activeItem = null : activeItem = item
     }
+
+    $: fids = activeItem ? visiableFields(options.fields, activeItem) : [];
 
     let addItem = () => {
         let item = {};
@@ -180,10 +182,8 @@
 
                 {#if activeItem === item}
                     <main>
-                        {#each Object.keys(item) as fid}
-                            {#if options.fields[fid]}
-                                <Field mini={true} errors={errors[fid]} {...options.fields[fid]} bind:value={value[i][fid]}/>
-                            {/if}
+                        {#each fids as fid}
+                            <Field animate={false} mini={true} errors={errors[fid]} {...options.fields[fid]} bind:value={value[i][fid]}/>
                         {/each}
                         
                         <button on:click={removeItem}>

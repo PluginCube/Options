@@ -75,6 +75,7 @@ $sample = new CiraPress\Framework([
                     'type' => 'image',
                     'title' => 'Image',
                     'default' => '',
+                    'condition' => ['switch', '===', true]
                 ],
                 'select' => [
                     'type' => 'select',
@@ -130,6 +131,7 @@ $sample = new CiraPress\Framework([
                                 'type' => 'icon',
                                 'title' => 'Icon',
                                 'default' => 'ri-building-3-line',
+                                'condition' => ['switch', '===', true]
                             ],
                             'multi_mini_input' => [
                                 'type' => 'multi-mini-input',
@@ -147,11 +149,7 @@ $sample = new CiraPress\Framework([
                                         ]
                                     ]
                                 ]
-                                        ],
-                            'typography' => [
-                                'type' => 'typography',
-                                'title' => 'Typography',
-                            ],        
+                            ],
                         ],
                     ]
                 ],

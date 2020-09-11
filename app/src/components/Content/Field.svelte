@@ -6,6 +6,9 @@
 	export let options = {}
     export let errors = undefined
     export let mini;
+    export let animate = true;
+
+    import { fade } from "svelte/transition";
 
     import Text from './Controls/Text'
     import Textarea from './Controls/Textarea'
@@ -110,7 +113,7 @@
     }
 </style>
 
-<div class:mini>
+<div transition:fade={{duration: animate ? 150 : 0}} class:mini>
     <header>
         {#if title}
             <span>{title}</span>
