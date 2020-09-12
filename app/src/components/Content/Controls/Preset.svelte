@@ -1,16 +1,15 @@
 <script>
-    export let value;
     export let options;
 
     import { translation, values } from 'store'
-    import { get } from 'svelte/store'
+
     import { save } from 'methods'
 
     import merge from 'deepmerge'
 
     let importDemo = async (data) => {
         if (confirm($translation.confirm)) {
-                let newData = merge(get(values), data);
+                let newData = merge($values, data);
 
                 values.set(newData);
                 

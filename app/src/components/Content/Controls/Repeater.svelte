@@ -4,20 +4,22 @@
     export let errors;
 
     import { onDestroy, onMount, beforeUpdate, afterUpdate } from 'svelte'
+
     import { arrayMove, visiableFields } from 'methods'
+
     import { translation } from 'store'
+    
+    import Field from '../Field'
 
-    import Field from '../Field.svelte'
-
-    let activeItem;
     let list;
+    let activeItem;
     let sortable;
+
+    $: fids = activeItem ? visiableFields(options.fields, activeItem) : [];
 
     let toggleItem = (item) => {
         activeItem === item ? activeItem = null : activeItem = item
     }
-
-    $: fids = activeItem ? visiableFields(options.fields, activeItem) : [];
 
     let addItem = () => {
         let item = {};
@@ -160,6 +162,7 @@
                     border-radius: 3px;
                     font-size: 12px;
                     cursor: pointer;
+                    padding-bottom: 1px;
                 }
             }
         }
@@ -195,7 +198,6 @@
         {/each}    
     </ul>    
 {/if}
-
 
 <button on:click={addItem} class="button button-primary">
     {$translation.add_item}

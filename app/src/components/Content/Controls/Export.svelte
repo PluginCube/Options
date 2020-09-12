@@ -2,6 +2,7 @@
     export let options;
     
     import { translation, values, id } from 'store'
+    
     import { saveAs } from 'file-saver'
 
     let download = () => {

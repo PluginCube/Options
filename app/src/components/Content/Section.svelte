@@ -4,9 +4,10 @@
     export let fields
 
     import { values, errors } from 'store'
+    
     import { visiableFields } from "methods"
 
-    import Field from './Field.svelte'
+    import Field from './Field'
 
     $: returnErrors = (fid) => {
         if ($errors[id] && $errors[id][fid]) {

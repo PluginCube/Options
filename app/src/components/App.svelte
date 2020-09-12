@@ -1,10 +1,13 @@
 <script>
     import { onMount } from 'svelte'
+
     import { activeSection, sections } from 'store'
 
-    import Header from './Header/Header.svelte'
-    import Navigation from './Navigation/Navigation.svelte'
-    import Content from './Content/Content.svelte'
+    import Header from './Header/Header'
+
+    import Navigation from './Navigation/Navigation'
+
+    import Content from './Content/Content'
 
     import 'remixicon/fonts/remixicon.css'
     
@@ -58,7 +61,6 @@
 
 <div>
     <Header />
-    {@debug window} 
 
     <main>
         <Navigation />

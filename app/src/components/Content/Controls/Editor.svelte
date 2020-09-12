@@ -4,8 +4,9 @@
     import { onMount, onDestroy } from 'svelte'
 
 
-    let id = 'x' + Math.random().toString(36).substr(2, 9);
     let editor = null;
+
+    let id = '_' + Math.random().toString(36).substr(2, 9);
 
     let initEditor = (edt) => {
         editor = edt;
@@ -22,7 +23,7 @@
     let options = {
         selector: '#' + id,
         menubar: false,
-        plugins: 'charmap,colorpicker,hr,lists,paste,tabfocus,textcolor,fullscreen,wordpress,wpautoresize,wpeditimage,wpemoji,wpgallery,wplink,wptextpattern,image',
+        plugins: 'charmap,hr,lists,paste,,fullscreen,wordpress,,wpemoji,,image',
         toolbar1: "formatselect,alignleft,aligncenter,alignright,alignjustify,bold,italic,bullist,numlist,image,link,fullscreen",
         wpeditimage_html5_captions: true,
         branding: false,
@@ -45,6 +46,11 @@
     :global {
         .mce-top-part::before {
             box-shadow: none !important;
+        }
+        
+        .mce-fullscreen {
+            z-index: 100010 !important;
+            --cf-border-radius: 0;
         }
 
         .mce-tinymce{

@@ -1,5 +1,6 @@
 <script>
-    import Section from './Section.svelte'
+    import Section from './Section'
+    
     import { sections, activeSection } from 'store'
 </script>
 

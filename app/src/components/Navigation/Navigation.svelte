@@ -1,11 +1,13 @@
 <script>
     import { menu } from 'store'
 
-    import Save from './Save.svelte'
+    import Save from './Save'
 
-    import Section from './Item/Section.svelte'
-    import Link from './Item/Link.svelte'
-    import Separator from './Item/Separator.svelte'
+    import Section from './Item/Section'
+
+    import Link from './Item/Link'
+    
+    import Separator from './Item/Separator'
 
     let types = {
         'section': Section,
@@ -14,18 +16,60 @@
     }
 </script>
 
-<style>
+<style lang="scss">
     nav {
         width: 185px;
         margin: 0;
         padding: 20px 0;
         float: left;
         box-sizing: border-box;
-    }
+    
+        ul {
+            margin: 0;
+            padding: 0;
 
-    ul {
-        margin: 0;
-        padding: 0;
+            :global > li {
+                float: left;
+                width: 100%;
+                margin: 0px 0px 5px 0px;
+
+                &.active a {
+                    color: var(--cf-brand);
+                    background: #d9dfe6;
+                }
+
+                a {
+                    color: var(--cf-primary-text);
+                    width: 100%;
+                    text-transform: capitalize;
+                    font-weight: 700;
+                    font-size: 14px;
+                    cursor: pointer;
+                    transition: .3s;
+                    position: relative;
+                    height: 34px;
+                    line-height: 38px;
+                    padding: 0px 12px;
+                    box-sizing: border-box;
+                    border-radius: var(--cf-border-radius);
+                    text-decoration: none;
+                    float: left;
+                    font-family: Josefin Sans,sans-serif;
+                    outline: none;
+                    box-shadow: none;
+                    letter-spacing: -.2px;
+                    
+                    i {
+                        float: left;
+                        margin-right: 12px;
+                        font-size: 17px;
+                        margin-top: 0px;
+                        line-height: 34px;
+                        font-weight: 100;
+                    }
+                }
+            }
+        }
     }
 </style>
 

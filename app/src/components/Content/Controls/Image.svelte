@@ -3,8 +3,9 @@
 
     import { translation } from 'store'
 
-    import Text from './Text.svelte'
-    import Button from '../../Comman/Button.svelte'
+    import Text from './Text'
+    
+    import Button from '../../Comman/Button'
 
     let select = () => {
         let frame;

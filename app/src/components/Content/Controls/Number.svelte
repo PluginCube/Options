@@ -2,7 +2,7 @@
     export let value;
     export let options;
 
-    if (typeof value == 'string') {
+    $: if (typeof value == 'string') {
         value = parseInt(value);
     }
 

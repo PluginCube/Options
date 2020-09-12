@@ -1,9 +1,10 @@
 <script>
-    export let style = null;
-    export let disabled = false;
+    export let style = null
+
+    export let disabled = false
 </script>
 
-<style>
+<style lang="scss">
     button {
         height: 33px;
         text-align: center;
@@ -16,11 +17,11 @@
         border: none;
         cursor: pointer;
         outline: none;
-    }
-
-    button:disabled {
-        cursor: auto;
-        opacity: 0.6;
+    
+        &:disabled {
+            cursor: auto;
+            opacity: 0.6;
+        }
     }
 </style>
 

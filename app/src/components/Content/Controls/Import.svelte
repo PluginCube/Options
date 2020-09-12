@@ -1,11 +1,13 @@
 <script>
     import { translation, values } from 'store'
+
     import { save } from 'methods'
+    
     import merge from 'deepmerge'
 
     let reader;
 
-    $: fileSelected = (e) => {
+    $: change = (e) => {
         let files = event.target.files;
 
         try {            
@@ -50,7 +52,7 @@
 </style>
 
 <label>
-    <input on:change={fileSelected} type="file" accept="application/json"/>
+    <input on:change={change} type="file" accept="application/json"/>
 
     <span class="button button-primary" type="input">
         {$translation.select_file}

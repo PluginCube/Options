@@ -4,7 +4,7 @@
 
     import SvelteTooltip from 'svelte-tooltip';
 
-    import Color from './Color.svelte'
+    import Color from './Color'
 </script>
 
 <style lang="scss">

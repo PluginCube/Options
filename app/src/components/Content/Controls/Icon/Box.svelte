@@ -5,9 +5,10 @@
 
     import categories from './tags.json'
 
-    import Header from './Header.svelte'
+    import Header from './Header'
 
     import PerfectScrollbar from 'perfect-scrollbar';
+
     import 'perfect-scrollbar/css/perfect-scrollbar.css'
 
     let box;
@@ -15,9 +16,6 @@
     
     let style = "fill";
     let category = "Weather";
-
-    const dispatch = createEventDispatcher();
-
 
     $: icons = Object.keys(categories[category]).map(i => {
         let icon;
@@ -45,7 +43,7 @@
     });
 </script>
 
-<style>
+<style lang="scss">
     div {
         position: absolute;
         margin-left: 65px;
@@ -58,35 +56,35 @@
         max-height: 260px;
         overflow: hidden;
         z-index: 9999;
-    }
 
-    ul {
-        border-radius: var(--cf-border-radius);
-        background: white;
-        width: 100%;
-        box-sizing: border-box;
-        padding: 10px;
-        max-height: 210px;
-        position: relative;
-    }
+        ul {
+            border-radius: var(--cf-border-radius);
+            background: white;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            max-height: 210px;
+            position: relative;
 
-    div ul li {
-        float: left;
-        margin: 4px;
-        width: calc(25% - 10px);
-        text-align: center;
-        line-height: 38px;
-        font-size: 14px;
-        color: var(--cf-primary-text);
-        border: var(--cf-control-border);
-        border-radius: var(--cf-border-radius);
-        transition: all 0.1s;
-        cursor: pointer;
-        padding-top: 1px;
-    }
-
-    div ul li:hover {
-        background-color: #eeeeeeba;
+            li {
+                float: left;
+                margin: 4px;
+                width: calc(25% - 10px);
+                text-align: center;
+                line-height: 38px;
+                font-size: 14px;
+                color: var(--cf-primary-text);
+                border: var(--cf-control-border);
+                border-radius: var(--cf-border-radius);
+                transition: all 0.1s;
+                cursor: pointer;
+                padding-top: 1px;
+                
+                &:hover {
+                    background-color: #eeeeeeba;
+                }
+            }
+        }
     }
 </style>
 
@@ -96,7 +94,7 @@
 
     <ul bind:this={box}>
         {#each icons as icon}
-            <li on:click={() => dispatch('update', icon)}>
+            <li on:click={() => createEventDispatcher()('update', icon)}>
                 <i class={icon}></i>  
             </li>
         {/each}

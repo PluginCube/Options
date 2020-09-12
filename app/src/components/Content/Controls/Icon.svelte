@@ -1,8 +1,9 @@
 <script>
     export let value;
 
-    import Box from './Icon/Box.svelte'
     import ClickOutside from 'svelte-click-outside'
+
+    import Box from './Icon/Box'
 
     let show = false;
 

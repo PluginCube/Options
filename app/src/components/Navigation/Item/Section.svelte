@@ -1,54 +1,10 @@
 <script>
-    import { activeSection } from 'store'
-
     export let id
     export let title
     export let icon
-</script>
-
-<style>
-    li {
-        float: left;
-        width: 100%;
-        margin: 0px 0px 5px 0px;
-    }
     
-    a {
-        color: var(--cf-primary-text);
-        width: 100%;
-        text-transform: capitalize;
-        font-weight: 700;
-        font-size: 14px;
-        cursor: pointer;
-        transition: .3s;
-        position: relative;
-        height: 34px;
-        line-height: 38px;
-        padding: 0px 12px;
-        box-sizing: border-box;
-        border-radius: var(--cf-border-radius);
-        text-decoration: none;
-        float: left;
-        font-family: Josefin Sans,sans-serif;
-        outline: none;
-        box-shadow: none;
-        letter-spacing: -.2px;
-    }
-
-    .active a {
-        color: var(--cf-brand);
-        background: #d9dfe6;
-    }
-
-    i {
-        float: left;
-        margin-right: 12px;
-        font-size: 17px;
-        margin-top: 0px;
-        line-height: 34px;
-        font-weight: 100;
-    }
-</style>
+    import { activeSection } from 'store'
+</script>
 
 <li class:active={$activeSection === id} on:click={() => activeSection.set(id)}>
     <a href="#{id}">

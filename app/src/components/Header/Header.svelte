@@ -1,6 +1,7 @@
 <script>
     import {titles, notifications} from 'store'
-    import Notification from './Notification.svelte'
+    
+    import Notification from './Notification'
 </script>
 
 <style>

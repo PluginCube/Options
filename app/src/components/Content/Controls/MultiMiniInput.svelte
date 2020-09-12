@@ -4,7 +4,7 @@
 
     import { beforeUpdate } from 'svelte'
 
-    import MiniInput from './MiniInput.svelte'
+    import MiniInput from './MiniInput'
     
     beforeUpdate(() => {
         if (! value) {

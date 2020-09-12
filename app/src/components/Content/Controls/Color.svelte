@@ -2,7 +2,9 @@
 	export let value;
     
     import { fade } from 'svelte/transition'
-    import ChromePicker from 'svelte-color/Chrome.svelte'
+
+    import ChromePicker from 'svelte-color/Chrome'
+    
     import ClickOutside from 'svelte-click-outside'
 
     let show = false;
