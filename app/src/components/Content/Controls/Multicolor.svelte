@@ -1,8 +1,8 @@
 <script>
-    export let value;
-    export let options;
+    export let value
+    export let options
 
-    import SvelteTooltip from 'svelte-tooltip';
+    import SvelteTooltip from 'svelte-tooltip'
 
     import Color from './Color'
 </script>
@@ -17,8 +17,8 @@
             float: left;
             margin-right: 10px;
             color: var(--cf-secondary-text);
-            
-            &:global .tooltip{
+
+            &:global .tooltip {
                 box-shadow: var(--cf-box-shadow);
                 visibility: visible;
             }
@@ -29,8 +29,8 @@
 <ul>
     {#each options.choices as choice}
         <li>
-            <SvelteTooltip tip={choice.title} color="#ffffff" top >
-                <Color bind:value={value[choice.id]}/>
+            <SvelteTooltip tip={choice.title} color="#ffffff" top>
+                <Color bind:value={value[choice.id]} />
             </SvelteTooltip>
         </li>
     {/each}

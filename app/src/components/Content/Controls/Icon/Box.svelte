@@ -1,5 +1,10 @@
 <script>
-    import { onMount, onDestroy, afterUpdate, createEventDispatcher } from 'svelte'
+    import {
+        onMount,
+        onDestroy,
+        afterUpdate,
+        createEventDispatcher,
+    } from 'svelte'
 
     import { fade } from 'svelte/transition'
 
@@ -7,40 +12,40 @@
 
     import Header from './Header'
 
-    import PerfectScrollbar from 'perfect-scrollbar';
+    import PerfectScrollbar from 'perfect-scrollbar'
 
     import 'perfect-scrollbar/css/perfect-scrollbar.css'
 
-    let box;
-    let ps;
-    
-    let style = "fill";
-    let category = "Weather";
+    let box
+    let ps
 
-    $: icons = Object.keys(categories[category]).map(i => {
-        let icon;
+    let style = 'fill'
+    let category = 'Weather'
+
+    $: icons = Object.keys(categories[category]).map((i) => {
+        let icon
 
         if (category == 'Editor') {
-            icon = `ri-${i}`;
+            icon = `ri-${i}`
         } else {
-            icon = `ri-${i}-${style}`;
+            icon = `ri-${i}-${style}`
         }
 
-        return icon;
-    });
+        return icon
+    })
 
     onMount(() => {
-        ps = new PerfectScrollbar(box);
-    });
+        ps = new PerfectScrollbar(box)
+    })
 
     afterUpdate(() => {
-        ps.update();
-    });
+        ps.update()
+    })
 
     onDestroy(() => {
-        ps.destroy();
-        ps = null;
-    });
+        ps.destroy()
+        ps = null
+    })
 </script>
 
 <style lang="scss">
@@ -79,7 +84,7 @@
                 transition: all 0.1s;
                 cursor: pointer;
                 padding-top: 1px;
-                
+
                 &:hover {
                     background-color: #eeeeeeba;
                 }
@@ -88,14 +93,13 @@
     }
 </style>
 
-
-<div transition:fade={{duration: 50}}>
-    <Header bind:style bind:category categories={Object.keys(categories)}/>
+<div transition:fade={{ duration: 50 }}>
+    <Header bind:style bind:category categories={Object.keys(categories)} />
 
     <ul bind:this={box}>
         {#each icons as icon}
             <li on:click={() => createEventDispatcher()('update', icon)}>
-                <i class={icon}></i>  
+                <i class={icon} />
             </li>
         {/each}
     </ul>

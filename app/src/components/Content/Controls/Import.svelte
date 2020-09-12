@@ -2,41 +2,39 @@
     import { translation, values } from 'store'
 
     import { save } from 'methods'
-    
+
     import merge from 'deepmerge'
 
-    let reader;
+    let reader
 
     $: change = (e) => {
-        let files = event.target.files;
+        let files = event.target.files
 
-        try {            
-            if ( ! files.length ) {
-                alert($translation.no_file_selected);
-                return;
+        try {
+            if (!files.length) {
+                alert($translation.no_file_selected)
+                return
             }
 
-            let file = files[0];
-            reader = new FileReader();
+            let file = files[0]
+            reader = new FileReader()
 
             reader.onload = (event) => {
-                let data = merge($values, JSON.parse(event.target.result));
+                let data = merge($values, JSON.parse(event.target.result))
 
-                if( confirm($translation.override_warning) ){
-                    values.set(data);
+                if (confirm($translation.override_warning)) {
+                    values.set(data)
                     jQuery('#cf nav > button').click()
                 }
 
-                e.target.value = '';
-            };
+                e.target.value = ''
+            }
 
-            reader.readAsText(file);
-
-
+            reader.readAsText(file)
         } catch (err) {
-            console.error(err);
-        }    
-    };
+            console.error(err)
+        }
+    }
 </script>
 
 <style lang="scss">
@@ -52,7 +50,7 @@
 </style>
 
 <label>
-    <input on:change={change} type="file" accept="application/json"/>
+    <input on:change={change} type="file" accept="application/json" />
 
     <span class="button button-primary" type="input">
         {$translation.select_file}

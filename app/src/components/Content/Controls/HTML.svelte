@@ -1,5 +1,5 @@
 <script>
-    export let options;
+    export let options
 </script>
 
 {@html options.content}

@@ -6,13 +6,13 @@
     import Section from './Item/Section'
 
     import Link from './Item/Link'
-    
+
     import Separator from './Item/Separator'
 
     let types = {
-        'section': Section,
-        'link': Link,
-        'separator': Separator
+        section: Section,
+        link: Link,
+        separator: Separator,
     }
 </script>
 
@@ -23,7 +23,7 @@
         padding: 20px 0;
         float: left;
         box-sizing: border-box;
-    
+
         ul {
             margin: 0;
             padding: 0;
@@ -45,7 +45,7 @@
                     font-weight: 700;
                     font-size: 14px;
                     cursor: pointer;
-                    transition: .3s;
+                    transition: 0.3s;
                     position: relative;
                     height: 34px;
                     line-height: 38px;
@@ -54,11 +54,11 @@
                     border-radius: var(--cf-border-radius);
                     text-decoration: none;
                     float: left;
-                    font-family: Josefin Sans,sans-serif;
+                    font-family: Josefin Sans, sans-serif;
                     outline: none;
                     box-shadow: none;
-                    letter-spacing: -.2px;
-                    
+                    letter-spacing: -0.2px;
+
                     i {
                         float: left;
                         margin-right: 12px;
@@ -76,9 +76,9 @@
 <nav>
     <ul>
         {#each $menu as item}
-            <svelte:component this={types[item.type]} {...item}/>
+            <svelte:component this={types[item.type]} {...item} />
         {/each}
     </ul>
-    
+
     <Save />
 </nav>

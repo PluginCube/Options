@@ -1,45 +1,44 @@
 <script>
-    export let value;
-    
+    export let value
+
     import { onMount, onDestroy } from 'svelte'
 
+    let editor = null
 
-    let editor = null;
-
-    let id = '_' + Math.random().toString(36).substr(2, 9);
+    let id = '_' + Math.random().toString(36).substr(2, 9)
 
     let initEditor = (edt) => {
-        editor = edt;
+        editor = edt
 
         editor.on('KeyUp Change Undo Redo paste', (e) => {
             value = editor.getContent()
-        });
+        })
 
         editor.on('init', (e) => {
-            editor.setContent(value);
-        });
+            editor.setContent(value)
+        })
     }
 
     let options = {
         selector: '#' + id,
         menubar: false,
         plugins: 'charmap,hr,lists,paste,,fullscreen,wordpress,,wpemoji,,image',
-        toolbar1: "formatselect,alignleft,aligncenter,alignright,alignjustify,bold,italic,bullist,numlist,image,link,fullscreen",
+        toolbar1:
+            'formatselect,alignleft,aligncenter,alignright,alignjustify,bold,italic,bullist,numlist,image,link,fullscreen',
         wpeditimage_html5_captions: true,
         branding: false,
-        init_instance_callback : initEditor
-    };
-
+        init_instance_callback: initEditor,
+    }
 
     onMount(() => {
-        setTimeout(() => tinymce.init(options), 300);
-    });
+        setTimeout(() => tinymce.init(options), 300)
+    })
 
     onDestroy(() => {
         if (editor) {
-            editor.destroy();
+            editor.destroy()
         }
-    });
+    })
 </script>
 
 <style lang="scss">
@@ -47,13 +46,13 @@
         .mce-top-part::before {
             box-shadow: none !important;
         }
-        
+
         .mce-fullscreen {
             z-index: 100010 !important;
             --cf-border-radius: 0;
         }
 
-        .mce-tinymce{
+        .mce-tinymce {
             box-shadow: var(--cf-box-shadow) !important;
             border-radius: var(--cf-border-radius);
             overflow: hidden;
@@ -71,10 +70,10 @@
             position: relative !important;
         }
 
-        .mce-btn-group:not(:first-child){
+        .mce-btn-group:not(:first-child) {
             border: none !important;
         }
     }
 </style>
 
-<textarea id={id}>{value}</textarea>
+<textarea {id}>{value}</textarea>

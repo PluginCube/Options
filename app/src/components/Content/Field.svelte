@@ -1,14 +1,14 @@
 <script>
-	export let type
-	export let value
-	export let title = null
-	export let description = undefined
-	export let options = {}
+    export let type
+    export let value
+    export let title = null
+    export let description = undefined
+    export let options = {}
     export let errors = undefined
-    export let mini;
-    export let animate = true;
+    export let mini
+    export let animate = true
 
-    import { fade } from "svelte/transition";
+    import { fade } from 'svelte/transition'
 
     import Text from './Controls/Text'
     import Textarea from './Controls/Textarea'
@@ -32,29 +32,28 @@
     import Typography from './Controls/Typography'
 
     let types = {
-        'text': Text,
-        'textarea': Textarea,
-        'number': Number,
-        'switch': Switch,
-        'select': Select,
-        'image': Image,
-        'color': Color,
-        'icon': Icon,
-        'editor': Editor,
-        'repeater': Repeater,
+        text: Text,
+        textarea: Textarea,
+        number: Number,
+        switch: Switch,
+        select: Select,
+        image: Image,
+        color: Color,
+        icon: Icon,
+        editor: Editor,
+        repeater: Repeater,
+        export: Export,
+        import: Import,
+        html: HTML,
+        preset: Preset,
         'radio-image': RadioImage,
-        'export': Export,
-        'import': Import,
-        'html': HTML,
-        'preset': Preset,
         'multi-color': Multicolor,
         'mini-input': MiniInput,
-        'multi-mini-input' :MultiMiniInput,
+        'multi-mini-input': MultiMiniInput,
         'radio-icon': RadioIcon,
-        'typography': Typography
-    };
+        typography: Typography,
+    }
 </script>
-
 
 <style lang="scss">
     div {
@@ -69,7 +68,7 @@
             font-size: 14px;
             color: var(--cf-primary-text);
             margin-right: 15%;
-            
+
             p {
                 font-size: 12px;
                 line-height: 22px;
@@ -82,7 +81,7 @@
         main {
             float: left;
             width: 50%;
-            
+
             p {
                 color: red;
             }
@@ -97,7 +96,7 @@
                 width: fit-content;
                 max-width: 100%;
             }
-            
+
             header {
                 float: left;
                 width: fit-content;
@@ -112,24 +111,22 @@
     }
 </style>
 
-<div transition:fade={{duration: animate ? 150 : 0}} class:mini>
+<div transition:fade={{ duration: animate ? 150 : 0 }} class:mini>
     <header>
-        {#if title}
-            <span>{title}</span>
-        {/if}
-        
+        {#if title}<span>{title}</span>{/if}
+
         {#if description}
             <p>{description}</p>
         {/if}
     </header>
 
     <main>
-        <svelte:component this={types[type]} {errors} bind:value bind:options/>
+        <svelte:component this={types[type]} {errors} bind:value bind:options />
 
         {#if errors}
             {#each errors as error}
-                <p>{error}</p>   
+                <p>{error}</p>
             {/each}
         {/if}
-	</main>
+    </main>
 </div>

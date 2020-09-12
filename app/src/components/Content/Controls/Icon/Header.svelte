@@ -13,7 +13,6 @@
         padding: 10px 14px;
         box-sizing: border-box;
         border-bottom: 1px solid #eeeeee9c;
-
     }
 
     div select {
@@ -31,7 +30,7 @@
         border-radius: var(--cf-border-radius);
     }
 
-    div select:last-of-type{
+    div select:last-of-type {
         width: 65px;
         float: right;
     }
@@ -40,19 +39,13 @@
 <div>
     <select bind:value={category}>
         {#each categories as cat}
-            <option value={cat}>
-                {cat}
-            </option>
+            <option value={cat}>{cat}</option>
         {/each}
     </select>
 
     <select bind:value={style}>
-        <option value="fill">
-            Fill
-        </option>
+        <option value="fill">Fill</option>
 
-        <option value="line">
-            Line
-        </option>
+        <option value="line">Line</option>
     </select>
 </div>

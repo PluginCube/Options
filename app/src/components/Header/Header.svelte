@@ -1,6 +1,6 @@
 <script>
-    import {titles, notifications} from 'store'
-    
+    import { titles, notifications } from 'store'
+
     import Notification from './Notification'
 </script>
 
@@ -10,7 +10,7 @@
         float: left;
         margin: 15px 0;
         line-height: normal;
-        font-family: Josefin Sans,sans-serif;
+        font-family: Josefin Sans, sans-serif;
         font-weight: bold;
         font-size: 27px;
     }
@@ -19,7 +19,7 @@
         z-index: 9999999;
         margin: 0;
         padding: 0;
-        transition: all .3s;
+        transition: all 0.3s;
         position: fixed;
         float: right;
         width: inherit;
@@ -32,7 +32,7 @@
 
     <ul>
         {#each $notifications as item}
-            <Notification {...item}/>
+            <Notification {...item} />
         {/each}
     </ul>
 </header>

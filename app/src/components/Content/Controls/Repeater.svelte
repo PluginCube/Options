@@ -1,84 +1,84 @@
 <script>
-	export let value = [];
-    export let options;
-    export let errors;
+    export let value = []
+    export let options
+    export let errors
 
     import { onDestroy, onMount, beforeUpdate, afterUpdate } from 'svelte'
 
     import { arrayMove, visiableFields } from 'methods'
 
     import { translation } from 'store'
-    
+
     import Field from '../Field'
 
-    let list;
-    let activeItem;
-    let sortable;
+    let list
+    let activeItem
+    let sortable
 
-    $: fids = activeItem ? visiableFields(options.fields, activeItem) : [];
+    $: fids = activeItem ? visiableFields(options.fields, activeItem) : []
 
     let toggleItem = (item) => {
-        activeItem === item ? activeItem = null : activeItem = item
+        activeItem === item ? (activeItem = null) : (activeItem = item)
     }
 
     let addItem = () => {
-        let item = {};
+        let item = {}
 
-        Object.keys(options.fields).forEach(id => {
+        Object.keys(options.fields).forEach((id) => {
             let field = options.fields[id]
             let value = field['default'] ? field['default'] : null
             item[id] = value
-        });
+        })
 
         value = [...value, item]
     }
 
     let removeItem = () => {
         if (confirm($translation.confirm)) {
-            value = value.filter(i => i !== activeItem)
+            value = value.filter((i) => i !== activeItem)
         }
     }
 
     let initSortable = () => {
         sortable = jQuery(list).sortable({
             handle: 'header > svg',
-            start: function( event, ui ) {
-                jQuery(this).attr('data-previndex', ui.item.index());
+            start: function (event, ui) {
+                jQuery(this).attr('data-previndex', ui.item.index())
             },
-            update: function( event, ui ) {
-                let from = parseInt(jQuery(this).attr('data-previndex'));
-                let to = ui.item.index();
+            update: function (event, ui) {
+                let from = parseInt(jQuery(this).attr('data-previndex'))
+                let to = ui.item.index()
 
-                value = arrayMove(value, from, to);
-            }
-        });
+                value = arrayMove(value, from, to)
+            },
+        })
     }
 
     let destroySortable = () => {
-        jQuery(list).sortable('destroy');
+        jQuery(list).sortable('destroy')
     }
 
     onMount(() => {
         if (value.length) {
-            initSortable();
+            initSortable()
         }
-    });
+    })
 
     onDestroy(() => {
-        destroySortable();
-    });
+        destroySortable()
+    })
 
     beforeUpdate(() => {
         if (typeof value == 'undefined') {
-            value = [];
+            value = []
         }
     })
 
     afterUpdate(() => {
         if (value.length) {
-            initSortable();
+            initSortable()
         }
-    });
+    })
 </script>
 
 <style lang="scss">
@@ -98,7 +98,7 @@
             overflow: hidden;
             margin-right: auto;
             border: var(--cf-control-border);
-            
+
             header {
                 padding: 0px 15px;
                 position: relative;
@@ -151,7 +151,7 @@
                 float: left;
                 width: 100%;
                 box-sizing: border-box;
-                --cf-box-shadow: 0px 2px 3px rgba(0,0,0, 0.05);
+                --cf-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.05);
 
                 button {
                     background: #ff0000;
@@ -175,28 +175,38 @@
             <li>
                 <header on:click={() => toggleItem(item)}>
                     <svg viewBox="0 0 10 10">
-                        <path d="M3,2 C2.44771525,2 2,1.55228475 2,1 C2,0.44771525 2.44771525,0 3,0 C3.55228475,0 4,0.44771525 4,1 C4,1.55228475 3.55228475,2 3,2 Z M3,6 C2.44771525,6 2,5.55228475 2,5 C2,4.44771525 2.44771525,4 3,4 C3.55228475,4 4,4.44771525 4,5 C4,5.55228475 3.55228475,6 3,6 Z M3,10 C2.44771525,10 2,9.55228475 2,9 C2,8.44771525 2.44771525,8 3,8 C3.55228475,8 4,8.44771525 4,9 C4,9.55228475 3.55228475,10 3,10 Z M7,2 C6.44771525,2 6,1.55228475 6,1 C6,0.44771525 6.44771525,0 7,0 C7.55228475,0 8,0.44771525 8,1 C8,1.55228475 7.55228475,2 7,2 Z M7,6 C6.44771525,6 6,5.55228475 6,5 C6,4.44771525 6.44771525,4 7,4 C7.55228475,4 8,4.44771525 8,5 C8,5.55228475 7.55228475,6 7,6 Z M7,10 C6.44771525,10 6,9.55228475 6,9 C6,8.44771525 6.44771525,8 7,8 C7.55228475,8 8,8.44771525 8,9 C8,9.55228475 7.55228475,10 7,10 Z"></path>
+                        <path
+                            d="M3,2 C2.44771525,2 2,1.55228475 2,1 C2,0.44771525 2.44771525,0 3,0 C3.55228475,0 4,0.44771525 4,1 C4,1.55228475 3.55228475,2 3,2 Z M3,6 C2.44771525,6 2,5.55228475 2,5 C2,4.44771525 2.44771525,4 3,4 C3.55228475,4 4,4.44771525 4,5 C4,5.55228475 3.55228475,6 3,6 Z M3,10 C2.44771525,10 2,9.55228475 2,9 C2,8.44771525 2.44771525,8 3,8 C3.55228475,8 4,8.44771525 4,9 C4,9.55228475 3.55228475,10 3,10 Z M7,2 C6.44771525,2 6,1.55228475 6,1 C6,0.44771525 6.44771525,0 7,0 C7.55228475,0 8,0.44771525 8,1 C8,1.55228475 7.55228475,2 7,2 Z M7,6 C6.44771525,6 6,5.55228475 6,5 C6,4.44771525 6.44771525,4 7,4 C7.55228475,4 8,4.44771525 8,5 C8,5.55228475 7.55228475,6 7,6 Z M7,10 C6.44771525,10 6,9.55228475 6,9 C6,8.44771525 6.44771525,8 7,8 C7.55228475,8 8,8.44771525 8,9 C8,9.55228475 7.55228475,10 7,10 Z"
+                        />
                     </svg>
 
                     <span>{item[Object.keys(item)[0]]}</span>
 
-                    <i class={activeItem === item ? "ri-arrow-up-s-fill" : "ri-arrow-down-s-fill"}></i>
+                    <i
+                        class={activeItem === item ? 'ri-arrow-up-s-fill' : 'ri-arrow-down-s-fill'}
+                    />
                 </header>
 
                 {#if activeItem === item}
                     <main>
                         {#each fids as fid}
-                            <Field animate={false} mini={true} errors={errors[fid]} {...options.fields[fid]} bind:value={value[i][fid]}/>
+                            <Field
+                                animate={false}
+                                mini={true}
+                                errors={errors[fid]}
+                                {...options.fields[fid]}
+                                bind:value={value[i][fid]}
+                            />
                         {/each}
-                        
+
                         <button on:click={removeItem}>
                             {$translation.remove}
                         </button>
                     </main>
                 {/if}
             </li>
-        {/each}    
-    </ul>    
+        {/each}
+    </ul>
 {/if}
 
 <button on:click={addItem} class="button button-primary">

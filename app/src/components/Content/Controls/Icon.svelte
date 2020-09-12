@@ -1,19 +1,19 @@
 <script>
-    export let value;
+    export let value
 
     import ClickOutside from 'svelte-click-outside'
 
     import Box from './Icon/Box'
 
-    let show = false;
+    let show = false
 
     let toggle = () => {
-        show = !show;
+        show = !show
     }
 
     let update = (e) => {
-        value = e.detail;
-        toggle();
+        value = e.detail
+        toggle()
     }
 </script>
 
@@ -36,17 +36,14 @@
     }
 </style>
 
-
-<ClickOutside on:clickoutside={() => {show = false}}>
-
+<ClickOutside
+    on:clickoutside={() => {
+        show = false
+    }}
+>
     <button on:click={toggle}>
-        {#if value}
-            <i class={value}></i>
-        {:else}
-            <i class="ri-add-fill"></i>
-        {/if}
+        {#if value}<i class={value} />{:else}<i class="ri-add-fill" />{/if}
     </button>
-    
 
     {#if show}
         <Box {value} on:update={update} />

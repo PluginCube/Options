@@ -4,20 +4,20 @@
     export let fields
 
     import { values, errors } from 'store'
-    
-    import { visiableFields } from "methods"
+
+    import { visiableFields } from 'methods'
 
     import Field from './Field'
 
     $: returnErrors = (fid) => {
         if ($errors[id] && $errors[id][fid]) {
-            return $errors[id][fid];
+            return $errors[id][fid]
         }
 
-        return false;
+        return false
     }
 
-    $: fids = visiableFields(fields, $values[id]);
+    $: fids = visiableFields(fields, $values[id])
 </script>
 
 <style>
@@ -36,6 +36,10 @@
     <h2>{title}</h2>
 
     {#each fids as fid (fid)}
-        <Field errors={returnErrors(fid)} {...fields[fid]} bind:value={$values[id][fid]}/>
+        <Field
+            errors={returnErrors(fid)}
+            {...fields[fid]}
+            bind:value={$values[id][fid]}
+        />
     {/each}
 </section>

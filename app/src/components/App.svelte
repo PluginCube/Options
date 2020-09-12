@@ -10,16 +10,16 @@
     import Content from './Content/Content'
 
     import 'remixicon/fonts/remixicon.css'
-    
+
     onMount(() => {
-        let hash = location.hash.slice(1);
+        let hash = location.hash.slice(1)
 
         if (hash) {
-            activeSection.set(hash);
+            activeSection.set(hash)
         } else {
-            activeSection.set(Object.keys($sections)[0]);
+            activeSection.set(Object.keys($sections)[0])
         }
-    });
+    })
 </script>
 
 <style lang="scss">
@@ -27,7 +27,7 @@
         --cf-brand: #4c47ff;
         --cf-primary-text: #23282d;
         --cf-secondary-text: #666666;
-        --cf-box-shadow: 0px 3px 7px rgba(0,0,0, 0.03);
+        --cf-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.03);
         --cf-border-radius: 5px;
         --cf-control-border: 1px solid #eeeeee;
 
@@ -50,13 +50,13 @@
         #wpcontent {
             padding: 0px;
         }
-        
+
         div#wpfooter {
             display: none;
         }
     }
 
-    @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700");
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700');
 </style>
 
 <div>

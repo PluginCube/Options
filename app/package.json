@@ -5,7 +5,8 @@
   "scripts": {
     "postinstall": "cd ./node_modules/svelte-color && npm install && npm run build",
     "build": "cross-env NODE_ENV=production webpack",
-    "dev": "webpack"
+    "dev": "webpack",
+    "prettier": "prettier --write ./**/*.svelte | awk '{ print $1 }' | xargs -I{} truncate -s -1 {}"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +20,8 @@
     "mini-css-extract-plugin": "^0.6.0",
     "node-sass": "^4.14.1",
     "perfect-scrollbar": "^1.5.0",
+    "prettier": "2.1.1",
+    "prettier-plugin-svelte": "^1.2.1",
     "remixicon": "^2.5.0",
     "style-loader": "^0.23.1",
     "svelte": "^3.0.0",

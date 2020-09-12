@@ -19,10 +19,8 @@
     }
 </style>
 
-<select bind:value={value}>
+<select bind:value>
     {#each options.choices as choice}
-        <option value={choice.id}>
-            {choice.title}
-        </option>
+        <option value={choice.id}>{choice.title}</option>
     {/each}
 </select>

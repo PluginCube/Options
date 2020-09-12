@@ -1,15 +1,18 @@
 <script>
-    export let value = '';
-    export let options = {};
+    export let value = ''
+    export let options = {}
 
     import merge from 'deepmerge'
 
-    $: options = merge({
-        icon: 'ri-page-separator',
-        type: 'text'
-    }, options)
+    $: options = merge(
+        {
+            icon: 'ri-page-separator',
+            type: 'text',
+        },
+        options
+    )
 
-    let input;
+    let input
 </script>
 
 <style lang="scss">
@@ -49,10 +52,9 @@
             margin: 0;
         }
     }
-
 </style>
 
 <div>
-    <i class={options.icon} on:click={() => input.focus()}></i>   
-    <input bind:value {...options} bind:this={input}>
+    <i class={options.icon} on:click={() => input.focus()} />
+    <input bind:value {...options} bind:this={input} />
 </div>

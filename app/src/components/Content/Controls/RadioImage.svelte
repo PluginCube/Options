@@ -1,63 +1,68 @@
 <script>
-	export let value;
-	export let options;
+    export let value
+    export let options
 
-	import SvelteTooltip from 'svelte-tooltip';
+    import SvelteTooltip from 'svelte-tooltip'
 </script>
 
 <style lang="scss">
-	ul {
-		float: left;
-		margin: -5px -10px -5px 0px;
-		padding: 0;
+    ul {
+        float: left;
+        margin: -5px -10px -5px 0px;
+        padding: 0;
 
-		li {
-			float: left;
-			max-width: calc(25% - 10px);
-			margin: 5px 10px 5px 0px;
-			box-sizing: border-box;
-			display: block;
-			padding: 0;
-			cursor: pointer;
-			border-radius: 10px;
+        li {
+            float: left;
+            max-width: calc(25% - 10px);
+            margin: 5px 10px 5px 0px;
+            box-sizing: border-box;
+            display: block;
+            padding: 0;
+            cursor: pointer;
+            border-radius: 10px;
 
             & :global {
                 .tooltip-wrapper {
                     float: left;
                 }
 
-                .tooltip{
+                .tooltip {
                     box-shadow: var(--cf-box-shadow);
-                } 
-            } 
+                }
+            }
 
-			img {
-				float: left;
-				max-width: 100%;
-			}
+            img {
+                float: left;
+                max-width: 100%;
+            }
 
-			span {
-				font-size: 10px;
-				float: left;
-				margin: 5px 0px;
-				color: var(--cf-secondary-text);
-			}
+            span {
+                font-size: 10px;
+                float: left;
+                margin: 5px 0px;
+                color: var(--cf-secondary-text);
+            }
 
-			&.selected img {
-				float: left;
-				box-sizing: border-box;
-				outline: 3px solid #ccc;
-			}
-		}
-	}
+            &.selected img {
+                float: left;
+                box-sizing: border-box;
+                outline: 3px solid #ccc;
+            }
+        }
+    }
 </style>
 
 <ul>
-	{#each options.choices as choice}
-		<li class:selected={choice.id === value} on:click={() => {value = choice.id}}>
-			<SvelteTooltip tip={choice.title} color="#ffffff" top>
-				<img src={choice.img} alt={choice.title}>
-			</SvelteTooltip>
-		</li>
-	{/each}	
+    {#each options.choices as choice}
+        <li
+            class:selected={choice.id === value}
+            on:click={() => {
+                value = choice.id
+            }}
+        >
+            <SvelteTooltip tip={choice.title} color="#ffffff" top>
+                <img src={choice.img} alt={choice.title} />
+            </SvelteTooltip>
+        </li>
+    {/each}
 </ul>

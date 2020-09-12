@@ -1,16 +1,16 @@
 <script>
-	export let value;
-    
+    export let value
+
     import { fade } from 'svelte/transition'
 
     import ChromePicker from 'svelte-color/Chrome'
-    
+
     import ClickOutside from 'svelte-click-outside'
 
-    let show = false;
+    let show = false
 
     let change = (event) => {
-        let {r, g, b, a} = event.detail;
+        let { r, g, b, a } = event.detail
 
         value = `rgba(${r}, ${g}, ${b}, ${a})`
     }
@@ -33,17 +33,26 @@
         border-radius: 3px;
         overflow: hidden;
         margin-bottom: 40px;
-        box-shadow: 0px 0px 30px rgba(0,0,0, 0.1);
+        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
         z-index: 9999;
     }
 </style>
 
-<ClickOutside on:clickoutside={() => {show = false}}>
-    <span {style} on:click={() => {show = !show}}></span>
+<ClickOutside
+    on:clickoutside={() => {
+        show = false
+    }}
+>
+    <span
+        {style}
+        on:click={() => {
+            show = !show
+        }}
+    />
 
     {#if show}
-        <div transition:fade={{duration: 100}}>
-            <ChromePicker on:input={change} startColor={value}/>
-        </div>    
+        <div transition:fade={{ duration: 100 }}>
+            <ChromePicker on:input={change} startColor={value} />
+        </div>
     {/if}
 </ClickOutside>

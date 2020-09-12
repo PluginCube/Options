@@ -1,6 +1,5 @@
 <script>
     import Section from './Section'
-    
     import { sections, activeSection } from 'store'
 </script>
 
@@ -17,7 +16,7 @@
 <div>
     {#each Object.entries($sections) as [id, section]}
         {#if $activeSection == id}
-            <Section {id} {... section}/>   
+            <Section {id} {...section} />
         {/if}
-    {/each}    
+    {/each}
 </div>

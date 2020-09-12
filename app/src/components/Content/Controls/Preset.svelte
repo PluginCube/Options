@@ -1,5 +1,5 @@
 <script>
-    export let options;
+    export let options
 
     import { translation, values } from 'store'
 
@@ -9,26 +9,26 @@
 
     let importDemo = async (data) => {
         if (confirm($translation.confirm)) {
-                let newData = merge($values, data);
+            let newData = merge($values, data)
 
-                values.set(newData);
-                
-                await save();
+            values.set(newData)
 
-                if (options.reload) {
-                    location.reload()
-                }
+            await save()
+
+            if (options.reload) {
+                location.reload()
             }
+        }
     }
 </script>
 
 <style lang="scss">
     ul {
-		float: left;
-		margin: 0px -10px 0px 0px;
-		padding: 0;
+        float: left;
+        margin: 0px -10px 0px 0px;
+        padding: 0;
 
-		li {
+        li {
             float: left;
             max-width: calc(50% - 10px);
             margin: 0px 10px 10px 0px;
@@ -40,10 +40,10 @@
             overflow: hidden;
             box-shadow: var(--cf-box-shadow);
 
-			img {
-				float: left;
-				max-width: 100%;
-			}
+            img {
+                float: left;
+                max-width: 100%;
+            }
 
             div {
                 padding: 10px;
@@ -64,24 +64,25 @@
                     float: right;
                 }
             }
-		}
-	}
+        }
+    }
 </style>
 
 <ul>
     {#each options.presets as preset}
         <li>
-            <img src={preset.img} alt={preset.title}>
-            
+            <img src={preset.img} alt={preset.title} />
+
             <div>
-                {#if preset.title}
-                    <span>{preset.title}</span>
-                {/if}
-                
-                <button class="button button-primary button-small" on:click={() => importDemo(preset.data)}>
+                {#if preset.title}<span>{preset.title}</span>{/if}
+
+                <button
+                    class="button button-primary button-small"
+                    on:click={() => importDemo(preset.data)}
+                >
                     {$translation.import}
                 </button>
             </div>
         </li>
-    {/each}    
+    {/each}
 </ul>

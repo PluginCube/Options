@@ -1,6 +1,5 @@
 <script>
     export let style = null
-
     export let disabled = false
 </script>
 
@@ -17,7 +16,7 @@
         border: none;
         cursor: pointer;
         outline: none;
-    
+
         &:disabled {
             cursor: auto;
             opacity: 0.6;

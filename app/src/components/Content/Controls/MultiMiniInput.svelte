@@ -1,14 +1,14 @@
 <script>
-    export let value = {};
-    export let options;
+    export let value = {}
+    export let options
 
     import { beforeUpdate } from 'svelte'
 
     import MiniInput from './MiniInput'
-    
+
     beforeUpdate(() => {
-        if (! value) {
-            value = {};
+        if (!value) {
+            value = {}
         }
     })
 </script>

@@ -20,6 +20,4 @@
     }
 </style>
 
-<li>
-    <span>{title}</span>
-</li>
+<li><span>{title}</span></li>

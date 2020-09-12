@@ -1,6 +1,6 @@
 <script>
     import { translation } from 'store'
-    
+
     import { save } from 'methods'
 
     import Button from '../Comman/Button'
@@ -10,9 +10,9 @@
     let disabled = false
 
     let handleSave = async () => {
-        disabled = true;
-        await save();
-        disabled = false;
+        disabled = true
+        await save()
+        disabled = false
     }
 </script>
 

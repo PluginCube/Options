@@ -1,24 +1,24 @@
 <script>
-    export let value;
-    export let options;
+    export let value
+    export let options
 
     $: if (typeof value == 'string') {
-        value = parseInt(value);
+        value = parseInt(value)
     }
 
     let increase = () => {
-        if (! value) {
-            value = 0;
+        if (!value) {
+            value = 0
         }
-        value = value + 1;
+        value = value + 1
     }
 
     let decrease = () => {
-        if (! value) {
-            value = 0;
+        if (!value) {
+            value = 0
         }
 
-        value = value - 1;
+        value = value - 1
     }
 </script>
 
@@ -60,7 +60,7 @@
                 background: #f1f4f6;
             }
 
-            &:first-of-type{
+            &:first-of-type {
                 top: -1px;
                 border-top: 0;
             }
@@ -74,8 +74,8 @@
 </style>
 
 <div>
-    <i class="ri-arrow-drop-up-fill" on:click={increase}></i>
-    <i class="ri-arrow-drop-down-fill" on:click={decrease}></i>
-    
-    <input type="number" bind:value {...options}>
+    <i class="ri-arrow-drop-up-fill" on:click={increase} />
+    <i class="ri-arrow-drop-down-fill" on:click={decrease} />
+
+    <input type="number" bind:value {...options} />
 </div>
