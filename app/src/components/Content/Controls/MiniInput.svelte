@@ -7,7 +7,9 @@
     $: options = merge(
         {
             icon: 'ri-page-separator',
-            type: 'text',
+            attributes: {
+                type: 'text',
+            },
         },
         options
     )
@@ -56,5 +58,5 @@
 
 <div>
     <i class={options.icon} on:click={() => input.focus()} />
-    <input bind:value {...options} bind:this={input} />
+    <input bind:value {...options.attributes} bind:this={input} />
 </div>

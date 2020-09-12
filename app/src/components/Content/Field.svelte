@@ -1,58 +1,21 @@
 <script>
-    export let type
     export let value
-    export let title = null
-    export let description = undefined
-    export let options = {}
-    export let errors = undefined
+    export let args
+    export let errors
     export let mini
-    export let animate = true
+    export let animate
+
+    const { title, description, type, ...options } = args
 
     import { fade } from 'svelte/transition'
 
-    import Text from './Controls/Text'
-    import Textarea from './Controls/Textarea'
-    import Number from './Controls/Number'
-    import Switch from './Controls/Switch'
-    import Select from './Controls/Select'
-    import Image from './Controls/Image'
-    import Color from './Controls/Color'
-    import Icon from './Controls/Icon'
-    import Editor from './Controls/Editor'
-    import Repeater from './Controls/Repeater'
-    import RadioImage from './Controls/RadioImage'
-    import Export from './Controls/Export'
-    import Import from './Controls/Import'
-    import HTML from './Controls/HTML'
-    import Preset from './Controls/Preset'
-    import Multicolor from './Controls/Multicolor'
-    import MiniInput from './Controls/MiniInput'
-    import MultiMiniInput from './Controls/MultiMiniInput'
-    import RadioIcon from './Controls/RadioIcon'
-    import Typography from './Controls/Typography'
+    import modules from './Controls/*.svelte'
 
-    let types = {
-        text: Text,
-        textarea: Textarea,
-        number: Number,
-        switch: Switch,
-        select: Select,
-        image: Image,
-        color: Color,
-        icon: Icon,
-        editor: Editor,
-        repeater: Repeater,
-        export: Export,
-        import: Import,
-        html: HTML,
-        preset: Preset,
-        'radio-image': RadioImage,
-        'multi-color': Multicolor,
-        'mini-input': MiniInput,
-        'multi-mini-input': MultiMiniInput,
-        'radio-icon': RadioIcon,
-        typography: Typography,
-    }
+    let typeString = args.type.replace(new RegExp('-', 'g'), '')
+
+    $: control = modules.find((x) =>
+        x.fileName.toLowerCase().includes(typeString)
+    ).module.default
 </script>
 
 <style lang="scss">
@@ -121,7 +84,7 @@
     </header>
 
     <main>
-        <svelte:component this={types[type]} {errors} bind:value bind:options />
+        <svelte:component this={control} bind:value {options} />
 
         {#if errors}
             {#each errors as error}

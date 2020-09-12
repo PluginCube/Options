@@ -1,7 +1,6 @@
 <script>
     export let value = []
     export let options
-    export let errors
 
     import { onDestroy, onMount, beforeUpdate, afterUpdate } from 'svelte'
 
@@ -193,8 +192,8 @@
                             <Field
                                 animate={false}
                                 mini={true}
-                                errors={errors[fid]}
-                                {...options.fields[fid]}
+                                errors={false}
+                                args={options.fields[fid]}
                                 bind:value={value[i][fid]}
                             />
                         {/each}

@@ -16,4 +16,4 @@
     }
 </style>
 
-<textarea type="text" bind:value rows="5" cols="40" {...options} />
+<textarea type="text" bind:value rows="5" cols="40" {...options.attributes} />

@@ -29,15 +29,20 @@ module.exports = {
 		rules: [
 			{
 				test: /\.svelte$/,
-				use: {
-					loader: 'svelte-loader',
-					options: {
-						dev: true,
-						emitCss: true,
-						hotReload: true,
-						preprocess: sveltePreprocess()			
+				use: [
+					{
+						loader: 'webpack-extended-import-glob-loader'
+					},
+					{
+						loader: 'svelte-loader',
+						options: {
+							dev: false,
+							emitCss: true,
+							hotReload: true,
+							preprocess: sveltePreprocess()			
+						}
 					}
-				}
+				]
 			},
 			{
 				test: /\.css$/,

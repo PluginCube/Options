@@ -33,22 +33,30 @@
 
     let sizeInput = {
         icon: 'ri-font-size-2',
-        placeholder: $translation.size,
+        attributes: {
+            placeholder: $translation.size,
+        },
     }
 
     let lineHeightInput = {
         icon: 'ri-line-height',
-        placeholder: $translation.line_height,
+        attributes: {
+            placeholder: $translation.line_height,
+        },
     }
 
     let letterSpacingInput = {
         icon: 'ri-text-spacing',
-        placeholder: $translation.letter_spacing,
+        attributes: {
+            placeholder: $translation.letter_spacing,
+        },
     }
 
     let wordSpacingInput = {
         icon: 'ri-text-direction-l',
-        placeholder: $translation.word_spacing,
+        attributes: {
+            placeholder: $translation.word_spacing,
+        },
     }
 
     let alignment = {

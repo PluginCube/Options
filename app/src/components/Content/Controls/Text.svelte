@@ -16,4 +16,4 @@
     }
 </style>
 
-<input type="text" bind:value {...options} />
+<input type="text" bind:value {...options.attributes} />

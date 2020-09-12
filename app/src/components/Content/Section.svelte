@@ -9,7 +9,7 @@
 
     import Field from './Field'
 
-    $: returnErrors = (fid) => {
+    $: getErrors = (fid) => {
         if ($errors[id] && $errors[id][fid]) {
             return $errors[id][fid]
         }
@@ -37,9 +37,11 @@
 
     {#each fids as fid (fid)}
         <Field
-            errors={returnErrors(fid)}
-            {...fields[fid]}
             bind:value={$values[id][fid]}
+            args={fields[fid]}
+            errors={getErrors(fid)}
+            mini={false}
+            animate={true}
         />
     {/each}
 </section>
