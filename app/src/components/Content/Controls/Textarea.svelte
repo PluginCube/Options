@@ -1,6 +1,15 @@
 <script>
     export let value
-    export let options
+    export let args
+
+    import merge from 'deepmerge'
+
+    $: args = merge(
+        {
+            attributes: {},
+        },
+        args
+    )
 </script>
 
 <style>
@@ -16,4 +25,4 @@
     }
 </style>
 
-<textarea type="text" bind:value rows="5" cols="40" {...options.attributes} />
+<textarea type="text" bind:value rows="5" cols="40" {...args.attributes} />

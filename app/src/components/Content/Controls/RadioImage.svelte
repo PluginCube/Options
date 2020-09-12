@@ -1,6 +1,15 @@
 <script>
     export let value
-    export let options
+    export let args
+
+    import merge from 'deepmerge'
+
+    $: args = merge(
+        {
+            choices: [],
+        },
+        args
+    )
 
     import SvelteTooltip from 'svelte-tooltip'
 </script>
@@ -46,7 +55,7 @@
 </style>
 
 <ul>
-    {#each options.choices as choice}
+    {#each args.choices as choice}
         <li
             class:selected={choice.id === value}
             on:click={() => {

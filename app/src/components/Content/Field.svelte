@@ -5,8 +5,6 @@
     export let mini
     export let animate
 
-    const { title, description, type, ...options } = args
-
     import { fade } from 'svelte/transition'
 
     import modules from './Controls/*.svelte'
@@ -76,15 +74,15 @@
 
 <div transition:fade={{ duration: animate ? 150 : 0 }} class:mini>
     <header>
-        {#if title}<span>{title}</span>{/if}
+        {#if args.title}<span>{args.title}</span>{/if}
 
-        {#if description}
-            <p>{description}</p>
+        {#if args.description}
+            <p>{args.description}</p>
         {/if}
     </header>
 
     <main>
-        <svelte:component this={control} bind:value {options} />
+        <svelte:component this={control} bind:value {args} />
 
         {#if errors}
             {#each errors as error}

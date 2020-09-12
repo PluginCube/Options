@@ -1,9 +1,19 @@
 <script>
-    export let options
+    export let args
 
     import { translation, values, id } from 'store'
 
     import { saveAs } from 'file-saver'
+
+    import merge from 'deepmerge'
+
+    $: args = merge(
+        {
+            filename: null,
+            append_date: true,
+        },
+        args
+    )
 
     let download = () => {
         let dt = new Date()
@@ -15,13 +25,13 @@
             '_' +
             dt.getDate()
 
-        let fileName = $id + '_options_backup'
+        let fileName = $id + '_args_backup'
 
-        if (options.filename) {
-            fileName = options.filename
+        if (args.filename) {
+            fileName = args.filename
         }
 
-        if (options.append_date) {
+        if (args.append_date) {
             fileName = fileName + date
         }
 

@@ -1,5 +1,5 @@
 <script>
-    export let options
+    export let args
 
     import { translation, values } from 'store'
 
@@ -7,7 +7,15 @@
 
     import merge from 'deepmerge'
 
-    let importDemo = async (data) => {
+    $: args = merge(
+        {
+            presets: [],
+            reload: false,
+        },
+        args
+    )
+
+    let load = async (data) => {
         if (confirm($translation.confirm)) {
             let newData = merge($values, data)
 
@@ -15,7 +23,7 @@
 
             await save()
 
-            if (options.reload) {
+            if (args.reload) {
                 location.reload()
             }
         }
@@ -69,7 +77,7 @@
 </style>
 
 <ul>
-    {#each options.presets as preset}
+    {#each args.presets as preset}
         <li>
             <img src={preset.img} alt={preset.title} />
 
@@ -78,7 +86,7 @@
 
                 <button
                     class="button button-primary button-small"
-                    on:click={() => importDemo(preset.data)}
+                    on:click={() => load(preset.data)}
                 >
                     {$translation.import}
                 </button>

@@ -5,9 +5,7 @@
 
     import merge from 'deepmerge'
 
-    let reader
-
-    $: change = (e) => {
+    let change = (e) => {
         let files = event.target.files
 
         try {
@@ -17,7 +15,7 @@
             }
 
             let file = files[0]
-            reader = new FileReader()
+            let reader = new FileReader()
 
             reader.onload = (event) => {
                 let data = merge($values, JSON.parse(event.target.result))

@@ -1,16 +1,21 @@
 <script>
     export let value = {}
-    export let options
+    export let args
 
-    import { beforeUpdate } from 'svelte'
+    import merge from 'deepmerge'
+
+    $: args = merge(
+        {
+            choices: [],
+        },
+        args
+    )
+
+    $: if (!value) {
+        value = {}
+    }
 
     import MiniInput from './MiniInput'
-
-    beforeUpdate(() => {
-        if (!value) {
-            value = {}
-        }
-    })
 </script>
 
 <style lang="scss">
@@ -27,9 +32,9 @@
 </style>
 
 <ul>
-    {#each options.choices as choice}
+    {#each args.choices as choice}
         <li>
-            <MiniInput bind:value={value[choice.id]} options={choice} />
+            <MiniInput bind:value={value[choice.id]} args={choice} />
         </li>
     {/each}
 </ul>

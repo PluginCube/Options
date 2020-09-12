@@ -94,7 +94,11 @@
 </style>
 
 <div transition:fade={{ duration: 50 }}>
-    <Header bind:style bind:category categories={Object.keys(categories)} />
+    <Header
+        bind:style
+        bind:category
+        categories={Object.keys(categories)}
+    />
 
     <ul bind:this={box}>
         {#each icons as icon}

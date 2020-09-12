@@ -1,6 +1,15 @@
 <script>
     export let value
-    export let options
+    export let args
+
+    import merge from 'deepmerge'
+
+    $: args = merge(
+        {
+            attributes: {},
+        },
+        args
+    )
 </script>
 
 <style>
@@ -16,4 +25,4 @@
     }
 </style>
 
-<input type="text" bind:value {...options.attributes} />
+<input type="text" bind:value {...args.attributes} />

@@ -16,7 +16,11 @@
         })
 
         frame.on('select', () => {
-            let attachment = frame.state().get('selection').first().toJSON()
+            let attachment = frame
+                .state()
+                .get('selection')
+                .first()
+                .toJSON()
             value = attachment.url
         })
 
@@ -32,7 +36,7 @@
 
 <Text
     bind:value
-    options={{ attributes: { placeholder: $translation.image_url } }}
+    args={{ attributes: { placeholder: $translation.image_url } }}
 />
 
 <button on:click={select} class="button button-primary button-small">

@@ -1,7 +1,7 @@
 <script>
     export let value = false
 
-    if (typeof value == 'string') {
+    $: if (typeof value == 'string') {
         value = JSON.parse(value)
     }
 

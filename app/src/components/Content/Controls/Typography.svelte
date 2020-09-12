@@ -1,19 +1,40 @@
 <script>
     export let value
+    export let args
+
+    import merge from 'deepmerge'
+
+    $: args = merge(
+        {
+            family: true,
+            variant: true,
+            size: true,
+            variant: true,
+            lineHeight: true,
+            letterSpacing: true,
+            wordSpacing: true,
+            alignment: true,
+            decoration: true,
+        },
+        args
+    )
+
+    import { translation } from 'store'
 
     import Select from './Select'
+
     import MiniInput from './MiniInput'
+
     import RadioIcon from './RadioIcon'
 
     import { items } from './Typography/google-fonts.json'
 
-    import { translation } from 'store'
-
-    $: if (!value)
+    $: if (!value) {
         value = {
             family: 'Roboto',
             variant: 'regular',
         }
+    }
 
     $: families = items.map((i) => {
         return {
@@ -38,21 +59,21 @@
         },
     }
 
-    let lineHeightInput = {
+    let lineHeight = {
         icon: 'ri-line-height',
         attributes: {
             placeholder: $translation.line_height,
         },
     }
 
-    let letterSpacingInput = {
+    let letterSpacing = {
         icon: 'ri-text-spacing',
         attributes: {
             placeholder: $translation.letter_spacing,
         },
     }
 
-    let wordSpacingInput = {
+    let wordSpacing = {
         icon: 'ri-text-direction-l',
         attributes: {
             placeholder: $translation.word_spacing,
@@ -152,28 +173,49 @@
 
 <div>
     <div class="selects">
-        <Select bind:value={value.family} options={{ choices: families }} />
-        <Select bind:value={value.variant} options={{ choices: variants }} />
+        {#if args.family}
+            <Select
+                bind:value={value.family}
+                args={{ choices: families }}
+            />
+        {/if}
+
+        {#if args.variant}
+            <Select
+                bind:value={value.variant}
+                args={{ choices: variants }}
+            />
+        {/if}
     </div>
 
     <div class="mini-inputs">
-        <MiniInput bind:options={sizeInput} bind:value={value.size} />
-        <MiniInput
-            bind:options={lineHeightInput}
-            bind:value={value.line_height}
-        />
-        <MiniInput
-            bind:options={letterSpacingInput}
-            bind:value={value.letter_spacing}
-        />
-        <MiniInput
-            bind:options={wordSpacingInput}
-            bind:value={value.word_spacing}
-        />
+        {#if args.size}
+            <MiniInput args={sizeInput} bind:value={value.size} />
+        {/if}
+
+        {#if args.lineHeight}
+            <MiniInput args={lineHeight} bind:value={value.lineHeight} />
+        {/if}
+
+        {#if args.letterSpacing}
+            <MiniInput
+                args={letterSpacing}
+                bind:value={value.letterSpacing}
+            />
+        {/if}
+
+        {#if args.wordSpacing}
+            <MiniInput args={wordSpacing} bind:value={value.wordSpacing} />
+        {/if}
     </div>
 
     <div class="styling">
-        <RadioIcon bind:value={value.alignment} options={alignment} />
-        <RadioIcon bind:value={value.decoration} options={decoration} />
+        {#if args.alignment}
+            <RadioIcon bind:value={value.alignment} args={alignment} />
+        {/if}
+
+        {#if args.decoration}
+            <RadioIcon bind:value={value.decoration} args={decoration} />
+        {/if}
     </div>
 </div>

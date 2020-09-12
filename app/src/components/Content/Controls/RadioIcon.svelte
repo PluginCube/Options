@@ -1,27 +1,27 @@
 <script>
     export let value
-    export let options
+    export let args
 
     import SvelteTooltip from 'svelte-tooltip'
 
     import merge from 'deepmerge'
 
-    $: options = merge(
+    $: args = merge(
         {
             choices: [],
             multiple: false,
         },
-        options
+        args
     )
 
-    $: if (options.multiple) {
+    $: if (args.multiple) {
         if (!value) {
             value = []
         }
     }
 
     let select = (id) => {
-        if (options.multiple) {
+        if (args.multiple) {
             if (selected(id)) {
                 value = value.filter((i) => i !== id)
             } else {
@@ -34,7 +34,7 @@
 
     $: selected = (id) => {
         if (value) {
-            if (options.multiple) {
+            if (args.multiple) {
                 return value.includes(id)
             } else {
                 return value === id
@@ -81,8 +81,8 @@
             }
 
             &:last-of-type i {
-                border-radius: 0 var(--cf-border-radius) var(--cf-border-radius)
-                    0;
+                border-radius: 0 var(--cf-border-radius)
+                    var(--cf-border-radius) 0;
             }
 
             &:global {
@@ -99,7 +99,7 @@
 </style>
 
 <ul>
-    {#each options.choices as choice}
+    {#each args.choices as choice}
         <li
             class={selected(choice.id) ? 'selected' : null}
             on:click={() => select(choice.id)}

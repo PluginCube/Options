@@ -1,6 +1,15 @@
 <script>
     export let value
-    export let options
+    export let args
+
+    import merge from 'deepmerge'
+
+    $: args = merge(
+        {
+            choices: [],
+        },
+        args
+    )
 </script>
 
 <style>
@@ -20,7 +29,7 @@
 </style>
 
 <select bind:value>
-    {#each options.choices as choice}
+    {#each args.choices as choice}
         <option value={choice.id}>{choice.title}</option>
     {/each}
 </select>

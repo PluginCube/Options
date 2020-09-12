@@ -1,17 +1,17 @@
 <script>
     export let value = ''
-    export let options = {}
+    export let args = {}
 
     import merge from 'deepmerge'
 
-    $: options = merge(
+    $: args = merge(
         {
             icon: 'ri-page-separator',
             attributes: {
                 type: 'text',
             },
         },
-        options
+        args
     )
 
     let input
@@ -57,6 +57,6 @@
 </style>
 
 <div>
-    <i class={options.icon} on:click={() => input.focus()} />
-    <input bind:value {...options.attributes} bind:this={input} />
+    <i class={args.icon} on:click={() => input.focus()} />
+    <input bind:value {...args.attributes} bind:this={input} />
 </div>

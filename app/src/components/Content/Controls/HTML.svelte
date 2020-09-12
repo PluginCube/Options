@@ -1,5 +1,14 @@
 <script>
-    export let options
+    export let args
+
+    import merge from 'deepmerge'
+
+    $: args = merge(
+        {
+            content: null,
+        },
+        args
+    )
 </script>
 
-{@html options.content}
+{@html args.content}

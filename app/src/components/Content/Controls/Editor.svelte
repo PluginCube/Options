@@ -19,10 +19,11 @@
         })
     }
 
-    let options = {
+    let config = {
         selector: '#' + id,
         menubar: false,
-        plugins: 'charmap,hr,lists,paste,,fullscreen,wordpress,,wpemoji,,image',
+        plugins:
+            'charmap,hr,lists,paste,,fullscreen,wordpress,,wpemoji,,image',
         toolbar1:
             'formatselect,alignleft,aligncenter,alignright,alignjustify,bold,italic,bullist,numlist,image,link,fullscreen',
         wpeditimage_html5_captions: true,
@@ -31,7 +32,7 @@
     }
 
     onMount(() => {
-        setTimeout(() => tinymce.init(options), 300)
+        setTimeout(() => tinymce.init(config), 300)
     })
 
     onDestroy(() => {

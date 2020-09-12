@@ -1,23 +1,20 @@
 <script>
     export let value
-    export let options
+    export let args
+
+    $: if (!value) {
+        value = 0
+    }
 
     $: if (typeof value == 'string') {
         value = parseInt(value)
     }
 
     let increase = () => {
-        if (!value) {
-            value = 0
-        }
         value = value + 1
     }
 
     let decrease = () => {
-        if (!value) {
-            value = 0
-        }
-
         value = value - 1
     }
 </script>
@@ -77,5 +74,5 @@
     <i class="ri-arrow-drop-up-fill" on:click={increase} />
     <i class="ri-arrow-drop-down-fill" on:click={decrease} />
 
-    <input type="number" bind:value {...options} />
+    <input type="number" bind:value {...args} />
 </div>

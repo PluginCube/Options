@@ -1,8 +1,8 @@
 <script>
-    export let value = []
-    export let options
+    export let value
+    export let args
 
-    import { onDestroy, onMount, beforeUpdate, afterUpdate } from 'svelte'
+    import { onDestroy, onMount, afterUpdate } from 'svelte'
 
     import { arrayMove, visiableFields } from 'methods'
 
@@ -10,21 +10,22 @@
 
     import Field from '../Field'
 
+    $: if (!value) value = []
+
     let list
     let activeItem
-    let sortable
 
-    $: fids = activeItem ? visiableFields(options.fields, activeItem) : []
+    $: fids = activeItem ? visiableFields(args.fields, activeItem) : []
 
-    let toggleItem = (item) => {
+    let toggle = (item) => {
         activeItem === item ? (activeItem = null) : (activeItem = item)
     }
 
-    let addItem = () => {
+    let add = () => {
         let item = {}
 
-        Object.keys(options.fields).forEach((id) => {
-            let field = options.fields[id]
+        Object.keys(args.fields).forEach((id) => {
+            let field = args.fields[id]
             let value = field['default'] ? field['default'] : null
             item[id] = value
         })
@@ -32,14 +33,14 @@
         value = [...value, item]
     }
 
-    let removeItem = () => {
+    let remove = () => {
         if (confirm($translation.confirm)) {
             value = value.filter((i) => i !== activeItem)
         }
     }
 
     let initSortable = () => {
-        sortable = jQuery(list).sortable({
+        jQuery(list).sortable({
             handle: 'header > svg',
             start: function (event, ui) {
                 jQuery(this).attr('data-previndex', ui.item.index())
@@ -53,10 +54,6 @@
         })
     }
 
-    let destroySortable = () => {
-        jQuery(list).sortable('destroy')
-    }
-
     onMount(() => {
         if (value.length) {
             initSortable()
@@ -64,13 +61,7 @@
     })
 
     onDestroy(() => {
-        destroySortable()
-    })
-
-    beforeUpdate(() => {
-        if (typeof value == 'undefined') {
-            value = []
-        }
+        jQuery(list).sortable('destroy')
     })
 
     afterUpdate(() => {
@@ -172,7 +163,7 @@
     <ul bind:this={list}>
         {#each value as item, i (item)}
             <li>
-                <header on:click={() => toggleItem(item)}>
+                <header on:click={() => toggle(item)}>
                     <svg viewBox="0 0 10 10">
                         <path
                             d="M3,2 C2.44771525,2 2,1.55228475 2,1 C2,0.44771525 2.44771525,0 3,0 C3.55228475,0 4,0.44771525 4,1 C4,1.55228475 3.55228475,2 3,2 Z M3,6 C2.44771525,6 2,5.55228475 2,5 C2,4.44771525 2.44771525,4 3,4 C3.55228475,4 4,4.44771525 4,5 C4,5.55228475 3.55228475,6 3,6 Z M3,10 C2.44771525,10 2,9.55228475 2,9 C2,8.44771525 2.44771525,8 3,8 C3.55228475,8 4,8.44771525 4,9 C4,9.55228475 3.55228475,10 3,10 Z M7,2 C6.44771525,2 6,1.55228475 6,1 C6,0.44771525 6.44771525,0 7,0 C7.55228475,0 8,0.44771525 8,1 C8,1.55228475 7.55228475,2 7,2 Z M7,6 C6.44771525,6 6,5.55228475 6,5 C6,4.44771525 6.44771525,4 7,4 C7.55228475,4 8,4.44771525 8,5 C8,5.55228475 7.55228475,6 7,6 Z M7,10 C6.44771525,10 6,9.55228475 6,9 C6,8.44771525 6.44771525,8 7,8 C7.55228475,8 8,8.44771525 8,9 C8,9.55228475 7.55228475,10 7,10 Z"
@@ -193,12 +184,12 @@
                                 animate={false}
                                 mini={true}
                                 errors={false}
-                                args={options.fields[fid]}
+                                args={args.fields[fid]}
                                 bind:value={value[i][fid]}
                             />
                         {/each}
 
-                        <button on:click={removeItem}>
+                        <button on:click={remove}>
                             {$translation.remove}
                         </button>
                     </main>
@@ -208,6 +199,6 @@
     </ul>
 {/if}
 
-<button on:click={addItem} class="button button-primary">
+<button on:click={add} class="button button-primary">
     {$translation.add_item}
 </button>
