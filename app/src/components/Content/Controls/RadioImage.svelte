@@ -36,13 +36,6 @@
                 max-width: 100%;
             }
 
-            span {
-                font-size: 10px;
-                float: left;
-                margin: 5px 0px;
-                color: var(--cf-secondary-text);
-            }
-
             &.selected img {
                 float: left;
                 box-sizing: border-box;

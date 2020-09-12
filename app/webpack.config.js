@@ -32,6 +32,7 @@ module.exports = {
 				use: {
 					loader: 'svelte-loader',
 					options: {
+						dev: true,
 						emitCss: true,
 						hotReload: true,
 						preprocess: sveltePreprocess()			
@@ -42,7 +43,7 @@ module.exports = {
 				test: /\.css$/,
 				use: [
 					MiniCssExtractPlugin.loader,
-					'css-loader'
+					'css-loader',
 				]
 			},
 			{

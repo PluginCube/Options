@@ -5,7 +5,7 @@
   "scripts": {
     "postinstall": "cd ./node_modules/svelte-color && npm install && npm run build",
     "build": "cross-env NODE_ENV=production webpack",
-    "dev": "webpack",
+    "dev": "NODE_ENV=development webpack",
     "prettier": "prettier --write ./**/*.svelte | awk '{ print $1 }' | xargs -I{} truncate -s -1 {}"
   },
   "keywords": [],
