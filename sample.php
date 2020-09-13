@@ -1,309 +1,80 @@
 <?php
 
-// TO-DO: Refacto this file to use the api.
 
+/**
+ * Initialize the instance
+ */
 $options = new CiraPress\Framework([
-    'id' => 'cirapress20',
-    'titles' =>
-    [
+    'id' => 'cirapress31',
+    'titles' => [
         'page' => 'Cira',
         'menu' => 'Cirapress'
     ],
-    'sections' => 
-    [
-        'general' => [
-            'title' => 'General',
-            'description' => 'This is my section.',
-            'fields' =>
-            [
-                'text' => [
-                    'type' => 'text',
-                    'title' => 'Text',
-                    'default' => 'This is the input field.',
-                    'attributes' => [
-                        'placeholder' => 'Insert here ...',
-                    ]
-                ],
-                'textarea' => [
-                    'type' => 'textarea',
-                    'title' => 'Textarea',
-                    'default' => 'This is the textarea field.',
-                    'attributes' => [
-                        'placeholder' => 'Insert here ...',
-                    ]
-                ],
-                'color' => [
-                    'type' => 'color',
-                    'title' => 'Color',
-                    'default' => '#555555',
-                ],
-                'switch' => [
-                    'type' => 'switch',
-                    'title' => 'Switch',
-                    'default' => true,
-                ],
-                'image' => [
-                    'type' => 'image',
-                    'title' => 'Image',
-                    'default' => '',
-                    'condition' => ['switch', '===', true]
-                ],
-                'select' => [
-                    'type' => 'select',
-                    'title' => 'Select',
-                    'default' => 'two',
-                    'choices' => [
-                        [
-                            'id' => 'one',
-                            'title' => 'One'
-                        ],
-                        [
-                            'id' => 'two',
-                            'title' => 'Two'
-                        ]
-                    ]
-                ],
-                'icon' => [
-                    'type' => 'icon',
-                    'title' => 'Icon',
-                    'default' => 'ri-building-3-line',
-                ],
-                'editor' => [
-                    'type' => 'editor',
-                    'title' => 'Editor',
-                    'default' => 'hello <i>world</i>',
-                ],
-                'repeater' => [
-                    'type' => 'repeater',
-                    'title' => 'Repeater',
-                    'fields' => [
-                        'text' => [
-                            'type' => 'text',
-                            'title' => 'Text',
-                            'default' => 'This is the input field.',
-                            'attributes' => [
-                                'placeholder' => 'Insert here ...',
-                            ]
-                        ],
-                        'color' => [
-                            'type' => 'color',
-                            'title' => 'Color',
-                            'default' => '#555555',
-                        ],
-                        'switch' => [
-                            'type' => 'switch',
-                            'title' => 'Switch',
-                            'default' => true,
-                        ],
-                        'icon' => [
-                            'type' => 'icon',
-                            'title' => 'Icon',
-                            'default' => 'ri-building-3-line',
-                            'condition' => ['switch', '===', true]
-                        ],
-                        'multi_mini_input' => [
-                            'type' => 'multi-mini-input',
-                            'title' => 'Multi Mini Input',
-                            'choices' => [
-                                [
-                                    'id' => 'size',
-                                    'icon' => 'ri-font-size-2',
-                                    'attributes' => [
-                                        'placeholder' => 'Size',
-                                    ]
-                                ],
-                                [
-                                    'id' => 'hight',
-                                    'attributes' => [
-                                        'placeholder' => 'Hight',      
-                                    ]  
-                                ]
-                            ]
-                        ],
-                    ],
-                ],
-                'radio_image' => [
-                    'type' => 'radio-image',
-                    'title' => 'Radio Image',
-                    'default' => 'b',
-                    'choices' => [
-                        [
-                            'img' => 'http://localhost:8080/images/gle_c-salt.gif',
-                            'id' => 'a',
-                            'title' => 'Layout A'
-                        ],
-                        [
-                            'img' => 'http://localhost:8080/images/gle_c-salt-s.gif',
-                            'id' => 'b',
-                            'title' => 'Layout B'
-                        ],
-                        [
-                            'img' => 'http://localhost:8080/images/gle_hncs.gif',
-                            'id' => 'c',
-                            'title' => 'Layout C'
-                        ],
-                        [
-                            'img' => 'http://localhost:8080/images/gle_pbc.gif',
-                            'id' => 'd',
-                            'title' => 'Layout D'
-                        ],
-                        [
-                            'img' => 'http://localhost:8080/images/gle_s-c-salt.gif',
-                            'id' => 'e',
-                        ],                            
-                    ],
-                ],
-                'export' => [
-                    'type' => 'export',
-                    'title' => 'Export',
-                ],
-                'import' => [
-                    'type' => 'import',
-                    'title' => 'Import',
-                ],
-                'html' => [
-                    'type' => 'html',
-                    'title' => 'HTML',
-                    'content' => '<i>hello world!</i>'
-                ],
-                'preset' => [
-                    'type' => 'preset',
-                    'title' => 'Presets',
-                    'presets' => [
-                        [
-                            'title' => 'Dark',
-                            'img' => 'http://localhost:8080/wp-content/themes/twentytwenty/screenshot.png',
-                            'data' => [
-                                'general' => [
-                                    'text' => 'Dark theme import successfuly.'
-                                ]
-                            ]
-                        ],
-                        [
-                            'title' => 'Minimal',
-                            'img' => 'http://localhost:8080/wp-content/themes/twentyseventeen/screenshot.png',
-                            'data' => [
-                                'general' => [
-                                    'text' => 'Minimal theme import successfuly.'
-                                ]
-                            ]
-                        ]
-                    ]
-                ],
-            ]
-        ],
-        'appearance' => [
-            'title' => 'Appearance',
-            'description' => 'This is my section.',
-            'fields' =>
-            [
-                'multi_color' => [
-                    'type' => 'multi-color',
-                    'title' => 'Multi Color',
-                    'default' => [
-                        'link'    => '#0088cc',
-                        'hover'   => '#00aaff',
-                        'active'  => '#00ffff',                
-                    ],
-                    'choices' => [
-                        [
-                            'id' => 'link',
-                            'title' => 'Link'
-                        ],
-                        [
-                            'id' => 'hover',
-                            'title' => 'Hover'
-                        ],
-                        [
-                            'id' => 'active',
-                            'title' => 'Active'
-                        ]
-                    ]
-                ],
-                'number' => [
-                    'type' => 'number',
-                    'title' => 'Number',
-                    'default' => 23,
-                    'attributes' => [
-                        'placeholder' => 'Width'
-                    ]
-                ],
-                'mini_input' => [
-                    'type' => 'mini-input',
-                    'title' => 'Mini Input',
-                    'default' => 23,
-                    'icon' => 'ri-font-size-2',
-                    'attributes' => [
-                        'placeholder' => 'Size',
-                    ]
-                ],
-                'multi_mini_input' => [
-                    'type' => 'multi-mini-input',
-                    'title' => 'Multi Mini Input',
-                    'choices' => [
-                        [
-                            'id' => 'size',
-                            'icon' => 'ri-font-size-2',
-                            'attributes' => [
-                                'placeholder' => 'Size', 
-                            ]       
-                        ],
-                        [
-                            'id' => 'hight',
-                            'attributes' => [
-                                'placeholder' => 'Hight',
-                            ]
-                        ]
-                    ]
-                ],
-                'radio_icon' => [
-                    'type' => 'radio-icon',
-                    'title' => 'Radio Icon',
-                    'choices' => [
-                        [
-                            'id' => 'left',
-                            'title' => 'Left',
-                            'icon' => 'ri-align-left'
-                        ],
-                        [
-                            'id' => 'right',
-                            'title' => 'Right',
-                            'icon' => 'ri-align-right'
-                        ],
-                        [
-                            'id' => 'center',
-                            'title' => 'Center',
-                            'icon' => 'ri-align-center'
-                        ],
-                        [
-                            'id' => 'justify',
-                            'title' => 'Justify',
-                            'icon' => 'ri-align-justify'
-                        ]
-                    ]
-                ],
-                'typography' => [
-                    'type' => 'typography',
-                    'title' => 'Typography',
-                ],
-            ]
-        ]
-    ],
 ]);
 
+
+
+/**
+ * Section: General
+ */
+
 $options->add('section', [
-    'id' => 'documentation',
-    'title' => 'Documentation',
-    'priority' => 1
+    'id' => 'general',
+    'title' => 'General',
+]);
+
+$options->add('link', [
+    'type' => 'section',
+    'title' => 'General',
+    'section' => 'general',
+    'icon' => 'ri-pencil-ruler-fill',
 ]);
 
 $options->add('field', [
-    'id' => 'typography',
-    'type' => 'typography',
-    'title' => 'Typography',
-    'section' => 'documentation',
-    'default' => [
-        'size' => '12px'
+    'id' => 'text',
+    'type' => 'text',
+    'title' => 'Text',
+    'section' => 'general',
+    'default' => 'This is the text field.',
+    'attributes' => [
+        'placeholder' => 'Insert here ...',
+    ]
+]);
+
+$options->add('field', [
+    'id' => 'textarea',
+    'type' => 'textarea',
+    'title' => 'Textarea',
+    'section' => 'general',
+    'default' => 'This is the textarea field.',
+    'attributes' => [
+        'placeholder' => 'Insert here ...',
+    ]
+]);
+
+$options->add('field', [
+    'id' => 'switch',
+    'type' => 'switch',
+    'title' => 'Switch',
+    'section' => 'general',
+    'default' => true,
+]);
+
+$options->add('field', [
+    'id' => 'select',
+    'type' => 'select',
+    'title' => 'Select',
+    'section' => 'general',
+    'default' => 'two',
+    'choices' => [
+        [
+            'id' => 'one',
+            'title' => 'One'
+        ],
+        [
+            'id' => 'two',
+            'title' => 'Two'
+        ]
     ]
 ]);
 
@@ -311,39 +82,304 @@ $options->add('field', [
     'id' => 'number',
     'type' => 'number',
     'title' => 'Number',
-    'section' => 'documentation',
-    'default' => 23,
-]);
-
-$options->add('link', [
-    'type' => 'section',
     'section' => 'general',
-    'title' => 'General',
-    'icon' => 'ri-stack-fill'
+    'default' => 12,
 ]);
 
-$options->add('link', [
-    'type' => 'section',
-    'section' => 'appearance',
+$options->add('field', [
+    'id' => 'image',
+    'type' => 'image',
+    'title' => 'Image',
+    'section' => 'general',
+    'default' => '',
+    'condition' => ['select', '===', 'two']
+]);
+
+$options->add('field', [
+    'id' => 'mini_input',
+    'type' => 'mini-input',
+    'title' => 'Mini Input',
+    'section' => 'general',
+    'icon' => 'ri-font-size-2',
+    'attributes' => [
+        'placeholder' => 'Hey!',
+    ]
+]);
+
+$options->add('field', [
+    'id' => 'editor',
+    'type' => 'editor',
+    'title' => 'Editor',
+    'section' => 'general',
+    'default' => 'hello <i>world</i>',
+]);
+
+/**
+ * Section: Appearance
+ */
+
+$options->add('section', [
+    'id' => 'appearance',
     'title' => 'Appearance',
-    'icon' => 'ri-pencil-ruler-fill'
 ]);
 
 $options->add('link', [
     'type' => 'section',
-    'section' => 'documentation',
-    'title' => 'Documentation',
-    'icon' => 'ri-file-list-fill'
+    'title' => 'Appearance',
+    'section' => 'appearance',
+    'icon' => 'ri-palette-fill',
+]);
+
+$options->add('field', [
+    'id' => 'icon',
+    'type' => 'icon',
+    'section' => 'appearance',
+    'title' => 'Icon',
+    'default' => 'ri-sun-fill',
+]);
+
+$options->add('field', [
+    'id' => 'color',
+    'type' => 'color',
+    'title' => 'Color',
+    'section' => 'appearance',
+    'default' => '#e0c708',
+]);
+
+$options->add('field', [
+    'id' => 'radio_image',
+    'type' => 'radio-image',
+    'title' => 'Radio Image',
+    'section' => 'appearance',
+    'default' => 'b',
+    'choices' => [
+        [
+            'img' => 'http://localhost:8080/images/gle_c-salt.gif',
+            'id' => 'a',
+            'title' => 'Layout A'
+        ],
+        [
+            'img' => 'http://localhost:8080/images/gle_c-salt-s.gif',
+            'id' => 'b',
+            'title' => 'Layout B'
+        ],
+        [
+            'img' => 'http://localhost:8080/images/gle_hncs.gif',
+            'id' => 'c',
+            'title' => 'Layout C'
+        ],
+        [
+            'img' => 'http://localhost:8080/images/gle_pbc.gif',
+            'id' => 'd',
+            'title' => 'Layout D'
+        ],
+        [
+            'img' => 'http://localhost:8080/images/gle_s-c-salt.gif',
+            'id' => 'e',
+        ],                            
+    ],
+]);
+
+$options->add('field', [
+    'id' => 'multi_mini_input',
+    'type' => 'multi-mini-input',
+    'section' => 'appearance',
+    'title' => 'Multi Mini Input',
+    'choices' => [
+        [
+            'id' => 'size',
+            'icon' => 'ri-font-size-2',
+            'attributes' => [
+                'placeholder' => 'Size', 
+            ]       
+        ],
+        [
+            'id' => 'hight',
+            'attributes' => [
+                'placeholder' => 'Hight',
+            ]
+        ]
+    ]
+]);
+
+$options->add('field', [
+    'id' => 'radio_icon',
+    'type' => 'radio-icon',
+    'title' => 'Radio Icon',
+    'section' => 'appearance',
+    'choices' => [
+        [
+            'id' => 'left',
+            'title' => 'Left',
+            'icon' => 'ri-align-left'
+        ],
+        [
+            'id' => 'right',
+            'title' => 'Right',
+            'icon' => 'ri-align-right'
+        ],
+        [
+            'id' => 'center',
+            'title' => 'Center',
+            'icon' => 'ri-align-center'
+        ],
+        [
+            'id' => 'justify',
+            'title' => 'Justify',
+            'icon' => 'ri-align-justify'
+        ]
+    ]
+]);
+
+$options->add('field', [
+    'id' => 'typography',
+    'type' => 'typography',
+    'title' => 'Typography',
+    'section' => 'appearance',
+    'family' => true,
+    'variant' => true,
+    'size' => true,
+    'variant' => true,
+    'lineHeight' => true,
+    'letterSpacing' => true,
+    'wordSpacing' => true,
+    'alignment' => true,
+    'decoration' => true,
+]);
+
+$options->add('field', [
+    'id' => 'multicolor',
+    'type' => 'multi-color',
+    'title' => 'Multi Color',
+    'section' => 'appearance',
+    'default' => [
+        'link'    => '#0088cc',
+        'hover'   => '#00aaff',
+        'active'  => '#00ffff',                
+    ],
+    'choices' => [
+        [
+            'id' => 'link',
+            'title' => 'Link'
+        ],
+        [
+            'id' => 'hover',
+            'title' => 'Hover'
+        ],
+        [
+            'id' => 'active',
+            'title' => 'Active'
+        ]
+    ]
+]);
+
+/**
+ * Section: Others
+ */
+
+$options->add('section', [
+    'id' => 'others',
+    'title' => 'Others',
 ]);
 
 $options->add('link', [
-    'type' => 'separator',
-    'title' => 'Help'
+    'type' => 'section',
+    'title' => 'Others',
+    'section' => 'others',
+    'icon' => 'ri-drag-drop-fill',
+]);
+
+$options->add('field', [
+    'id' => 'repeater',
+    'type' => 'repeater',
+    'title' => 'Repeater',
+    'section' => 'others',
+    'fields' => [
+        'text' => [
+            'type' => 'text',
+            'title' => 'Text',
+            'default' => 'New Item',
+            'attributes' => [
+                'placeholder' => 'Insert here ...',
+            ]
+        ],
+        'switch' => [
+            'type' => 'switch',
+            'title' => 'Switch',
+            'default' => false,
+        ],
+        'color' => [
+            'type' => 'color',
+            'title' => 'Color',
+            'default' => '#555555',
+            'condition' => ['switch', '===', true]
+        ],
+    ]
+]);
+
+
+$options->add('field', [
+    'id' => 'preset',
+    'type' => 'preset',
+    'title' => 'Preset',
+    'section' => 'others',
+    'presets' => [
+        [
+            'title' => 'Dark',
+            'img' => 'http://localhost:8080/wp-content/themes/twentytwenty/screenshot.png',
+            'data' => [
+                'general' => [
+                    'text' => 'Dark theme import successfuly.'
+                ]
+            ]
+        ],
+        [
+            'title' => 'Minimal',
+            'img' => 'http://localhost:8080/wp-content/themes/twentyseventeen/screenshot.png',
+            'data' => [
+                'general' => [
+                    'text' => 'Minimal theme import successfuly.'
+                ]
+            ]
+        ]
+    ]
+]);
+
+
+/**
+ * Section: Advanced
+ */
+
+$options->add('section', [
+    'id' => 'advanced',
+    'title' => 'Advanced',
 ]);
 
 $options->add('link', [
-    'type' => 'external',
-    'url' => 'https://cirapress.com',
-    'title' => 'Support',
-    'icon' => 'ri-chat-3-fill'
+    'type' => 'section',
+    'title' => 'Advanced',
+    'section' => 'advanced',
+    'icon' => 'ri-flashlight-fill',
+]);
+
+$options->add('field', [
+    'id' => 'export',
+    'type' => 'export',
+    'title' => 'Export',
+    'section' => 'advanced',
+]);
+
+$options->add('field', [
+    'id' => 'import',
+    'type' => 'import',
+    'title' => 'Import',
+    'section' => 'advanced',
+]);
+
+$options->add('field', [
+    'id' => 'html',
+    'type' => 'html',
+    'title' => 'html',
+    'section' => 'advanced',
+    'content' => '<i>hello world!</i>'
 ]);

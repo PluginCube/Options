@@ -26,7 +26,7 @@
 
         Object.keys(args.fields).forEach((id) => {
             let field = args.fields[id]
-            let value = field['default'] ? field['default'] : null
+            let value = field['default'] !== 'undefined' ? field['default'] : null
             item[id] = value
         })
 
@@ -199,6 +199,6 @@
     </ul>
 {/if}
 
-<button on:click={add} class="button button-primary">
+<button on:click={add} class="button button-primary button-small">
     {$translation.add_item}
 </button>

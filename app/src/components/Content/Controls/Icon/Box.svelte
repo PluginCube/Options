@@ -16,6 +16,8 @@
 
     import 'perfect-scrollbar/css/perfect-scrollbar.css'
 
+    let dispatch = createEventDispatcher()
+
     let box
     let ps
 
@@ -102,7 +104,7 @@
 
     <ul bind:this={box}>
         {#each icons as icon}
-            <li on:click={() => createEventDispatcher()('update', icon)}>
+            <li on:click={() => dispatch('update', icon)}>
                 <i class={icon} />
             </li>
         {/each}

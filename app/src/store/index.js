@@ -1,5 +1,5 @@
 import { writable, readable } from 'svelte/store';
-
+console.log(CFStore.values);
 export const id = readable(CFStore.id);
 export const sections = readable(CFStore.sections);
 export const activeSection = writable(null)

@@ -17,6 +17,8 @@
         return false
     }
 
+    $: if (typeof $values[id] !== 'object') $values[id] = {};
+
     $: fids = visiableFields(fields, $values[id])
 </script>
 

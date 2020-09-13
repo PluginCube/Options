@@ -42,26 +42,25 @@
                     color: var(--cf-primary-text);
                     width: 100%;
                     text-transform: capitalize;
-                    font-weight: 700;
-                    font-size: 14px;
+                    font-weight: bold;
+                    font-size: 13px;
                     cursor: pointer;
                     transition: 0.3s;
                     position: relative;
                     height: 34px;
-                    line-height: 38px;
+                    line-height: 34px;
                     padding: 0px 12px;
                     box-sizing: border-box;
                     border-radius: var(--cf-border-radius);
                     text-decoration: none;
                     float: left;
-                    font-family: Josefin Sans, sans-serif;
                     outline: none;
                     box-shadow: none;
-                    letter-spacing: -0.2px;
+
 
                     i {
                         float: left;
-                        margin-right: 12px;
+                        margin-right: 14px;
                         font-size: 17px;
                         margin-top: 0px;
                         line-height: 34px;

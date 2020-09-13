@@ -227,6 +227,8 @@ class Framework
             foreach ($section['fields'] as $fid => $field) {
                 if(isset($field['default'])){
                     $defaults[$id][$fid] = $field['default'];
+                } else {
+                    $defaults[$id][$fid] = null;
                 }
             }
         }

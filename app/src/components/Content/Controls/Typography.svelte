@@ -1,5 +1,5 @@
 <script>
-    export let value
+    export let value = {}
     export let args
 
     import merge from 'deepmerge'

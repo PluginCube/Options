@@ -5,7 +5,7 @@
 
 <style lang="scss">
     button {
-        height: 33px;
+        height: 32px;
         text-align: center;
         transition: all 0.2s;
         font-size: 12px;
