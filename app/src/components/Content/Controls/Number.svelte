@@ -1,6 +1,15 @@
 <script>
     export let value
     export let args
+    
+    import merge from 'deepmerge'
+
+    $: args = merge(
+        {
+            attributes: {},
+        },
+        args
+    )
 
     $: if (!value) {
         value = 0
@@ -74,5 +83,5 @@
     <i class="ri-arrow-drop-up-fill" on:click={increase} />
     <i class="ri-arrow-drop-down-fill" on:click={decrease} />
 
-    <input type="number" bind:value {...args} />
+    <input type="number" bind:value {...args.attributes} />
 </div>

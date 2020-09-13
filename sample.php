@@ -1,42 +1,13 @@
 <?php
 
-$sample = new CiraPress\Framework([
+// TO-DO: Refacto this file to use the api.
+
+$options = new CiraPress\Framework([
     'id' => 'cirapress20',
     'titles' =>
     [
         'page' => 'Cira',
         'menu' => 'Cirapress'
-    ],
-    'menu' =>
-    [
-        [
-            'type' => 'section',
-            'id' => 'general',
-            'title' => 'General',
-            'icon' => 'ri-stack-fill'
-        ],
-        [
-            'type' => 'section',
-            'id' => 'appearance',
-            'title' => 'Appearance',
-            'icon' => 'ri-pencil-ruler-fill'
-        ],
-        [
-            'type' => 'section',
-            'id' => 'documentation',
-            'title' => 'Documentation',
-            'icon' => 'ri-file-list-fill'
-        ],
-        [
-            'type' => 'separator',
-            'title' => 'Help'
-        ],
-        [
-            'type' => 'link',
-            'url' => 'https://cirapress.com',
-            'title' => 'Support',
-            'icon' => 'ri-chat-3-fill'
-        ]
     ],
     'sections' => 
     [
@@ -318,4 +289,61 @@ $sample = new CiraPress\Framework([
             ]
         ]
     ],
+]);
+
+$options->add('section', [
+    'id' => 'documentation',
+    'title' => 'Documentation',
+    'priority' => 1
+]);
+
+$options->add('field', [
+    'id' => 'typography',
+    'type' => 'typography',
+    'title' => 'Typography',
+    'section' => 'documentation',
+    'default' => [
+        'size' => '12px'
+    ]
+]);
+
+$options->add('field', [
+    'id' => 'number',
+    'type' => 'number',
+    'title' => 'Number',
+    'section' => 'documentation',
+    'default' => 23,
+]);
+
+$options->add('link', [
+    'type' => 'section',
+    'section' => 'general',
+    'title' => 'General',
+    'icon' => 'ri-stack-fill'
+]);
+
+$options->add('link', [
+    'type' => 'section',
+    'section' => 'appearance',
+    'title' => 'Appearance',
+    'icon' => 'ri-pencil-ruler-fill'
+]);
+
+$options->add('link', [
+    'type' => 'section',
+    'section' => 'documentation',
+    'title' => 'Documentation',
+    'icon' => 'ri-file-list-fill'
+]);
+
+$options->add('link', [
+    'type' => 'separator',
+    'title' => 'Help'
+]);
+
+$options->add('link', [
+    'type' => 'external',
+    'url' => 'https://cirapress.com',
+    'title' => 'Support',
+    'icon' => 'ri-chat-3-fill'
 ]);

@@ -4,6 +4,14 @@
 
     import merge from 'deepmerge'
 
+    $: value = merge(
+        {
+            family: 'Roboto',
+            variant: 'regular',
+        },
+        value
+    )
+
     $: args = merge(
         {
             family: true,
@@ -28,13 +36,6 @@
     import RadioIcon from './RadioIcon'
 
     import { items } from './Typography/google-fonts.json'
-
-    $: if (!value) {
-        value = {
-            family: 'Roboto',
-            variant: 'regular',
-        }
-    }
 
     $: families = items.map((i) => {
         return {

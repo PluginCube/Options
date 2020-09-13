@@ -50,6 +50,15 @@ class Framework
     public $AJAX;
 
     /**
+     * API Class.
+     *
+     * @since 1.0.0
+     * @access public
+     * @var object
+     */
+    public $API;
+
+    /**
      * Translated strings for localization.
      *
      * @since 1.0.0
@@ -84,6 +93,7 @@ class Framework
 
         // Require files
         require_once $this->path . 'ajax.php';
+        require_once $this->path . 'api.php';
 
         // Instance args
         $this->args = wp_parse_args($args, [
@@ -106,6 +116,7 @@ class Framework
         }
         
         $this->AJAX = new AJAX($this);
+        $this->API = new API($this);
     }
 
     /**
@@ -245,6 +256,9 @@ class Framework
      * 
      * @since 1.0.0
      * @access public 
+     * 
+     * @param array $values An array of values to compare against.
+     * 
      * @return array
      */
     public function get_errors($values = NULL)
@@ -272,7 +286,10 @@ class Framework
      * Sanitize the values.
      * 
      * @since 1.0.0
-     * @access public 
+     * @access public
+     * 
+     * @param array $values An array of values to sanitize.
+     * 
      * @return array
      */
     public function sanitize($values)
@@ -305,7 +322,39 @@ class Framework
             }
         }
         
-
         return $values;
+    }
+
+    /**
+     * Add an element to the instance.
+     * 
+     * @since 1.0.0
+     * @access public
+     * @api
+     * 
+     * @param array $type Element type.
+     * @param array $args Element Arguments.
+     * 
+     * @return void
+     */
+    public function add($type, $args)
+    {
+        switch ($type) {
+            case 'field':
+                $this->API->add_field($args);
+                break;
+
+            case 'section':
+                $this->API->add_section($args);
+                break;
+
+            case 'link':
+                $this->API->add_link($args);
+                break;
+
+            default:
+                $this->API->add_field($args);
+                break;
+        }
     }
 }

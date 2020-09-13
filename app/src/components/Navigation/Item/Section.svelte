@@ -1,5 +1,5 @@
 <script>
-    export let id
+    export let section
     export let title
     export let icon
 
@@ -7,8 +7,8 @@
 </script>
 
 <li
-    class:active={$activeSection === id}
-    on:click={() => activeSection.set(id)}
+    class:active={$activeSection === section}
+    on:click={() => activeSection.set(section)}
 >
-    <a href="#{id}"> <i class={icon} /> {title} </a>
+    <a href="#{section}"> <i class={icon} /> {title} </a>
 </li>

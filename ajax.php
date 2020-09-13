@@ -11,13 +11,16 @@ class AJAX
      * @access private
      * @var string
      */
-    private $parent = '1.0.0';
+    private $parent;
 
     /**
      * Class constructer.
      * 
      * @since 1.0.0
      * @access public
+     * 
+     * @param array $parent The parent instance.
+     * 
      * @return void
      */
     public function __construct($parent)
@@ -83,6 +86,9 @@ class AJAX
      * 
      * @since 1.0.0
      * @access public
+     * 
+     * @param array $data Request data.
+     * 
      * @return void
      */
     public function save($data)

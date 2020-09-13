@@ -5,13 +5,13 @@
 
     import Section from './Item/Section'
 
-    import Link from './Item/Link'
+    import External from './Item/External'
 
     import Separator from './Item/Separator'
 
     let types = {
         section: Section,
-        link: Link,
+        external: External,
         separator: Separator,
     }
 </script>
