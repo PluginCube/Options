@@ -221,14 +221,14 @@ class Framework
     {
         $defaults = [];
 
-        foreach ($this->args['sections'] as $id => $section) {
-            $defaults[$id] = [];
+        foreach ($this->args['sections'] as $section) {
+            $defaults[$section['id']] = [];
 
-            foreach ($section['fields'] as $fid => $field) {
+            foreach ($section['fields'] as $field) {
                 if(isset($field['default'])){
-                    $defaults[$id][$fid] = $field['default'];
+                    $defaults[$section['id']][$field['id']] = $field['default'];
                 } else {
-                    $defaults[$id][$fid] = null;
+                    $defaults[$section['id']][$field['id']] = null;
                 }
             }
         }
@@ -268,14 +268,14 @@ class Framework
         $errors = [];
         is_array($values) ?: $values = $this->get_values();
 
-        foreach ($this->args['sections'] as $id => $section) {
-            foreach ($section['fields'] as $fid => $field) {
+        foreach ($this->args['sections'] as $section) {
+            foreach ($section['fields'] as $field) {
                 if (isset($field['validate'])) {
-                    $value = $values[$id][$fid];
+                    $value = $values[$section['id']][$field['id']];
                     $result = call_user_func($field['validate'], $value);
                     
                     if( ! empty($result) ) {
-                        $errors[$id][$fid] = $result;
+                        $errors[$section['id']][$field['id']] = $result;
                     }
                 }
             }
@@ -313,11 +313,12 @@ class Framework
             },
         ];
 
-        foreach ($values as $section => &$fields) {
+        foreach ($values as $sectionID => &$fields) {
             foreach ($fields as $id => &$value) {
-                $field = $this->args['sections'][$section]['fields'][$id];
+                $section = $this->args['sections'][array_search($sectionID, array_column($this->args['sections'], 'id'))];
+                $field = $section['fields'][array_search($id, array_column($section['fields'], 'id'))];
                 $sanitize = isset($field['sanitize']) ? $field['sanitize'] : $types[$field['type']];
-                
+
                 if ($sanitize) {
                     $value = call_user_func($sanitize, $value);
                 }

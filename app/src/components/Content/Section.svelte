@@ -18,8 +18,8 @@
     }
 
     $: if (typeof $values[id] !== 'object') $values[id] = {};
-
-    $: fids = visiableFields(fields, $values[id])
+    
+    $: fields = visiableFields(fields, $values[id])
 </script>
 
 <style>
@@ -37,11 +37,11 @@
 <section>
     <h2>{title}</h2>
 
-    {#each fids as fid (fid)}
+    {#each fields as field (field.id)}
         <Field
-            bind:value={$values[id][fid]}
-            args={fields[fid]}
-            errors={getErrors(fid)}
+            bind:value={$values[id][field.id]}
+            args={field}
+            errors={getErrors(field.id)}
             mini={false}
             animate={true}
         />

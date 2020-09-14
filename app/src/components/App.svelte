@@ -17,7 +17,7 @@
         if (hash) {
             activeSection.set(hash)
         } else {
-            activeSection.set(Object.keys($sections)[0])
+            activeSection.set($sections[0]['id'])
         }
     })
 </script>
@@ -42,7 +42,7 @@
     main {
         float: left;
         width: 100%;
-        margin-top: 20px;
+        margin-top: 15px;
         position: relative;
     }
 

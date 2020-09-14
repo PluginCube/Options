@@ -5,7 +5,7 @@
  * Initialize the instance
  */
 $options = new CiraPress\Framework([
-    'id' => 'cirapress31',
+    'id' => 'cirapress34',
     'titles' => [
         'page' => 'Cira',
         'menu' => 'Cirapress'
@@ -295,7 +295,8 @@ $options->add('field', [
     'title' => 'Repeater',
     'section' => 'others',
     'fields' => [
-        'text' => [
+        [
+            'id' => 'text',
             'type' => 'text',
             'title' => 'Text',
             'default' => 'New Item',
@@ -303,12 +304,14 @@ $options->add('field', [
                 'placeholder' => 'Insert here ...',
             ]
         ],
-        'switch' => [
+        [
+            'id' => 'switch',
             'type' => 'switch',
             'title' => 'Switch',
             'default' => false,
         ],
-        'color' => [
+        [
+            'id' => 'color',
             'type' => 'color',
             'title' => 'Color',
             'default' => '#555555',
@@ -323,6 +326,7 @@ $options->add('field', [
     'type' => 'preset',
     'title' => 'Preset',
     'section' => 'others',
+    'priority' => 0,
     'presets' => [
         [
             'title' => 'Dark',
@@ -374,6 +378,7 @@ $options->add('field', [
     'type' => 'import',
     'title' => 'Import',
     'section' => 'advanced',
+
 ]);
 
 $options->add('field', [
@@ -381,5 +386,6 @@ $options->add('field', [
     'type' => 'html',
     'title' => 'html',
     'section' => 'advanced',
-    'content' => '<i>hello world!</i>'
+    'content' => '<i>hello world!</i>',
+    'priority' => 0
 ]);

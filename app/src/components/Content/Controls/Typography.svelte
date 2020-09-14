@@ -4,6 +4,8 @@
 
     import merge from 'deepmerge'
 
+    $: if (! value) value = {};
+
     $: value = merge(
         {
             family: 'Roboto',

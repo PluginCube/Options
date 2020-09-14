@@ -9,11 +9,17 @@
 
     import Separator from './Item/Separator'
 
+    $: if (typeof $menu === 'object') menu.set(Object.values($menu))
+
     let types = {
         section: Section,
         external: External,
         separator: Separator,
     }
+
+    $: items = $menu.sort(function (a, b) {
+        return a.priority - b.priority;
+    });
 </script>
 
 <style lang="scss">
@@ -74,7 +80,7 @@
 
 <nav>
     <ul>
-        {#each $menu as item}
+        {#each items as item}
             <svelte:component this={types[item.type]} {...item} />
         {/each}
     </ul>

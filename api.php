@@ -41,19 +41,14 @@ class API
     public function add_section($args)
     {
         do_action('cf/add/section/before', $args);
-
-        extract($args);
-        
-        unset($args['id']);
         
         $args = wp_parse_args($args, [
             'title' => null,
             'description' => null,
-            'priority' => 10,
             'fields' => []
         ]);
 
-        $this->parent->args['sections'][$id] = $args;
+        $this->parent->args['sections'][] = $args;
 
         do_action('cf/add/section/after', $args);
     }
@@ -72,11 +67,6 @@ class API
     {
         do_action('cf/add/field/before', $args);
 
-        extract($args);
-        
-        unset($args['id']);
-        unset($args['section']);
-
         $args = wp_parse_args($args, [
             'type' => 'text',
             'title' => null,
@@ -84,8 +74,14 @@ class API
             'priority' => 10,
             'default' => null,
         ]);
+        
+        $this->parent->args['fields'][] = $args;
 
-        $this->parent->args['sections'][$section]['fields'][$id] = $args;
+        foreach ($this->parent->args['sections'] as &$section) {
+            if ($section['id'] === $args['section']) {
+                $section['fields'][] = $args;
+            }
+        }
 
         do_action('cf/add/field/after', $args);
     }
@@ -104,8 +100,6 @@ class API
     {
         do_action('cf/add/link/before', $args);
 
-        extract($args);
-        
         $args = wp_parse_args($args, [
             'type' => 'section',
             'title' => null,

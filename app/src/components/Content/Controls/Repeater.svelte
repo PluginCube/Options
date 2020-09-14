@@ -15,19 +15,18 @@
     let list
     let activeItem
 
-    $: fids = activeItem ? visiableFields(args.fields, activeItem) : []
+    $: fields = activeItem ? visiableFields(args.fields, activeItem) : []
 
     let toggle = (item) => {
         activeItem === item ? (activeItem = null) : (activeItem = item)
     }
-
+    
     let add = () => {
         let item = {}
 
-        Object.keys(args.fields).forEach((id) => {
-            let field = args.fields[id]
+        args.fields.forEach((field) => {
             let value = field['default'] !== 'undefined' ? field['default'] : null
-            item[id] = value
+            item[field.id] = value
         })
 
         value = [...value, item]
@@ -179,13 +178,13 @@
 
                 {#if activeItem === item}
                     <main>
-                        {#each fids as fid}
+                        {#each fields as field}
                             <Field
                                 animate={false}
                                 mini={true}
                                 errors={false}
-                                args={args.fields[fid]}
-                                bind:value={value[i][fid]}
+                                args={field}
+                                bind:value={value[i][field.id]}
                             />
                         {/each}
 

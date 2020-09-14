@@ -31,7 +31,7 @@ export const save = async (values = false) => {
             pushNotification(get(store.translation).data_saved);
         } else {
             store.errors.set(result.data.errors);
-            console.log(result.data.errors);
+
             pushNotification(get(store.translation).validation_error, 'error');
         }
 
@@ -85,9 +85,11 @@ export const arrayMove = (arr, from, to) => {
 };
     
 export const visiableFields = (fields, values) => {
-    return Object.keys(fields).filter(i => {
-        let field = fields[i];
+    fields.sort(function (a, b) {
+        return a.priority - b.priority;
+    });
 
+    return fields.filter(field => {
         if (field.condition) {
             let target = values[field.condition[0]];
             let operation = field.condition[1];
