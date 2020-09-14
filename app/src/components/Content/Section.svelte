@@ -19,7 +19,7 @@
 
     $: if (typeof $values[id] !== 'object') $values[id] = {};
     
-    $: fields = visiableFields(fields, $values[id])
+    $: vfields = visiableFields(fields, $values[id])
 </script>
 
 <style>
@@ -37,7 +37,7 @@
 <section>
     <h2>{title}</h2>
 
-    {#each fields as field (field.id)}
+    {#each vfields as field (field.id)}
         <Field
             bind:value={$values[id][field.id]}
             args={field}

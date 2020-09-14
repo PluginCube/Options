@@ -15,7 +15,7 @@
     let list
     let activeItem
 
-    $: fields = activeItem ? visiableFields(args.fields, activeItem) : []
+    $: vrfields = activeItem ? visiableFields(args.fields, activeItem) : []
 
     let toggle = (item) => {
         activeItem === item ? (activeItem = null) : (activeItem = item)
@@ -179,7 +179,7 @@
 
                 {#if activeItem === item}
                     <main>
-                        {#each fields as field}
+                        {#each vrfields as field (field.id)}
                             <Field
                                 animate={false}
                                 mini={true}

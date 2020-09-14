@@ -38,7 +38,8 @@ $options->add('field', [
     'default' => 'This is the text field.',
     'attributes' => [
         'placeholder' => 'Insert here ...',
-    ]
+    ],
+    'description' => 'This is the description field, useful for additional information.'
 ]);
 
 $options->add('field', [
@@ -66,6 +67,7 @@ $options->add('field', [
     'title' => 'Select',
     'section' => 'general',
     'default' => 'two',
+    'condition' => ['switch', '===', true],
     'choices' => [
         [
             'id' => 'one',
@@ -91,8 +93,7 @@ $options->add('field', [
     'type' => 'image',
     'title' => 'Image',
     'section' => 'general',
-    'default' => '',
-    'condition' => ['select', '===', 'two']
+    'default' => ''
 ]);
 
 $options->add('field', [

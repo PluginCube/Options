@@ -35,7 +35,7 @@
                 line-height: 22px;
                 font-weight: 400;
                 color: var(--cf-secondary-text);
-                margin: 15px 0px 0px 0px;
+                margin: 20px 0px 10px 0px;
             }
         }
 

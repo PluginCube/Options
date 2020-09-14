@@ -93,9 +93,9 @@ export const visiableFields = (fields, values) => {
         if (field.condition) {
             let target = values[field.condition[0]];
             let operation = field.condition[1];
-            let value = field.condition[2];
+            let compare = field.condition[2];
 
-            return eval(`value ${operation} target`);
+            return eval(`target ${operation} compare`);
         }
 
         return true;
