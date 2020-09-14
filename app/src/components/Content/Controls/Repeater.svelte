@@ -122,6 +122,7 @@
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     width: 200px;
+                    max-width: calc(100% - 40px);
                     float: left;
                     overflow: hidden;
                 }
@@ -146,7 +147,7 @@
                     background: #ff0000;
                     border: none;
                     height: 22px;
-                    padding: 0px 7px;
+                    padding: 0px 8px;
                     color: #ffffff;
                     border-radius: 3px;
                     font-size: 12px;

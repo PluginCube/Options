@@ -317,6 +317,22 @@ $options->add('field', [
             'default' => '#555555',
             'condition' => ['switch', '===', true]
         ],
+        [
+            'id' => 'repeater',
+            'type' => 'repeater',
+            'title' => 'Repeater',
+            'fields' => [
+                [
+                    'id' => 'text',
+                    'type' => 'text',
+                    'title' => 'Text',
+                    'default' => 'New Item',
+                    'attributes' => [
+                        'placeholder' => 'Sub repeater!',
+                    ]
+                ]
+            ]
+        ]
     ]
 ]);
 
