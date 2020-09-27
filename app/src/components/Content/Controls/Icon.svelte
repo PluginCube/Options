@@ -26,10 +26,10 @@
         text-align: center;
         font-size: 14px;
         cursor: pointer;
-        color: var(--cf-primary-text);
-        border-radius: var(--cf-border-radius);
-        box-shadow: var(--cf-box-shadow);
-        border: var(--cf-control-border);
+        color: var(--co-primary-text);
+        border-radius: var(--co-border-radius);
+        box-shadow: var(--co-box-shadow);
+        border: var(--co-control-border);
         outline: none;
         float: left;
         box-sizing: border-box;

@@ -40,7 +40,7 @@ class API
      */
     public function add_section($args)
     {
-        do_action('cf/add/section/before', $args);
+        do_action('co/add/section/before', $args);
         
         $args = wp_parse_args($args, [
             'title' => null,
@@ -50,7 +50,7 @@ class API
 
         $this->parent->args['sections'][] = $args;
 
-        do_action('cf/add/section/after', $args);
+        do_action('co/add/section/after', $args);
     }
 
     /**
@@ -65,7 +65,7 @@ class API
      */
     public function add_field($args)
     {
-        do_action('cf/add/field/before', $args);
+        do_action('co/add/field/before', $args);
 
         $args = wp_parse_args($args, [
             'type' => 'text',
@@ -83,7 +83,7 @@ class API
             }
         }
 
-        do_action('cf/add/field/after', $args);
+        do_action('co/add/field/after', $args);
     }
 
     /**
@@ -98,7 +98,7 @@ class API
      */
     public function add_link($args)
     {
-        do_action('cf/add/link/before', $args);
+        do_action('co/add/link/before', $args);
 
         $args = wp_parse_args($args, [
             'type' => 'section',
@@ -109,6 +109,6 @@ class API
 
         $this->parent->args['menu'][] = $args;
 
-        do_action('cf/add/link/after', $args);
+        do_action('co/add/link/after', $args);
     }
 }

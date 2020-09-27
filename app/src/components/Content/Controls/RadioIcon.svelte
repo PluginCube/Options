@@ -50,19 +50,19 @@
         float: left;
         margin: 0;
         padding: 0;
-        box-shadow: var(--cf-box-shadow);
-        border: var(--cf-control-border);
-        border-radius: var(--cf-border-radius);
+        box-shadow: var(--co-box-shadow);
+        border: var(--co-control-border);
+        border-radius: var(--co-border-radius);
 
         li {
             float: left;
             margin: 0px;
-            color: var(--cf-primary-text);
+            color: var(--co-primary-text);
             line-height: 12px;
 
             &.selected i {
                 background: #f8f5f5;
-                color: var(--cf-brand);
+                color: var(--co-brand);
             }
 
             i {
@@ -76,13 +76,13 @@
             }
 
             &:first-of-type i {
-                border-radius: var(--cf-border-radius) 0 0
-                    var(--cf-border-radius);
+                border-radius: var(--co-border-radius) 0 0
+                    var(--co-border-radius);
             }
 
             &:last-of-type i {
-                border-radius: 0 var(--cf-border-radius)
-                    var(--cf-border-radius) 0;
+                border-radius: 0 var(--co-border-radius)
+                    var(--co-border-radius) 0;
             }
 
             &:global {
@@ -91,7 +91,7 @@
                 }
 
                 .tooltip {
-                    box-shadow: var(--cf-box-shadow);
+                    box-shadow: var(--co-box-shadow);
                 }
             }
         }

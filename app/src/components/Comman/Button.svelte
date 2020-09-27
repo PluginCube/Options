@@ -8,14 +8,15 @@
         height: 32px;
         text-align: center;
         transition: all 0.2s;
-        font-size: 12px;
-        border-radius: var(--cf-border-radius);
-        background: var(--cf-primary-text);
+        font-size: 11px;
+        border-radius: var(--co-border-radius);
+        background: var(--co-primary-text);
         color: #fff;
         padding: 0px 12px;
         border: none;
         cursor: pointer;
         outline: none;
+        font-family: 'Nunito', sans-serif;
 
         &:disabled {
             cursor: auto;

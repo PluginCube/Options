@@ -17,19 +17,19 @@
         if (hash) {
             activeSection.set(hash)
         } else {
-            activeSection.set($sections[0]['id'])
+            activeSection.set($sections[0] ? $sections[0]['id'] : '')
         }
     })
 </script>
 
 <style lang="scss">
     div {
-        --cf-brand: #4c47ff;
-        --cf-primary-text: #23282d;
-        --cf-secondary-text: #666666;
-        --cf-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.03);
-        --cf-border-radius: 5px;
-        --cf-control-border: 1px solid #eeeeee;
+        --co-brand: #4c47ff;
+        --co-primary-text: #23282d;
+        --co-secondary-text: #666666;
+        --co-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.03);
+        --co-border-radius: 5px;
+        --co-control-border: 1px solid #eeeeee;
 
         float: none;
         display: block;
@@ -47,16 +47,10 @@
     }
 
     :global {
-        #wpcontent {
-            padding: 0px;
-        }
-
         div#wpfooter {
             display: none;
         }
     }
-
-    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700');
 </style>
 
 <div>

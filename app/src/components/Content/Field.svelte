@@ -25,16 +25,17 @@
         header {
             float: left;
             width: 35%;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 14px;
-            color: var(--cf-primary-text);
+            color: var(--co-primary-text);
             margin-right: 15%;
-
+            font-family: 'Nunito', sans-serif;
+            
             p {
                 font-size: 12px;
                 line-height: 22px;
                 font-weight: 400;
-                color: var(--cf-secondary-text);
+                color: var(--co-secondary-text);
                 margin: 20px 0px 10px 0px;
             }
         }

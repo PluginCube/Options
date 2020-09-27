@@ -24,13 +24,13 @@
 
 <style>
     h2 {
-        color: var(--cf-primary-text);
+        color: var(--co-primary-text);
         text-transform: capitalize;
-        margin: 0 0 35px;
-        font-size: 23px;
-        line-height: 23px;
-        font-family: 'Josefin Sans', sans-serif;
-        font-weight: bold;
+        margin: 0 0 45px;
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: 800;
+        font-family: 'Nunito', sans-serif;
     }
 </style>
 

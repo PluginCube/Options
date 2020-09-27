@@ -22,7 +22,7 @@
 
                 if (confirm($translation.override_warning)) {
                     values.set(data)
-                    jQuery('#cf nav > button').click()
+                    jQuery('#co nav > button').click()
                 }
 
                 e.target.value = ''

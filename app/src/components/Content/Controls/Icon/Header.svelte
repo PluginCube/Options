@@ -27,7 +27,7 @@
         margin: 0;
         padding: 0px 11px;
         font-size: 13px;
-        border-radius: var(--cf-border-radius);
+        border-radius: var(--co-border-radius);
     }
 
     div select:last-of-type {

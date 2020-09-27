@@ -27,7 +27,7 @@ class AJAX
     {
         $this->parent = $parent;
 
-        add_action('wp_ajax_cf', [$this, 'request']);
+        add_action('wp_ajax_co', [$this, 'request']);
     }
 
     /**
@@ -39,7 +39,7 @@ class AJAX
      */
     public function request()
     {        
-        if ( ! check_ajax_referer('cf', 'security')) {
+        if ( ! check_ajax_referer('co', 'security')) {
             wp_die();
         }
 

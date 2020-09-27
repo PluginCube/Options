@@ -79,14 +79,14 @@
         width: 100%;
 
         li {
-            box-shadow: var(--cf-box-shadow);
+            box-shadow: var(--co-box-shadow);
             background: #fff;
-            border-radius: var(--cf-border-radius);
+            border-radius: var(--co-border-radius);
             margin-bottom: 12px;
             width: 100%;
             overflow: hidden;
             margin-right: auto;
-            border: var(--cf-control-border);
+            border: var(--co-control-border);
 
             header {
                 padding: 0px 15px;
@@ -115,7 +115,7 @@
                 span {
                     font-weight: 600;
                     font-size: 13px;
-                    color: var(--cf-primary-text);
+                    color: var(--co-primary-text);
                     top: 0px;
                     line-height: 43px;
                     position: relative;
@@ -141,7 +141,7 @@
                 float: left;
                 width: 100%;
                 box-sizing: border-box;
-                --cf-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.05);
+                --co-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.05);
 
                 button {
                     background: #ff0000;

@@ -44,9 +44,9 @@
             display: block;
             padding: 0;
             cursor: pointer;
-            border-radius: var(--cf-border-radius);
+            border-radius: var(--co-border-radius);
             overflow: hidden;
-            box-shadow: var(--cf-box-shadow);
+            box-shadow: var(--co-box-shadow);
 
             img {
                 float: left;
@@ -64,7 +64,7 @@
                 span {
                     font-size: 11px;
                     float: left;
-                    color: var(--cf-secondary-text);
+                    color: var(--co-secondary-text);
                     text-transform: capitalize;
                 }
 

@@ -4,15 +4,9 @@
 /**
  * Initialize the instance
  */
-$options = new CiraPress\Framework([
+$options = new CiraPress\Options([
     'id' => 'cirapress34',
-    'titles' => [
-        'page' => 'Cira',
-        'menu' => 'Cirapress'
-    ],
 ]);
-
-
 
 /**
  * Section: General
@@ -38,8 +32,7 @@ $options->add('field', [
     'default' => 'This is the text field.',
     'attributes' => [
         'placeholder' => 'Insert here ...',
-    ],
-    'description' => 'This is the description field, useful for additional information.'
+    ]
 ]);
 
 $options->add('field', [

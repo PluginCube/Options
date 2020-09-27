@@ -11,7 +11,7 @@
 
 namespace CiraPress;
 
-class Framework 
+class Options 
 {
     /**
      * Version, used for cache-busting.
@@ -97,6 +97,8 @@ class Framework
 
         // Instance args
         $this->args = wp_parse_args($args, [
+            'sections' => [],
+            'menu' => [],
             'capability' => 'manage_options',
             'menu_icon' => '',
             'menu_position' => 99,            
@@ -104,10 +106,7 @@ class Framework
 
         // Translation file
         $this->translation = include $this->path . "/translation.php";
-        
-        // Admin page
-        add_action('_admin_menu', [$this, "add_admin_page"]);
-        
+                
         // Enqueue assets
         if ($this->in_view()) {
             add_action('admin_enqueue_scripts', [$this, "styles"]);
@@ -117,31 +116,6 @@ class Framework
         
         $this->AJAX = new AJAX($this);
         $this->API = new API($this);
-    }
-
-    /**
-     * Add admin page.
-     * 
-     * @since 1.0.0
-     * @access public
-     * @return void
-     */
-    public function add_admin_page()
-    {
-        extract($this->args);
-        add_menu_page($titles['page'], $titles['menu'], $capability, $id, [$this, 'render_page'], $menu_icon, $menu_position);
-    }
-
-    /**
-     * Render page.
-     *
-     * @since 1.0.0
-     * @access public 
-     * @return void
-     */
-    public function render_page()
-    {
-        echo '<div id="cf"></div>';
     }
 
     /**
@@ -168,7 +142,7 @@ class Framework
         wp_enqueue_editor();
         wp_enqueue_media();
         
-        wp_enqueue_script('cf', $this->url . "app/dist/bundle.js", ['jquery', 'wp-tinymce', 'jquery-ui-sortable'], $this->version, true);
+        wp_enqueue_script('co', $this->url . "app/dist/bundle.js", ['jquery', 'wp-tinymce', 'jquery-ui-sortable'], $this->version, true);
     }
 
     /**
@@ -180,9 +154,8 @@ class Framework
      */
     public function styles()
     {
-        
         if (file_exists($this->path . "app/dist/bundle.css")) {
-            wp_enqueue_style('cf', $this->url . "app/dist/bundle.css");
+            wp_enqueue_style('co', $this->url . "app/dist/bundle.css");
         }
     }
 
@@ -203,11 +176,10 @@ class Framework
             'errors' => $this->get_errors(),
             'defaults' => $this->get_defaults(),
             'translation' => $this->translation,
-            'titles' => $this->args['titles'],
-            'nonce' => wp_create_nonce('cf'),
+            'nonce' => wp_create_nonce('co'),
         ];
 
-        wp_localize_script('cf', 'CFStore', $data);
+        wp_localize_script('co', 'CFStore', $data);
     }
 
     /**
