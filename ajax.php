@@ -1,6 +1,6 @@
 <?php
 
-namespace CiraPress;
+namespace CiraPress\Options;
 
 class AJAX 
 {

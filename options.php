@@ -114,8 +114,8 @@ class Options
             add_action('admin_enqueue_scripts', [$this, "app_state"]);
         }
         
-        $this->AJAX = new AJAX($this);
-        $this->API = new API($this);
+        $this->AJAX = new Options\AJAX($this);
+        $this->API = new Options\API($this);
     }
 
     /**
