@@ -54,7 +54,7 @@
                     transition: 0.3s;
                     position: relative;
                     height: 34px;
-                    line-height: 34px;
+                    line-height: 36px;
                     padding: 0px 12px;
                     box-sizing: border-box;
                     border-radius: var(--co-border-radius);

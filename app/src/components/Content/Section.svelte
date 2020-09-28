@@ -26,7 +26,7 @@
     h2 {
         color: var(--co-primary-text);
         text-transform: capitalize;
-        margin: 0 0 45px;
+        margin: 0 0 50px;
         font-size: 20px;
         line-height: 20px;
         font-weight: 800;
