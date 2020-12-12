@@ -1,5 +1,5 @@
 {
-  "name": "cirapress-framework",
+  "name": "plugincube-framework",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -26,7 +26,7 @@
     "style-loader": "^0.23.1",
     "svelte": "^3.0.0",
     "svelte-click-outside": "^1.0.0",
-    "svelte-color": "https://github.com/cirapress/svelte-color",
+    "svelte-color": "https://github.com/plugincube/svelte-color",
     "svelte-loader": "2.13.3",
     "svelte-preprocess": "^4.2.1",
     "svelte-tooltip": "^1.2.0",

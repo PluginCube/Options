@@ -4,8 +4,8 @@
 /**
  * Initialize the instance
  */
-$options = new CiraPress\Options([
-    'id' => 'cirapress34',
+$options = new PluginCube\Options([
+    'id' => 'plugincube34',
 ]);
 
 /**
