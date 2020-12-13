@@ -95,29 +95,28 @@
                 width: 100%;
                 float: left;
                 box-sizing: border-box;
-                line-height: 45px;
-                height: 45px;
+                line-height: 48px;
+                height: 48px;
                 cursor: pointer;
-
                 svg {
                     width: 12px;
                     height: 12px;
                     display: block;
-                    fill: #b2b2b2;
+                    fill: #adabab;
                     flex-shrink: 0;
                     backface-visibility: hidden;
-                    margin-top: 16px;
-                    margin-right: 10px;
+                    margin-top: 18px;
+                    margin-right: 12px;
                     cursor: move;
                     float: left;
                 }
 
                 span {
-                    font-weight: 600;
-                    font-size: 13px;
-                    color: var(--co-primary-text);
+                    font-weight: 700;
+                    font-size: 14px;
+                    color: var(--co-secondary-text);
                     top: 0px;
-                    line-height: 43px;
+                    line-height: 48px;
                     position: relative;
                     white-space: nowrap;
                     text-overflow: ellipsis;
@@ -125,6 +124,7 @@
                     max-width: calc(100% - 40px);
                     float: left;
                     overflow: hidden;
+                    font-family: 'Nunito', sans-serif;
                 }
 
                 i {
@@ -199,6 +199,6 @@
     </ul>
 {/if}
 
-<button on:click={add} class="button button-primary">
+<button on:click={add} class="button button-primary ">
     {$translation.add_item}
 </button>

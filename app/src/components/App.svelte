@@ -26,7 +26,7 @@
     div {
         --co-brand: #4c47ff;
         --co-primary-text: #23282d;
-        --co-secondary-text: #666666;
+        --co-secondary-text: #5d5b5b;
         --co-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.03);
         --co-border-radius: 5px;
         --co-control-border: 1px solid #eeeeee;
