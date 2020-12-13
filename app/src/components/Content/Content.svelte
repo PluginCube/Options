@@ -9,7 +9,7 @@
         float: right;
         width: calc(100% - 180px);
         box-sizing: border-box;
-        padding: 25px 0 25px 80px;
+        padding: 0px 0 25px 80px;
     }
 </style>
 

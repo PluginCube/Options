@@ -20,7 +20,7 @@
     div {
         float: left;
         width: 100%;
-        padding: 25px 0px;
+        padding: 28px 0px;
 
         header {
             float: left;

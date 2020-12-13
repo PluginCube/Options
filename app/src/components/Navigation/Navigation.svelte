@@ -26,7 +26,6 @@
     nav {
         width: 180px;
         margin: 0;
-        padding: 20px 0;
         float: left;
         box-sizing: border-box;
 
@@ -37,11 +36,11 @@
             :global > li {
                 float: left;
                 width: 100%;
-                margin: 0px 0px 5px 0px;
+                margin: 0px 0px 4px 0px;
 
                 &.active a {
                     color: var(--co-brand);
-                    background: #dbe1e7;
+                    background: #e2e4e6;
                 }
 
                 a {
@@ -49,12 +48,13 @@
                     width: 100%;
                     text-transform: capitalize;
                     font-weight: 800;
-                    font-size: 13px;
+                    font-size: 13.5px;
                     cursor: pointer;
                     transition: 0.3s;
+                    letter-spacing: .5px;
                     position: relative;
-                    height: 34px;
-                    line-height: 36px;
+                    height: 36px;
+                    line-height: 38px;
                     padding: 0px 12px;
                     box-sizing: border-box;
                     border-radius: var(--co-border-radius);
@@ -62,15 +62,13 @@
                     float: left;
                     outline: none;
                     box-shadow: none;
-                    font-family: 'Nunito', sans-serif;
-                    
+                    font-family: 'Nunito', sans-serif;                    
                     i {
                         float: left;
                         margin-right: 14px;
-                        font-size: 14px;
-                        margin-top: 0px;
-                        line-height: 34px;
+                        font-size: 16px;
                         font-weight: 100;
+                        line-height: 36px;
                     }
                 }
             }

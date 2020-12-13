@@ -16,7 +16,7 @@
     input {
         width: 260px;
         max-width: 100%;
-        padding: 4px 12px;
+        padding: 6px 12px;
         font-size: 13px;
         border: var(--co-control-border) !important;
         box-shadow: var(--co-box-shadow) !important;

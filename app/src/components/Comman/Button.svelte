@@ -5,9 +5,10 @@
 
 <style lang="scss">
     button {
-        height: 32px;
+        height: 35px;
         text-align: center;
         transition: all 0.2s;
+        font-weight: 500;
         font-size: 11px;
         border-radius: var(--co-border-radius);
         background: var(--co-primary-text);
@@ -17,7 +18,7 @@
         cursor: pointer;
         outline: none;
         font-family: 'Nunito', sans-serif;
-
+        
         &:disabled {
             cursor: auto;
             opacity: 0.6;

@@ -34,7 +34,7 @@
             background: #fff;
             width: 32px;
             height: 100%;
-            line-height: 34px;
+            line-height: 36px;
             text-align: center;
             border-left: var(--co-control-border);
             cursor: pointer;
@@ -46,7 +46,7 @@
             float: left;
             width: 125px;
             max-width: 100%;
-            padding: 4px 12px;
+            padding: 5px 12px;
             font-size: 13px;
             border: none;
             box-shadow: none;

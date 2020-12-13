@@ -67,7 +67,7 @@
 
             i {
                 float: left;
-                line-height: 35px;
+                line-height: 36px;
                 width: 40px;
                 text-align: center;
                 background: #fff;

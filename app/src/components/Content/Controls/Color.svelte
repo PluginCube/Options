@@ -25,6 +25,7 @@
         height: 28px;
         border-radius: 3px;
         cursor: pointer;
+        box-shadow: var(--co-box-shadow);
     }
 
     div {

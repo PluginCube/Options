@@ -19,9 +19,9 @@
 
 <style>
     button {
-        width: 36px;
-        height: 36px;
-        line-height: 34px;
+        width: 42px;
+        height: 40px;
+        line-height: 39px;
         background-color: #ffffff;
         text-align: center;
         font-size: 14px;
@@ -33,6 +33,7 @@
         outline: none;
         float: left;
         box-sizing: border-box;
+        padding: 0;
     }
 </style>
 

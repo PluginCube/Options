@@ -199,6 +199,6 @@
     </ul>
 {/if}
 
-<button on:click={add} class="button button-primary button-small">
+<button on:click={add} class="button button-primary">
     {$translation.add_item}
 </button>

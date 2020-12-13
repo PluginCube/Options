@@ -14,9 +14,10 @@
 
 <style>
     select {
-        min-width: 150px;
+        min-width: 200px;
         max-width: 100%;
-        padding: 4px 12px;
+        padding: 5px 12px;
+        padding-right: 35px;
         font-size: 13px;
         border: var(--co-control-border);
         box-shadow: var(--co-box-shadow);

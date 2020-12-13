@@ -40,7 +40,7 @@
         input {
             width: 85px;
             max-width: 100%;
-            padding: 4px 12px;
+            padding: 5px 12px;
             font-size: 13px;
             border: none;
             box-shadow: none;
