@@ -6,6 +6,8 @@
 
     import { arrayMove, visiableFields } from 'methods'
 
+    import Button from '../../Comman/Button'
+
     import { translation } from 'store'
 
     import Field from '../Field'
@@ -72,7 +74,7 @@
 
 <style lang="scss">
     ul {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         margin-top: 0;
         padding: 0;
         float: left;
@@ -98,6 +100,7 @@
                 line-height: 48px;
                 height: 48px;
                 cursor: pointer;
+
                 svg {
                     width: 12px;
                     height: 12px;
@@ -112,8 +115,8 @@
                 }
 
                 span {
-                    font-weight: 700;
-                    font-size: 14px;
+                    font-weight: 800;
+                    font-size: 13px;
                     color: var(--co-secondary-text);
                     top: 0px;
                     line-height: 48px;
@@ -199,6 +202,6 @@
     </ul>
 {/if}
 
-<button on:click={add} class="button button-primary ">
+<Button on:click={add}>
     {$translation.add_item}
-</button>
+</Button>

@@ -20,8 +20,9 @@
     div {
         float: left;
         width: 100%;
-        padding: 28px 0px;
-
+        padding: 20px 0px;
+        min-height: 40px;
+                        
         header {
             float: left;
             width: 35%;

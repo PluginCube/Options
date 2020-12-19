@@ -32,10 +32,10 @@
         --co-control-border: 1px solid #eeeeee;
 
         float: none;
-        display: block;
+        display: flex;
         width: 850px;
         margin: 0 auto;
-        padding: 20px 0;
+        padding: 30px 0;
         position: relative;
     }
 
