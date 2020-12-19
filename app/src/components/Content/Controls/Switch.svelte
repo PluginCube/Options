@@ -15,7 +15,7 @@
         position: relative;
         display: inline-block;
         width: 44px;
-        height: 22px;
+        height: 23px;
 
         &.active span {
             background-color: #20d678;
@@ -32,8 +32,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgb(217, 223, 230);
-            -webkit-transition: 0.4s;
+            background-color: #d8dee4;
             transition: 0.4s;
             border-radius: 34px;
         }
@@ -44,7 +43,7 @@
             height: 15px;
             width: 15px;
             left: 4px;
-            bottom: 3.5px;
+            bottom: 4px;
             background-color: #fff;
             -webkit-transition: 0.4s;
             transition: 0.4s;
