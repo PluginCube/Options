@@ -24,7 +24,7 @@
 
 <style lang="scss">
     div {
-        --co-brand: #4c47ff;
+        --co-brand: #001fff;
         --co-primary-text: #23282d;
         --co-secondary-text: #5d5b5b;
         --co-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.03);

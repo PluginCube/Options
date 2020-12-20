@@ -36,7 +36,7 @@
             :global > li {
                 float: left;
                 width: 100%;
-                margin: 0px 0px 3px 0px;
+                margin: 0px 0px 5px 0px;
 
                 &.active a {
                     color: var(--co-brand);
@@ -65,10 +65,10 @@
                     font-family: 'Nunito', sans-serif;                    
                     i {
                         float: left;
-                        margin-right: 14px;
+                        margin-right: 12px;
                         font-size: 16px;
                         font-weight: 100;
-                        line-height: 36px;
+                        line-height: 37px;
                     }
                 }
             }
