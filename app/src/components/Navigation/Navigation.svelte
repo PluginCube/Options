@@ -24,7 +24,7 @@
 
 <style lang="scss">
     nav {
-        width: 180px;
+        width: 185px;
         margin: 0;
         float: left;
         box-sizing: border-box;
@@ -65,7 +65,7 @@
                     font-family: 'Nunito', sans-serif;                    
                     i {
                         float: left;
-                        margin-right: 12px;
+                        margin-right: 11px;
                         font-size: 16px;
                         font-weight: 100;
                         line-height: 37px;
