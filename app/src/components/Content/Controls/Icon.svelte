@@ -17,14 +17,13 @@
     }
 </script>
 
-<style>
+<style lang="scss">
     button {
-        width: 42px;
-        height: 40px;
-        line-height: 39px;
+        height: 38px;
+        line-height: 37px;
         background-color: #ffffff;
         text-align: center;
-        font-size: 14px;
+        font-size: 16px;
         cursor: pointer;
         color: var(--co-primary-text);
         border-radius: var(--co-border-radius);
@@ -33,7 +32,13 @@
         outline: none;
         float: left;
         box-sizing: border-box;
-        padding: 0;
+        padding: 0px 10px;
+
+        span {
+            margin-left: 6px;
+            font-size: 12px;
+            float: right;
+        }
     }
 </style>
 
@@ -44,6 +49,8 @@
 >
     <button on:click={toggle}>
         {#if value}<i class={value} />{:else}<i class="ri-add-fill" />{/if}
+        
+        <span class="ri-arrow-down-s-fill"></span>
     </button>
 
     {#if show}

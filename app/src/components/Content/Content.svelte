@@ -1,6 +1,8 @@
 <script>
     import Section from './Section'
     import { sections, activeSection } from 'store'
+
+    $: section = $sections.find(x => x.id == $activeSection); 
 </script>
 
 <style>
@@ -9,14 +11,12 @@
         float: right;
         width: calc(100% - 185px);
         box-sizing: border-box;
-        padding: 0px 0 25px 80px;
+        padding: 0px 0 25px 75px;
     }
 </style>
 
 <div>
-    {#each $sections as section}
-        {#if $activeSection == section.id}
-            <Section {...section} />
-        {/if}
-    {/each}
+    {#if section}
+        <Section {...section} />
+    {/if}
 </div>

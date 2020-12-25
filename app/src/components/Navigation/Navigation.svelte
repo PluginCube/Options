@@ -40,7 +40,7 @@
 
                 &.active a {
                     color: var(--co-brand);
-                    background: #e2e4e6;
+                    background: #dbdee0;
                 }
 
                 a {

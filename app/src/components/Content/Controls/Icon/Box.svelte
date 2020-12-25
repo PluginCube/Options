@@ -55,12 +55,11 @@
         position: absolute;
         margin-left: 65px;
         margin-bottom: 40px;
-        box-shadow: var(--co-box-shadow);
-        border: var(--co-control-border);
+        box-shadow: var(--co-box-shadow-lg);
         border-radius: var(--co-border-radius);
         background: white;
         width: 220px;
-        max-height: 260px;
+        max-height: 280px;
         overflow: hidden;
         z-index: 9999;
 
@@ -75,20 +74,20 @@
 
             li {
                 float: left;
-                margin: 4px;
+                margin: 5px;
                 width: calc(25% - 10px);
                 text-align: center;
                 line-height: 38px;
                 font-size: 14px;
                 color: var(--co-primary-text);
-                border: var(--co-control-border);
                 border-radius: var(--co-border-radius);
                 transition: all 0.1s;
                 cursor: pointer;
                 padding-top: 1px;
-
+                background-color: #eeeeee;
+                
                 &:hover {
-                    background-color: #eeeeeeba;
+                    background-color: rgb(226, 226, 226);
                 }
             }
         }

@@ -8,6 +8,7 @@
     import ClickOutside from 'svelte-click-outside'
 
     let show = false
+    let style
 
     let change = (event) => {
         let { r, g, b, a } = event.detail
@@ -15,27 +16,55 @@
         value = `rgba(${r}, ${g}, ${b}, ${a})`
     }
 
-    $: style = `background-color: ${value}`
+
+    $: if (['rgba(255, 255, 255, 1)', '#fff', '#ffffff'].includes(value)) {
+        style = `background-color: ${value}`
+    } else {
+        style = `background-color: ${value}; border-color: transparent;`
+    }
 </script>
 
-<style>
-    span {
-        float: left;
-        width: 28px;
-        height: 28px;
-        border-radius: 3px;
+<style lang="scss">
+    button {
+        height: 38px;
+        background-color: #ffffff;
+        text-align: center;
+        font-size: 16px;
         cursor: pointer;
+        color: var(--co-primary-text);
+        border-radius: var(--co-border-radius);
         box-shadow: var(--co-box-shadow);
+        border: var(--co-control-border);
+        outline: none;
+        float: left;
+        box-sizing: border-box;
+        padding: 0px 10px;
+        display: flex;
+        align-items: center;
+        span {
+            width: 14px;
+            height: 14px;
+            border-radius: 3px;
+            display: inline-block;
+            border: 1px solid #eee;
+        }
+
+        i {
+            margin-left: 8px;
+            font-size: 12px;
+        }
     }
 
     div {
         position: absolute;
-        margin-left: 50px;
-        border-radius: 3px;
-        overflow: hidden;
+        margin-left: 75px;
         margin-bottom: 40px;
-        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
         z-index: 9999;
+        
+        :global(.color-picker) {
+            border-radius: 3px;
+            overflow: hidden;
+        }
     }
 </style>
 
@@ -44,12 +73,14 @@
         show = false
     }}
 >
-    <span
-        {style}
+    <button
         on:click={() => {
             show = !show
         }}
-    />
+    >
+        <span {style} />
+        <i class="ri-arrow-down-s-fill" />
+    </button>
 
     {#if show}
         <div transition:fade={{ duration: 100 }}>

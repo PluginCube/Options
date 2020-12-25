@@ -155,7 +155,7 @@
                     border-radius: 3px;
                     font-size: 12px;
                     cursor: pointer;
-                    padding-bottom: 1px;
+                    margin-top: 10px;
                 }
             }
         }

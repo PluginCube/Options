@@ -5,8 +5,6 @@
     export let mini
     export let animate
 
-    import { fade } from 'svelte/transition'
-
     import modules from './Controls/*.svelte'
 
     let typeString = args.type.replace(new RegExp('-', 'g'), '')
@@ -51,20 +49,20 @@
         }
 
         &.mini {
-            padding: 0px 0px 30px 0px;
-            min-height: 34px;
+            padding: 0px 0px 25px 0px;
 
             main {
                 float: left;
-                width: fit-content;
-                max-width: 100%;
+                width: 100%;
+
+                > :global(select) {
+                    width: 100%;
+                }
             }
 
             header {
                 float: left;
-                width: fit-content;
-                min-width: 50px;
-                margin-bottom: 15px;
+                margin-bottom: 10px;
 
                 span {
                     font-size: 13px;
@@ -74,7 +72,7 @@
     }
 </style>
 
-<div transition:fade={{ duration: animate ? 150 : 0 }} class:mini>
+<div class:mini>
     <header>
         {#if args.title}<span>{args.title}</span>{/if}
 

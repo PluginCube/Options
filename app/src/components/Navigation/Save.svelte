@@ -5,7 +5,7 @@
 
     import Button from '../Comman/Button'
 
-    let style = 'margin: 50px 0px;width: 100%; height: 34px;'
+    let style = 'margin-top: 150px;width: 100%; height: 34px;'
 
     let disabled = false
 

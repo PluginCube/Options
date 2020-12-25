@@ -12,7 +12,7 @@
     )
 </script>
 
-<style>
+<style lang="scss">
     select {
         min-width: 200px;
         max-width: 100%;
@@ -26,6 +26,10 @@
         background-repeat: no-repeat;
         background-position-x: calc(100% - 10px);
         margin: 0;
+
+        option {
+            font-size: 14px;
+        }
     }
 </style>
 
