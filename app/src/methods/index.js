@@ -84,18 +84,19 @@ export const arrayMove = (arr, from, to) => {
     return arr;
 };
     
-export const visiableFields = (fields, values) => {
+export const visiableFields = (fields, data) => {
     fields.sort(function (a, b) {
         return a.priority - b.priority;
     });
 
     return fields.filter(field => {
         if (field.condition) {
-            let target = values[field.condition[0]];
-            let operation = field.condition[1];
-            let compare = field.condition[2];
-
-            return eval(`target ${operation} compare`);
+            try {
+                return eval(field.condition);
+            } catch (error) {
+                console.log(error);
+                return true
+            }
         }
 
         return true;
