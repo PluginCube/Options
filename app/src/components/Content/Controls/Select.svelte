@@ -14,7 +14,7 @@
 
 <style lang="scss">
     select {
-        min-width: 200px;
+        width: 200px;
         max-width: 100%;
         padding: 5px 12px;
         padding-right: 35px;

@@ -35,7 +35,7 @@
         padding: 0px 10px;
 
         span {
-            margin-left: 6px;
+            margin-left: 8px;
             font-size: 12px;
             float: right;
         }

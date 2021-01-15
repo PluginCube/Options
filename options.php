@@ -270,7 +270,7 @@ class Options
     {
         $types = [
             'text' => 'sanitize_text_field',
-            'textarea' => 'sanitize_textarea_field',
+            'textarea' => 'wp_filter_post_kses',
             'editor' => 'wp_filter_post_kses',
             'color' => 'sanitize_text_field',
             'image' => 'sanitize_url',

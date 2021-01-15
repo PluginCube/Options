@@ -49,7 +49,11 @@
         }
 
         &.mini {
-            padding: 0px 0px 25px 0px;
+            padding: 20px;
+            margin-bottom: 5px;
+            background: #f1f1f1;
+            box-sizing: border-box;
+            border-radius: 3px;
 
             main {
                 float: left;
@@ -63,6 +67,7 @@
             header {
                 float: left;
                 margin-bottom: 10px;
+                width: 100%;
 
                 span {
                     font-size: 13px;
