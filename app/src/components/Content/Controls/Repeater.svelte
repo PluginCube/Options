@@ -17,7 +17,7 @@
     let list
     let activeItem = window._active_item || null
 
-    $: vrfields = activeItem ? visiableFields(args.fields, activeItem) : []
+    $: vrfields = activeItem ? visiableFields(args.fields, value.find(i => i._id == activeItem)) : []
 
     let generateId = () => '_' + Math.random().toString(36).substring(7);
 
@@ -68,11 +68,12 @@
         if (value.length) {
             initSortable()
 
-            // Make sure every item has an _id
+            /* 
+             * Make sure every item has an _id
+             */
             value = value.map(i => {
                 if ( ! i._id ) {
                     i._id = generateId()
-                    console.log(i);
                 }
 
                 return i
