@@ -15,12 +15,19 @@
     $: if (!value) value = []
 
     let list
-    let activeItem
+    let activeItem = window._active_item || null
 
     $: vrfields = activeItem ? visiableFields(args.fields, activeItem) : []
 
+    let generateId = () => '_' + Math.random().toString(36).substring(7);
+
     let toggle = (item) => {
-        activeItem === item ? (activeItem = null) : (activeItem = item)
+        if (activeItem === item._id) {
+            activeItem = null
+            window._active_item = null
+        } else {
+            activeItem = item._id
+        }
     }
     
     let add = () => {
@@ -31,12 +38,14 @@
             item[field.id] = value
         })
 
+        item['_id'] = generateId()
+
         value = [...value, item]
     }
 
     let remove = () => {
         if (confirm($translation.confirm)) {
-            value = value.filter((i) => i !== activeItem)
+            value = value.filter((i) => i._id !== activeItem)
         }
     }
 
@@ -58,6 +67,16 @@
     onMount(() => {
         if (value.length) {
             initSortable()
+
+            // Make sure every item has an _id
+            value = value.map(i => {
+                if ( ! i._id ) {
+                    i._id = generateId()
+                    console.log(i);
+                }
+
+                return i
+            })
         }
     })
 
@@ -176,11 +195,11 @@
                     <span>{item[Object.keys(item)[0]]}</span>
 
                     <i
-                        class={activeItem === item ? 'ri-arrow-up-s-fill' : 'ri-arrow-down-s-fill'}
+                        class={activeItem === item._id ? 'ri-arrow-up-s-fill' : 'ri-arrow-down-s-fill'}
                     />
                 </header>
 
-                {#if activeItem === item}
+                {#if activeItem === item._id}
                     <main>
                         {#each vrfields as field (field.id)}
                             <Field
