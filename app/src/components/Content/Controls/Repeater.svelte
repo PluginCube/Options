@@ -207,7 +207,7 @@
                                 animate={false}
                                 mini={true}
                                 errors={false}
-                                args={field}
+                                args={{...field, activeItemValues: value.find(i => i._id == activeItem)}}
                                 bind:value={value[i][field.id]}
                             />
                         {/each}

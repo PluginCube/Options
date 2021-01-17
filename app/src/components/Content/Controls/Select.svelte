@@ -1,15 +1,38 @@
 <script>
+    import { values } from 'store'
+
     export let value
     export let args
 
     import merge from 'deepmerge'
 
-    $: args = merge(
-        {
-            choices: [],
-        },
-        args
-    )
+    $: args.choices = merge(args.choices, []);
+
+    
+    /**
+     *  Lookup Examples:
+     * 
+     *  data.section.field                for getting values from a repeater in a section
+     *  args.activeItemValues.fields      for gettings values from a repeater in the current repeater item. 
+    */
+
+    $: if ( args.lookup ) {
+        let data = $values;
+        
+        try {
+            let lookupItems = eval(args.lookup);
+
+            args.choices = lookupItems.map(i => {
+                return {
+                    id: i['_id'],
+                    title: i[Object.keys(i)[0]]
+                }
+            });
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
 </script>
 
 <style lang="scss">
