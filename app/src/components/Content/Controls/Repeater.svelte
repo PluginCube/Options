@@ -106,7 +106,7 @@
             border-radius: var(--co-border-radius);
             margin-bottom: 12px;
             width: 100%;
-            overflow: hidden;
+            display: inline-block;
             margin-right: auto;
             border: var(--co-control-border);
 

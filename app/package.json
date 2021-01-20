@@ -33,5 +33,8 @@
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.0",
     "webpack-extended-import-glob-loader": "^1.6.6"
+  },
+  "dependencies": {
+    "svelte-select": "^3.16.1"
   }
 }

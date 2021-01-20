@@ -1,5 +1,6 @@
 <script>
     import { values } from 'store'
+    import Select from 'svelte-select';
 
     export let value
     export let args
@@ -8,6 +9,7 @@
 
     $: args.choices = merge(args.choices, []);
 
+    $: value = value || null;
     
     /**
      *  Lookup Examples:
@@ -24,8 +26,8 @@
 
             args.choices = lookupItems.map(i => {
                 return {
-                    id: i['_id'],
-                    title: i[Object.keys(i)[0]]
+                    value: i['_id'],
+                    label: i[Object.keys(i)[0]]
                 }
             });
         } catch (error) {
@@ -33,31 +35,46 @@
         }
     }
 
+    $: change = (e) => {
+        if (args.attributes && args.attributes.isMulti) {
+            value = e.detail
+        } else {
+            value = e.detail.value;
+        }
+    }
+
+    $: clear = (e) => {
+        value = null;
+    }
 </script>
 
-<style lang="scss">
-    select {
-        width: 200px;
-        max-width: 100%;
-        padding: 5px 12px;
-        padding-right: 35px;
+<style>
+    :global(.selectContainer) {
+        width: 100%;
+        max-width: 220px;
         font-size: 13px;
-        border: var(--co-control-border);
-        box-shadow: var(--co-box-shadow);
-        border-radius: var(--co-border-radius);
-        background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
-        background-repeat: no-repeat;
-        background-position-x: calc(100% - 10px);
-        margin: 0;
-
-        option {
-            font-size: 14px;
-        }
+        border: var(--co-control-border) !important;
+        box-shadow: var(--co-box-shadow) !important;
+        border-radius: var(--co-border-radius) !important;
+        box-sizing: border-box;
+        --height: 40px;
+        --indicatorWidth: 16px;
+        --indicatorHeight: 16px;
+        --multiItemHeight: 24px;
+        --multiItemPadding: 0px 10px;
+        --multiLabelMargin: 0px;
     }
 </style>
 
-<select bind:value>
-    {#each args.choices as choice}
-        <option value={choice.id}>{choice.title}</option>
-    {/each}
-</select>
+<div>
+    <Select 
+        items={args.choices}
+        selectedValue={value}
+        on:select={change}
+        on:clear={clear}
+        isClearable={false}
+        showIndicator={true}
+        multiFullItemClearable={true}
+        {...args.attributes}>
+    </Select>
+</div>

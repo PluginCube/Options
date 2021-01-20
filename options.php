@@ -268,6 +268,10 @@ class Options
      */
     public function sanitize($values)
     {
+        function _ignore($val) {
+            return $val;
+        }
+
         $types = [
             'text' => 'sanitize_text_field',
             'textarea' => 'wp_filter_post_kses',
@@ -275,14 +279,12 @@ class Options
             'color' => 'sanitize_text_field',
             'image' => 'sanitize_url',
             'icon' => 'sanitize_html_class',
-            'select' => 'sanitize_key',
+            'select' => _ignore($val),
             'radio-image' => 'sanitize_key',
             'switch' => function ($val) {
                 return filter_var($val, FILTER_VALIDATE_BOOLEAN);
             },
-            'repeater' => function ($val) {
-                return $val;
-            },
+            'repeater' => _ignore($val),
         ];
 
         foreach ($values as $sectionID => &$fields) {
