@@ -44,7 +44,9 @@
     }
 
     let remove = () => {
-        if (confirm($translation.confirm)) {
+        let alertMsg = args.remove_alert || $translation.confirm;
+        
+        if (confirm(alertMsg)) {
             value = value.filter((i) => i._id !== activeItem)
         }
     }
