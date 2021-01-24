@@ -1,12 +1,12 @@
 <script>
-    import { translation, values } from 'store'
+    export let args
 
-    import { save } from 'methods'
+    import { translation, values } from 'store'
 
     import merge from 'deepmerge'
 
     let change = (e) => {
-        let files = event.target.files
+        let files = e.target.files
 
         try {
             if (!files.length) {
@@ -18,7 +18,11 @@
             let reader = new FileReader()
 
             reader.onload = (event) => {
-                let data = merge($values, JSON.parse(event.target.result))
+                let data = JSON.parse(event.target.result);
+
+                if (args.merge) {
+                    data = merge($values, JSON.parse(event.target.result))
+                }
 
                 if (confirm($translation.override_warning)) {
                     values.set(data)
