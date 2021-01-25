@@ -50,19 +50,19 @@
         float: left;
         margin: 0;
         padding: 0;
-        box-shadow: var(--co-box-shadow);
-        border: var(--co-control-border);
-        border-radius: var(--co-border-radius);
+        box-shadow: var(--pco-box-shadow);
+        border: var(--pco-control-border);
+        border-radius: var(--pco-border-radius);
 
         li {
             float: left;
             margin: 0px;
-            color: var(--co-primary-text);
+            color: var(--pco-primary-text);
             line-height: 12px;
 
             &.selected i {
                 background: #f8f5f5;
-                color: var(--co-brand);
+                color: var(--pco-brand);
             }
 
             i {
@@ -76,13 +76,13 @@
             }
 
             &:first-of-type i {
-                border-radius: var(--co-border-radius) 0 0
-                    var(--co-border-radius);
+                border-radius: var(--pco-border-radius) 0 0
+                    var(--pco-border-radius);
             }
 
             &:last-of-type i {
-                border-radius: 0 var(--co-border-radius)
-                    var(--co-border-radius) 0;
+                border-radius: 0 var(--pco-border-radius)
+                    var(--pco-border-radius) 0;
             }
 
             &:global {
@@ -91,7 +91,7 @@
                 }
 
                 .tooltip {
-                    box-shadow: var(--co-box-shadow);
+                    box-shadow: var(--pco-box-shadow);
                 }
             }
         }

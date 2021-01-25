@@ -24,13 +24,13 @@
 
 <style lang="scss">
     div {
-        --co-brand: #001fff;
-        --co-primary-text: #23282d;
-        --co-secondary-text: #5d5b5b;
-        --co-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.03);
-        --co-box-shadow-lg: 0px 0px 30px rgba(0, 0, 0, 0.05);
-        --co-border-radius: 5px;
-        --co-control-border: 1px solid #eeeeee;
+        --pco-brand: #001fff;
+        --pco-primary-text: #23282d;
+        --pco-secondary-text: #5d5b5b;
+        --pco-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.03);
+        --pco-box-shadow-lg: 0px 0px 30px rgba(0, 0, 0, 0.05);
+        --pco-border-radius: 5px;
+        --pco-control-border: 1px solid #eeeeee;
 
         float: none;
         display: flex;

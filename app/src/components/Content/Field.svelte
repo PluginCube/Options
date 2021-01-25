@@ -26,7 +26,7 @@
             width: 35%;
             font-weight: 700;
             font-size: 14px;
-            color: var(--co-primary-text);
+            color: var(--pco-primary-text);
             margin-right: 15%;
             font-family: 'Nunito', sans-serif;
             
@@ -34,7 +34,7 @@
                 font-size: 12px;
                 line-height: 22px;
                 font-weight: 400;
-                color: var(--co-secondary-text);
+                color: var(--pco-secondary-text);
                 margin: 20px 0px 10px 0px;
             }
         }

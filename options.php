@@ -3,7 +3,7 @@
  * Creates an interactive wordpress options panel.
  *
  * @package    PluginCube
- * @subpackage Framework
+ * @subpackage Options
  * @copyright  Copyright (c) 2020, PluginCube
  * @license    https://opensource.org/licenses/MIT
  * @since      1.0
@@ -39,6 +39,15 @@ class Options
      * @var string|null
      */
     private $path;
+
+    /**
+     * Prefix.
+     *
+     * @since 1.0.0
+     * @access private
+     * @var string|null
+     */
+    private $prefix = 'pco';
 
     /**
      * AJAX Class.
@@ -142,7 +151,7 @@ class Options
         wp_enqueue_editor();
         wp_enqueue_media();
         
-        wp_enqueue_script('co', $this->url . "app/dist/bundle.js", ['jquery', 'wp-tinymce', 'jquery-ui-sortable'], $this->version, true);
+        wp_enqueue_script($this->prefix, $this->url . "app/dist/bundle.js", ['jquery', 'wp-tinymce', 'jquery-ui-sortable'], $this->version, true);
     }
 
     /**
@@ -155,7 +164,7 @@ class Options
     public function styles()
     {
         if (file_exists($this->path . "app/dist/bundle.css")) {
-            wp_enqueue_style('co', $this->url . "app/dist/bundle.css");
+            wp_enqueue_style($this->prefix, $this->url . "app/dist/bundle.css");
         }
     }
 
@@ -176,10 +185,12 @@ class Options
             'errors' => $this->get_errors(),
             'defaults' => $this->get_defaults(),
             'translation' => $this->translation,
-            'nonce' => wp_create_nonce('co'),
+            'nonce' => wp_create_nonce($this->args['id']),
         ];
 
-        wp_localize_script('co', 'CFStore', $data);
+        $data = json_encode($data);
+
+        wp_add_inline_script($this->prefix, "const PluginCubeOptions = $data", 'before');
     }
 
     /**

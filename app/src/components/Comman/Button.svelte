@@ -10,8 +10,8 @@
         transition: all 0.2s;
         font-weight: 500;
         font-size: 11px;
-        border-radius: var(--co-border-radius);
-        background: var(--co-primary-text);
+        border-radius: var(--pco-border-radius);
+        background: var(--pco-primary-text);
         color: #fff;
         padding: 0px 15px;
         border: none;

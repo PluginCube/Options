@@ -18,9 +18,9 @@
         max-width: 100%;
         padding: 6px 12px;
         font-size: 13px;
-        border: var(--co-control-border) !important;
-        box-shadow: var(--co-box-shadow) !important;
-        border-radius: var(--co-border-radius);
+        border: var(--pco-control-border) !important;
+        box-shadow: var(--pco-box-shadow) !important;
+        border-radius: var(--pco-border-radius);
         margin: 0;
     }
 </style>

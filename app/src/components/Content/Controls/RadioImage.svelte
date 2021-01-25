@@ -36,7 +36,7 @@
                 }
 
                 .tooltip {
-                    box-shadow: var(--co-box-shadow);
+                    box-shadow: var(--pco-box-shadow);
                 }
             }
 

@@ -103,14 +103,14 @@
         width: 100%;
 
         li {
-            box-shadow: var(--co-box-shadow);
+            box-shadow: var(--pco-box-shadow);
             background: #fff;
-            border-radius: var(--co-border-radius);
+            border-radius: var(--pco-border-radius);
             margin-bottom: 12px;
             width: 100%;
             display: inline-block;
             margin-right: auto;
-            border: var(--co-control-border);
+            border: var(--pco-control-border);
 
             header {
                 padding: 0px 15px;
@@ -139,7 +139,7 @@
                 span {
                     font-weight: 800;
                     font-size: 13px;
-                    color: var(--co-secondary-text);
+                    color: var(--pco-secondary-text);
                     top: 0px;
                     line-height: 48px;
                     position: relative;
@@ -166,7 +166,7 @@
                 float: left;
                 width: 100%;
                 box-sizing: border-box;
-                --co-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.05);
+                --pco-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.05);
 
                 button {
                     background: #ff0000;

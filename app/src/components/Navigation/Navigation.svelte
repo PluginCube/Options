@@ -39,12 +39,12 @@
                 margin: 0px 0px 5px 0px;
 
                 &.active a {
-                    color: var(--co-brand);
+                    color: var(--pco-brand);
                     background: #dbdee0;
                 }
 
                 a {
-                    color: var(--co-primary-text);
+                    color: var(--pco-primary-text);
                     width: 100%;
                     text-transform: capitalize;
                     font-weight: 800;
@@ -57,7 +57,7 @@
                     line-height: 38px;
                     padding: 0px 12px;
                     box-sizing: border-box;
-                    border-radius: var(--co-border-radius);
+                    border-radius: var(--pco-border-radius);
                     text-decoration: none;
                     float: left;
                     outline: none;

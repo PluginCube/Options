@@ -53,9 +53,9 @@
         width: 100%;
         max-width: 220px;
         font-size: 13px;
-        border: var(--co-control-border) !important;
-        box-shadow: var(--co-box-shadow) !important;
-        border-radius: var(--co-border-radius) !important;
+        border: var(--pco-control-border) !important;
+        box-shadow: var(--pco-box-shadow) !important;
+        border-radius: var(--pco-border-radius) !important;
         box-sizing: border-box;
         --height: 40px;
         --indicatorWidth: 16px;

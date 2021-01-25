@@ -20,9 +20,9 @@
 <style lang="scss">
     div {
         position: relative;
-        border: var(--co-control-border) !important;
-        box-shadow: var(--co-box-shadow) !important;
-        border-radius: var(--co-border-radius);
+        border: var(--pco-control-border) !important;
+        box-shadow: var(--pco-box-shadow) !important;
+        border-radius: var(--pco-border-radius);
         overflow: hidden;
         width: fit-content;
 
@@ -36,10 +36,10 @@
             height: 100%;
             line-height: 36px;
             text-align: center;
-            border-left: var(--co-control-border);
+            border-left: var(--pco-control-border);
             cursor: pointer;
             padding-right: 1px;
-            color: var(--co-primary-text);
+            color: var(--pco-primary-text);
         }
 
         input {
@@ -50,7 +50,7 @@
             font-size: 13px;
             border: none;
             box-shadow: none;
-            border-radius: var(--co-border-radius);
+            border-radius: var(--pco-border-radius);
             margin: 0;
         }
     }

@@ -25,10 +25,10 @@
         li {
             float: left;
             margin-right: 10px;
-            color: var(--co-secondary-text);
+            color: var(--pco-secondary-text);
 
             &:global .tooltip {
-                box-shadow: var(--co-box-shadow);
+                box-shadow: var(--pco-box-shadow);
                 visibility: visible;
             }
         }

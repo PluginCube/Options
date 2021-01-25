@@ -55,8 +55,8 @@
         position: absolute;
         margin-left: 65px;
         margin-bottom: 40px;
-        box-shadow: var(--co-box-shadow-lg);
-        border-radius: var(--co-border-radius);
+        box-shadow: var(--pco-box-shadow-lg);
+        border-radius: var(--pco-border-radius);
         background: white;
         width: 220px;
         max-height: 280px;
@@ -64,7 +64,7 @@
         z-index: 9999;
 
         ul {
-            border-radius: var(--co-border-radius);
+            border-radius: var(--pco-border-radius);
             background: white;
             width: 100%;
             box-sizing: border-box;
@@ -79,8 +79,8 @@
                 text-align: center;
                 line-height: 38px;
                 font-size: 14px;
-                color: var(--co-primary-text);
-                border-radius: var(--co-border-radius);
+                color: var(--pco-primary-text);
+                border-radius: var(--pco-border-radius);
                 transition: all 0.1s;
                 cursor: pointer;
                 padding-top: 1px;

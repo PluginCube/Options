@@ -1,7 +1,7 @@
 import App from './components/App';
 
 const app = new App({
-	target: document.getElementById('co')
+	target: document.getElementById('pco')
 });
 
 export default app;

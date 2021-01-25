@@ -6,7 +6,7 @@ export const ajax = async (method, data = {}, type = 'POST') => {
         url: ajaxurl,
         type: type,
         data: {
-            action: 'co',
+            action: get(store.id),
             method: method,
             security: get(store.nonce),
             data: data    

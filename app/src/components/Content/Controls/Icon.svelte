@@ -25,10 +25,10 @@
         text-align: center;
         font-size: 16px;
         cursor: pointer;
-        color: var(--co-primary-text);
-        border-radius: var(--co-border-radius);
-        box-shadow: var(--co-box-shadow);
-        border: var(--co-control-border);
+        color: var(--pco-primary-text);
+        border-radius: var(--pco-border-radius);
+        box-shadow: var(--pco-box-shadow);
+        border: var(--pco-control-border);
         outline: none;
         float: left;
         box-sizing: border-box;

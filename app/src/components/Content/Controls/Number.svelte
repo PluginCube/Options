@@ -32,9 +32,9 @@
     div {
         position: relative;
         float: left;
-        border: var(--co-control-border) !important;
-        box-shadow: var(--co-box-shadow) !important;
-        border-radius: var(--co-border-radius);
+        border: var(--pco-control-border) !important;
+        box-shadow: var(--pco-box-shadow) !important;
+        border-radius: var(--pco-border-radius);
         overflow: hidden;
 
         input {

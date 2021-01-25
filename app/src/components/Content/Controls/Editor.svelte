@@ -50,14 +50,14 @@
 
         .mce-fullscreen {
             z-index: 100010 !important;
-            --co-border-radius: 0;
+            --pco-border-radius: 0;
         }
 
         .mce-tinymce {
-            box-shadow: var(--co-box-shadow) !important;
-            border-radius: var(--co-border-radius);
+            box-shadow: var(--pco-box-shadow) !important;
+            border-radius: var(--pco-border-radius);
             overflow: hidden;
-            border: var(--co-control-border) !important;
+            border: var(--pco-control-border) !important;
         }
 
         .mce-container iframe {
