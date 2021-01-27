@@ -41,12 +41,13 @@
         padding: 0px 10px;
         display: flex;
         align-items: center;
+        
         span {
             width: 14px;
             height: 14px;
             border-radius: 3px;
             display: inline-block;
-            border: 1px solid #eee;
+            border: 1px solid #f4f4f4;
         }
 
         i {

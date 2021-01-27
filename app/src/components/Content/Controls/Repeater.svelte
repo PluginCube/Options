@@ -4,6 +4,8 @@
 
     import { onDestroy, onMount, afterUpdate } from 'svelte'
 
+    import striptags from 'striptags'
+
     import { arrayMove, visiableFields } from 'methods'
 
     import Button from '../../Comman/Button'
@@ -169,15 +171,27 @@
                 --pco-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.05);
 
                 button {
-                    background: #ff0000;
-                    border: none;
-                    height: 22px;
-                    padding: 0px 8px;
-                    color: #ffffff;
-                    border-radius: 3px;
-                    font-size: 12px;
+                    border: 1px solid #e2e2e2;
+                    background: transparent;
+                    height: 24px;
+                    line-height: 1;
+                    padding: 0px 10px 0px 5px;
+                    color: #999;
+                    border-radius: 20px;
+                    font-size: 11px;
                     cursor: pointer;
-                    margin-top: 10px;
+                    margin-top: 20px;
+                    font-family: 'Nunito', sans-serif;
+                    display: flex;
+                    align-items: center;
+                    float: left;
+                    font-weight: 800;
+
+                    i {
+                        margin-right: 5px;
+                        font-weight: 100;
+                        font-size: 14px;
+                    }
                 }
             }
         }
@@ -195,7 +209,7 @@
                         />
                     </svg>
 
-                    <span>{item[Object.keys(item)[0]]}</span>
+                    <span>{striptags(item[Object.keys(item)[0]])}</span>
 
                     <i
                         class={activeItem === item._id ? 'ri-arrow-up-s-fill' : 'ri-arrow-down-s-fill'}
@@ -215,6 +229,7 @@
                         {/each}
 
                         <button on:click={remove}>
+                            <i class="ri-close-circle-fill"></i>
                             {$translation.remove}
                         </button>
                     </main>

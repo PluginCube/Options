@@ -32,6 +32,7 @@
         ul {
             margin: 0;
             padding: 0;
+            overflow: hidden;
 
             :global > li {
                 float: left;
@@ -65,7 +66,7 @@
                     font-family: 'Nunito', sans-serif;                    
                     i {
                         float: left;
-                        margin-right: 11px;
+                        margin-right: 12px;
                         font-size: 16px;
                         font-weight: 100;
                         line-height: 37px;

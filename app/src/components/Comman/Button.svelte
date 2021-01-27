@@ -5,19 +5,22 @@
 
 <style lang="scss">
     button {
-        height: 30px;
+        height: 28px;
         text-align: center;
         transition: all 0.2s;
-        font-weight: 500;
         font-size: 11px;
-        border-radius: var(--pco-border-radius);
         background: var(--pco-primary-text);
         color: #fff;
-        padding: 0px 15px;
+        padding: 0px 12px;
         border: none;
         cursor: pointer;
+        border-radius: 5px;
         outline: none;
+        display: flex;
+        justify-content: center;
         font-family: 'Nunito', sans-serif;
+        align-items: center;
+        font-weight: 500;
 
         &:disabled {
             cursor: auto;
