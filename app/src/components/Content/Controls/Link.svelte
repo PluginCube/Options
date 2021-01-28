@@ -1,11 +1,12 @@
 <script>
-    export let value
     export let args
 
     import Button from '../../Comman/Button'
+    import SvelteTooltip from 'svelte-tooltip'
 
-    $: color = typeof args.color == 'string' ? args.color : '#fd1044';
-    
+    $: color = args.color || '#fd1044';
+    $: msg = args.msg || '#fd1044';
+
     let click = () => {
         if ( args.url ) {
             window.open(args.url, "_blank");
@@ -20,12 +21,18 @@
         margin-right: 5px;
         font-weight: 100;
     }
+
+    :global(.tooltip.top) {
+        margin-top: -35px !important;
+    }
 </style>
 
-<Button on:click={click} {style}>
-    {#if args.icon}
-        <i class={args.icon}></i>
-    {/if}
+<SvelteTooltip tip={msg} top color="#ffffff">
+    <Button on:click={click} {style}>
+        {#if args.icon}
+            <i class={args.icon}></i>
+        {/if}
 
-    {args.text}
-</Button>
+        {args.text}
+    </Button>
+</SvelteTooltip>

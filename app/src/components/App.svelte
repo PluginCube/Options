@@ -48,6 +48,10 @@
     }
 
     :global {
+        .button-small {
+            padding: 1px 9px !important;
+        }
+
         div#wpfooter {
             display: none;
         }

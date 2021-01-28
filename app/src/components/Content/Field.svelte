@@ -18,7 +18,7 @@
     div {
         float: left;
         width: 100%;
-        padding: 20px 0px;
+        padding: 18px 0px;
         min-height: 40px;
                         
         header {

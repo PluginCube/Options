@@ -9,6 +9,7 @@
     import { arrayMove, visiableFields } from 'methods'
 
     import Button from '../../Comman/Button'
+    import Link from './Link.svelte';
 
     import { translation } from 'store'
 
@@ -50,6 +51,8 @@
         
         if (confirm(alertMsg)) {
             value = value.filter((i) => i._id !== activeItem)
+            activeItem = null
+            window._active_item = null
         }
     }
 
@@ -239,6 +242,10 @@
     </ul>
 {/if}
 
-<Button on:click={add}>
-    {$translation.add_item}
-</Button>
+{#if args.limit && args.limit_link && value.length >= args.limit}
+    <Link args={args.limit_link}/>
+    {:else}
+    <Button on:click={add}>
+        {$translation.add_item}
+    </Button>
+{/if}
