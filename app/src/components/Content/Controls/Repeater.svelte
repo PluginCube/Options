@@ -188,7 +188,7 @@
                     font-weight: 800;
 
                     i {
-                        margin-right: 5px;
+                        margin-right: 4px;
                         font-weight: 100;
                         font-size: 14px;
                     }

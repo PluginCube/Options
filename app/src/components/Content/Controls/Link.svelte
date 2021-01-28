@@ -8,7 +8,6 @@
     
     let click = () => {
         if ( args.url ) {
-            args.url = (args.url.indexOf('://') === -1) ? 'http://' + args.url : args.url;
             window.open(args.url, "_blank");
         }
     }
