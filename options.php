@@ -112,19 +112,31 @@ class Options
             'menu_icon' => '',
             'menu_position' => 99,            
         ]);
-
-        // Translation file
-        $this->translation = include $this->path . "/translation.php";
                 
         // Enqueue assets
         if ($this->in_view()) {
             add_action('admin_enqueue_scripts', [$this, "styles"]);
             add_action('admin_enqueue_scripts', [$this, "scripts"]);
             add_action('admin_enqueue_scripts', [$this, "app_state"]);
+            add_action('plugins_loaded', [$this, "load_textdomain"]);
         }
         
         $this->AJAX = new Options\AJAX($this);
         $this->API = new Options\API($this);
+    }
+
+    /**
+     * load textdomain.
+     *
+     * @since 1.0.0
+     * @access public 
+     * @return void
+     */
+    public function load_textdomain()
+    {
+        $locale = get_locale();
+
+        load_textdomain('pco', $this->path . "languages/$locale.mo");
     }
 
     /**
@@ -177,6 +189,8 @@ class Options
      */
     public function app_state()
     {
+        $translation = include $this->path . "/translation.php";
+
         $data = [
             'id' => $this->args['id'],
             'menu' => $this->args['menu'],
@@ -184,7 +198,7 @@ class Options
             'values' => $this->get_values(),
             'errors' => $this->get_errors(),
             'defaults' => $this->get_defaults(),
-            'translation' => $this->translation,
+            'translation' => $translation,
             'nonce' => wp_create_nonce($this->args['id']),
         ];
 
