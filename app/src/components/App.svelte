@@ -9,8 +9,6 @@
 
     import Content from './Content/Content'
 
-    import 'remixicon/fonts/remixicon.css'
-
     onMount(() => {
         let hash = location.hash.slice(1)
 
@@ -56,6 +54,9 @@
             display: none;
         }
     }
+    
+    // Load RemixIcon
+    @import 'https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css';
 </style>
 
 <div>
