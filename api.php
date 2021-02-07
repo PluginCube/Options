@@ -43,7 +43,8 @@ class API
         $id = $this->parent->args['id'];
 
         $args = apply_filters("plugincube/options/$id/add/section", $args);
-        
+        $args = apply_filters("plugincube/options/$id/add/section/$args[id]", $args);
+
         $args = wp_parse_args($args, [
             'title' => null,
             'description' => null,
@@ -68,6 +69,7 @@ class API
         $id = $this->parent->args['id'];
 
         $args = apply_filters("plugincube/options/$id/add/field", $args);
+        $args = apply_filters("plugincube/options/$id/add/field/$args[section]/$args[id]", $args);
 
         $args = wp_parse_args($args, [
             'type' => 'text',
