@@ -47,8 +47,8 @@ class AJAX
             wp_die();
         }
         
-        $method = isset($_REQUEST['method']) ? $_REQUEST['method'] : false;
-        $data = isset($_REQUEST['data']) ? $_REQUEST['data'] : false;
+        $method = isset($_REQUEST['method']) ? sanitize_key($_REQUEST['method']) : false;
+        $data = isset($_REQUEST['data']) ? sanitize_key($_REQUEST['data']) : false;
 
         if ($method && method_exists($this, $method)) {
             $this->$method($data);

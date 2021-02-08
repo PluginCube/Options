@@ -141,40 +141,6 @@ $options->add('field', [
 ]);
 
 $options->add('field', [
-    'id' => 'radio_image',
-    'type' => 'radio-image',
-    'title' => 'Radio Image',
-    'section' => 'appearance',
-    'default' => 'b',
-    'choices' => [
-        [
-            'img' => 'http://localhost:8080/images/gle_c-salt.gif',
-            'id' => 'a',
-            'title' => 'Layout A'
-        ],
-        [
-            'img' => 'http://localhost:8080/images/gle_c-salt-s.gif',
-            'id' => 'b',
-            'title' => 'Layout B'
-        ],
-        [
-            'img' => 'http://localhost:8080/images/gle_hncs.gif',
-            'id' => 'c',
-            'title' => 'Layout C'
-        ],
-        [
-            'img' => 'http://localhost:8080/images/gle_pbc.gif',
-            'id' => 'd',
-            'title' => 'Layout D'
-        ],
-        [
-            'img' => 'http://localhost:8080/images/gle_s-c-salt.gif',
-            'id' => 'e',
-        ],                            
-    ],
-]);
-
-$options->add('field', [
     'id' => 'multi_mini_input',
     'type' => 'multi-mini-input',
     'section' => 'appearance',
