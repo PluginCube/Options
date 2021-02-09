@@ -48,7 +48,7 @@ class AJAX
         }
         
         $method = isset($_REQUEST['method']) ? sanitize_key($_REQUEST['method']) : false;
-        $data = isset($_REQUEST['data']) ? sanitize_key($_REQUEST['data']) : false;
+        $data = isset($_REQUEST['data']) ? $_REQUEST['data'] : false; // Sanitized later
 
         if ($method && method_exists($this, $method)) {
             $this->$method($data);
