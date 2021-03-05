@@ -110,7 +110,7 @@ class Options
             'menu' => [],
             'capability' => 'manage_options',
             'menu_icon' => '',
-            'menu_position' => 99,            
+            'menu_position' => 99,
         ]);
                 
         // Enqueue assets
@@ -118,25 +118,10 @@ class Options
             add_action('admin_enqueue_scripts', [$this, "styles"]);
             add_action('admin_enqueue_scripts', [$this, "scripts"]);
             add_action('admin_enqueue_scripts', [$this, "app_state"]);
-            add_action('plugins_loaded', [$this, "load_textdomain"]);
         }
         
         $this->AJAX = new Options\AJAX($this);
         $this->API = new Options\API($this);
-    }
-
-    /**
-     * load textdomain.
-     *
-     * @since 1.0.0
-     * @access public 
-     * @return void
-     */
-    public function load_textdomain()
-    {
-        $locale = get_locale();
-
-        load_textdomain('pco', $this->path . "languages/$locale.mo");
     }
 
     /**
@@ -189,7 +174,7 @@ class Options
      */
     public function app_state()
     {
-        $translation = include $this->path . "/translation.php";
+        $strings = include $this->path . "/strings.php";
 
         $data = [
             'id' => $this->args['id'],
@@ -198,7 +183,7 @@ class Options
             'values' => $this->get_values(),
             'errors' => $this->get_errors(),
             'defaults' => $this->get_defaults(),
-            'translation' => $translation,
+            'translation' => wp_parse_args($this->translation, $strings),
             'nonce' => wp_create_nonce($this->args['id']),
         ];
 
