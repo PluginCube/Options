@@ -4,10 +4,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PluginCube Options\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_"
+"attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -15,104 +17,104 @@ msgstr ""
 
 #: translation.php:3
 msgid "Are You Sure?"
-msgstr ""
+msgstr "تمھيں يقين ہے?"
 
 #: translation.php:4
 msgid "Save Changes"
-msgstr ""
+msgstr "تبدیلیاں محفوظ کریں"
 
 #: translation.php:5
 msgid "An error occurred, please reload the page"
-msgstr ""
+msgstr "ایک نقص ہو گیا، براہ کرم صفحہ پھر لوڈ کریں"
 
 #: translation.php:6
 msgid "Changes could not be updated, Some errors were found"
-msgstr ""
+msgstr "تبدیلیوں کی تازہ کاری نہیں کی جا سکی، کچھ غلطیاں پائی گئیں"
 
 #: translation.php:7
 msgid "Changes successfully updated"
-msgstr ""
+msgstr "تبدیلیاں کامیابی سے تازہ کاری کی گئیں"
 
 #: translation.php:8
 msgid "Add Item"
-msgstr ""
+msgstr "شے ا ضافہ کریں"
 
 #: translation.php:9
 msgid "Remove"
-msgstr ""
+msgstr "ہٹائیں"
 
 #: translation.php:10
 msgid "Import"
-msgstr ""
+msgstr "درآمد"
 
 #: translation.php:11
 msgid "Download Data"
-msgstr ""
+msgstr "کوائف ڈاؤن لوڈ کریں"
 
 #: translation.php:12
 msgid "This will override your current settings. Are You Sure?"
-msgstr ""
+msgstr "یہ آپ کی حالیہ سیٹنگیں زیر کر دے گا۔ تمھيں يقين ہے?"
 
 #: translation.php:13
 msgid "Image URL"
-msgstr ""
+msgstr "تصویر URL"
 
 #: translation.php:14
 msgid "From Library"
-msgstr ""
+msgstr "از لائبریری"
 
 #: translation.php:15
 msgid "Select"
-msgstr ""
+msgstr "منتخب"
 
 #: translation.php:16
 msgid "Search"
-msgstr ""
+msgstr "تلاش"
 
 #: translation.php:17
 msgid "Select file"
-msgstr ""
+msgstr "مسل منتخب کریں"
 
 #: translation.php:18
 msgid "Size"
-msgstr ""
+msgstr "سائز"
 
 #: translation.php:19
 msgid "Line Height"
-msgstr ""
+msgstr "لائن اونچائی"
 
 #: translation.php:20
 msgid "Left"
-msgstr ""
+msgstr "بائیں"
 
 #: translation.php:21
 msgid "Right"
-msgstr ""
+msgstr "دائیں"
 
 #: translation.php:22
 msgid "Center"
-msgstr ""
+msgstr "مرکز"
 
 #: translation.php:23
 msgid "Justify"
-msgstr ""
+msgstr "سطربندی"
 
 #: translation.php:24
 msgid "Letter Spacing"
-msgstr ""
+msgstr "حرف وقفہ کاری"
 
 #: translation.php:25
 msgid "Word Spacing"
-msgstr ""
+msgstr "لفظ وقفہ کاری"
 
 #: translation.php:26
 msgid "Underline"
-msgstr ""
+msgstr "خط کشیدہ"
 
 #: translation.php:27
 msgid "Italic"
-msgstr ""
+msgstr "اٹالک"
 
 #: translation.php:28
 msgid "Uppercase"
-msgstr ""
+msgstr "بالائی کیس"

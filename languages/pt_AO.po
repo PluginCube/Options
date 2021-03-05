@@ -4,10 +4,12 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PluginCube Options\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_"
+"attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -15,104 +17,104 @@ msgstr ""
 
 #: translation.php:3
 msgid "Are You Sure?"
-msgstr ""
+msgstr "Tem certeza?"
 
 #: translation.php:4
 msgid "Save Changes"
-msgstr ""
+msgstr "Salvar alterações"
 
 #: translation.php:5
 msgid "An error occurred, please reload the page"
-msgstr ""
+msgstr "Ocorreu um erro, por favor recarregue a página"
 
 #: translation.php:6
 msgid "Changes could not be updated, Some errors were found"
-msgstr ""
+msgstr "Alterações não puderam ser atualizadas, alguns erros foram encontrados"
 
 #: translation.php:7
 msgid "Changes successfully updated"
-msgstr ""
+msgstr "Alterações atualizadas com sucesso"
 
 #: translation.php:8
 msgid "Add Item"
-msgstr ""
+msgstr "Adicionar item"
 
 #: translation.php:9
 msgid "Remove"
-msgstr ""
+msgstr "Remover"
 
 #: translation.php:10
 msgid "Import"
-msgstr ""
+msgstr "Importação"
 
 #: translation.php:11
 msgid "Download Data"
-msgstr ""
+msgstr "Baixar dados"
 
 #: translation.php:12
 msgid "This will override your current settings. Are You Sure?"
-msgstr ""
+msgstr "Isso substituirá suas configurações atuais. Tem certeza?"
 
 #: translation.php:13
 msgid "Image URL"
-msgstr ""
+msgstr "URL de imagem"
 
 #: translation.php:14
 msgid "From Library"
-msgstr ""
+msgstr "Da Biblioteca"
 
 #: translation.php:15
 msgid "Select"
-msgstr ""
+msgstr "Selecione"
 
 #: translation.php:16
 msgid "Search"
-msgstr ""
+msgstr "Busca"
 
 #: translation.php:17
 msgid "Select file"
-msgstr ""
+msgstr "Selecionar arquivo"
 
 #: translation.php:18
 msgid "Size"
-msgstr ""
+msgstr "Tamanho"
 
 #: translation.php:19
 msgid "Line Height"
-msgstr ""
+msgstr "Altura da linha"
 
 #: translation.php:20
 msgid "Left"
-msgstr ""
+msgstr "Esquerda"
 
 #: translation.php:21
 msgid "Right"
-msgstr ""
+msgstr "Direita"
 
 #: translation.php:22
 msgid "Center"
-msgstr ""
+msgstr "Centro"
 
 #: translation.php:23
 msgid "Justify"
-msgstr ""
+msgstr "Justificar"
 
 #: translation.php:24
 msgid "Letter Spacing"
-msgstr ""
+msgstr "Espaçamento de letras"
 
 #: translation.php:25
 msgid "Word Spacing"
-msgstr ""
+msgstr "Espaçamento de palavras"
 
 #: translation.php:26
 msgid "Underline"
-msgstr ""
+msgstr "Sublinhar"
 
 #: translation.php:27
 msgid "Italic"
-msgstr ""
+msgstr "Itálico"
 
 #: translation.php:28
 msgid "Uppercase"
-msgstr ""
+msgstr "Maiúsculas"
