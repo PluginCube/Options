@@ -26,18 +26,19 @@
         font-size: 16px;
         cursor: pointer;
         color: var(--pco-primary-text);
-        border-radius: var(--pco-border-radius);
+        border-radius: 30px;
         box-shadow: var(--pco-box-shadow);
         border: var(--pco-control-border);
         outline: none;
         float: left;
         box-sizing: border-box;
         padding: 0px 10px;
-
+        
         span {
-            margin-left: 8px;
+            margin-left: 5px;
             font-size: 12px;
             float: right;
+            color: #c5cacf;
         }
     }
 </style>

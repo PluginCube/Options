@@ -32,7 +32,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: #d8dee4;
+            background-color: #dddddd;
             transition: 0.4s;
             border-radius: 34px;
         }

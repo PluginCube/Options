@@ -31,8 +31,8 @@
         text-align: center;
         font-size: 16px;
         cursor: pointer;
-        color: var(--pco-primary-text);
-        border-radius: var(--pco-border-radius);
+        color: #c5cacf;
+        border-radius: 30px;
         box-shadow: var(--pco-box-shadow);
         border: var(--pco-control-border);
         outline: none;
@@ -45,13 +45,13 @@
         span {
             width: 14px;
             height: 14px;
-            border-radius: 3px;
+            border-radius: 20px;
             display: inline-block;
-            border: 1px solid #f4f4f4;
+            border: 1px solid #e8e8e8;
         }
 
         i {
-            margin-left: 8px;
+            margin-left: 6px;
             font-size: 12px;
         }
     }
