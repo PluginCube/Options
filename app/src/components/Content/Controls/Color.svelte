@@ -8,14 +8,12 @@
     import ClickOutside from 'svelte-click-outside'
 
     let show = false
+    let color = value
     let style
 
-    let change = (event) => {
-        let { r, g, b, a } = event.detail
-
-        value = `rgba(${r}, ${g}, ${b}, ${a})`
+    $: if (typeof color == 'object') {
+        value = `rgba(${color.r}, ${color.g}, ${color.b}, ${color.a})`
     }
-
 
     $: if (['rgba(255, 255, 255, 1)', '#fff', '#ffffff'].includes(value)) {
         style = `background-color: ${value}`
@@ -85,7 +83,7 @@
 
     {#if show}
         <div transition:fade={{ duration: 100 }}>
-            <ChromePicker on:input={change} startColor={value} />
+            <ChromePicker bind:color startColor={value}/>
         </div>
     {/if}
 </ClickOutside>
