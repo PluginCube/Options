@@ -56,10 +56,13 @@
             div {
                 padding: 10px;
                 float: left;
+                display: flex;
                 width: 100%;
                 box-sizing: border-box;
-                line-height: 26px;
-                background: #fff;
+                line-height: 11px;
+                background: var(--pco-control-bg);
+                align-items: center;
+                justify-content: space-between;
 
                 span {
                     font-size: 11px;

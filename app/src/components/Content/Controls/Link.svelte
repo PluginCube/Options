@@ -23,11 +23,11 @@
     }
 
     :global(.tooltip.top) {
-        margin-top: -35px !important;
+        margin-top: -5px !important;
     }
 </style>
 
-<SvelteTooltip tip={msg} top color="#ffffff">
+<SvelteTooltip tip={msg} top color="var(--pco-control-bg)">
     <Button on:click={click} {style}>
         {#if args.icon}
             <i class={args.icon}></i>

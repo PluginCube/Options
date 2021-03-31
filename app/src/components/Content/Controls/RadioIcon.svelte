@@ -70,7 +70,7 @@
                 line-height: 36px;
                 width: 40px;
                 text-align: center;
-                background: #fff;
+                background: var(--pco-control-bg);
                 font-size: 15px;
                 cursor: pointer;
             }
@@ -104,7 +104,7 @@
             class={selected(choice.id) ? 'selected' : null}
             on:click={() => select(choice.id)}
         >
-            <SvelteTooltip tip={choice.title} color="#ffffff" top>
+            <SvelteTooltip tip={choice.title} color="var(--pco-control-bg)" top>
                 <i class={choice.icon} />
             </SvelteTooltip>
         </li>

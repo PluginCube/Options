@@ -21,7 +21,7 @@
     button {
         height: 38px;
         line-height: 37px;
-        background-color: #ffffff;
+        background-color: var(--pco-control-bg);
         text-align: center;
         font-size: 16px;
         cursor: pointer;

@@ -18,43 +18,45 @@
     div {
         float: left;
         width: 100%;
-        padding: 18px 0px;
+        padding-bottom: 55px;
         min-height: 40px;
                         
         header {
             float: left;
-            width: 35%;
-            font-weight: 700;
+            width: 200px;
+            font-weight: 800;
             font-size: 14px;
-            color: var(--pco-primary-text);
-            margin-right: 15%;
-            font-family: 'Nunito', sans-serif;
-            
+            color: var(--pco-secondary-text);
+            padding-right: 15px;
+            box-sizing: border-box;
+            margin-right: 40px;
+                        
             p {
                 font-size: 12px;
-                line-height: 22px;
-                font-weight: 400;
-                color: var(--pco-secondary-text);
-                margin: 20px 0px 10px 0px;
+                line-height: 16px;
+                font-weight: 300;
+                color: var(--pco-tertiary-text);
+                margin: 14px 0px 0px 0px;
             }
         }
 
         main {
             float: left;
-            width: 50%;
+            width: calc(100% - 240px);
 
-            p {
+            > p {
                 color: red;
             }
         }
 
         &.mini {
-            padding: 20px;
+            padding: 16px;
             margin-bottom: 5px;
-            background: #f1f1f1;
+            background: #00000014;
             box-sizing: border-box;
             border-radius: 3px;
-
+            width: inherit;
+            
             main {
                 float: left;
                 width: 100%;
@@ -66,11 +68,14 @@
 
             header {
                 float: left;
-                margin-bottom: 10px;
+                margin-bottom: 14px;
                 width: 100%;
-
+                
                 span {
-                    font-size: 13px;
+                    font-size: 12.5px;
+                    float: left;
+                    font-weight: 800;
+                    color: var(--pco-primary-text);
                 }
             }
         }

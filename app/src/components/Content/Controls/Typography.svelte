@@ -132,10 +132,10 @@
 
 <style lang="scss">
     div.selects {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
 
         :global {
-            select {
+            .selectContainer  {
                 width: 100%;
                 margin-bottom: 10px;
 
@@ -156,10 +156,9 @@
                 float: left;
                 margin-right: 10px;
                 margin-bottom: 10px;
-                width: calc(50% - 12px);
+                width: calc(50% - 10px);
 
                 input {
-                    padding: 5px 11px;
                     font-size: 12px;
                 }
             }

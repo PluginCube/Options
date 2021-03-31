@@ -62,7 +62,7 @@
                 value = choice.id
             }}
         >
-            <SvelteTooltip tip={choice.title} color="#ffffff" top>
+            <SvelteTooltip tip={choice.title} color="var(--pco-control-bg)" top>
                 <img src={choice.img} alt={choice.title} />
             </SvelteTooltip>
         </li>

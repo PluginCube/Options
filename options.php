@@ -1,7 +1,10 @@
 <?php
 /**
- * Creates an interactive wordpress options panel.
- *
+ * Plugin Name: PluginCube Options Framework
+ * Description: Creates an interactive wordpress options panel.
+ * Author: PluginCube
+ * Version: 1.0.0
+ * 
  * @package    PluginCube
  * @subpackage Options
  * @copyright  Copyright (c) 2020, PluginCube
@@ -112,6 +115,9 @@ class Options
             'menu_icon' => '',
             'menu_position' => 99,
         ]);
+
+        // Admin page
+        add_action('_admin_menu', [$this, "add_admin_page"]);
                 
         // Enqueue assets
         if ($this->in_view()) {
@@ -122,6 +128,31 @@ class Options
         
         $this->AJAX = new Options\AJAX($this);
         $this->API = new Options\API($this);
+    }
+
+    /**
+     * Add admin page.
+     * 
+     * @since 1.0.0
+     * @access public
+     * @return void
+     */
+    public function add_admin_page()
+    {
+        extract($this->args);
+        add_menu_page($titles['page'], $titles['menu'], $capability, $id, [$this, 'render_page'], $menu_icon, $menu_position);
+    }
+
+    /**
+     * Render page.
+     *
+     * @since 1.0.0
+     * @access public 
+     * @return void
+     */
+    public function render_page()
+    {
+        echo '<div id="pco"></div>';
     }
 
     /**
@@ -178,6 +209,8 @@ class Options
 
         $data = [
             'id' => $this->args['id'],
+            'titles' => $this->args['titles'],
+            'display_version' => $this->args['display_version'],
             'menu' => $this->args['menu'],
             'sections' => $this->args['sections'],
             'values' => $this->get_values(),
@@ -345,3 +378,6 @@ class Options
         }
     }
 }
+
+#DEV
+require_once dirname(__FILE__) . '/sample.php';

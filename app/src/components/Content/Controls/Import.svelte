@@ -3,7 +3,11 @@
 
     import { translation, values } from 'store'
 
+    import Button from '../../Comman/Button'
+
     import merge from 'deepmerge'
+
+    let input
 
     let change = (e) => {
         let files = e.target.files
@@ -52,9 +56,9 @@
 </style>
 
 <label>
-    <input on:change={change} type="file" accept="application/json" />
+    <input on:change={change} bind:this={input} type="file" accept="application/json" />
 
-    <span class="button button-primary button-small" type="input">
+    <Button small type="input" on:click={() => input.click()}>
         {$translation.select_file}
-    </span>
+    </Button>
 </label>

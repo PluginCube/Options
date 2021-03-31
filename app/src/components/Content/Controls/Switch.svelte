@@ -14,15 +14,15 @@
     div {
         position: relative;
         display: inline-block;
-        width: 44px;
-        height: 23px;
-
+        width: 43px;
+        height: 28px;
+        
         &.active span {
-            background-color: #20d678;
+            background-color: #02B875;
         }
 
         &.active span:before {
-            transform: translateX(21px);
+            transform: translateX(15px);
         }
 
         span {
@@ -32,7 +32,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: #dddddd;
+            background-color: #00000014;
             transition: 0.4s;
             border-radius: 34px;
         }
@@ -40,15 +40,15 @@
         span:before {
             position: absolute;
             content: '';
-            height: 15px;
-            width: 15px;
-            left: 4px;
-            bottom: 4px;
-            background-color: #fff;
+            height: 14px;
+            width: 14px;
+            left: 7px;
+            bottom: 7px;
             -webkit-transition: 0.4s;
             transition: 0.4s;
+            background-color: var(--pco-control-bg);
             border-radius: 50%;
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.06);
+            box-shadow: var(--pco-box-shadow);
         }
     }
 </style>

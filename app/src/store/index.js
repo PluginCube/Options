@@ -1,5 +1,7 @@
 import { writable, readable } from 'svelte/store';
 export const id = readable(PluginCubeOptions.id);
+export const titles = readable(PluginCubeOptions.titles);
+export const display_version = readable(PluginCubeOptions.display_version);
 export const sections = readable(PluginCubeOptions.sections);
 export const activeSection = writable(null)
 export const values = writable(PluginCubeOptions.values);

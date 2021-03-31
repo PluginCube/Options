@@ -5,7 +5,13 @@
 
     import Button from '../Comman/Button'
 
-    let style = 'margin-top: 150px;width: 100%; height: 34px;'
+    let style = `
+        position: absolute;
+        width: 150px;
+        height: 38px;
+        bottom: 20px;
+        left: 20px;
+        font-weight: 800;`
 
     let disabled = false
 

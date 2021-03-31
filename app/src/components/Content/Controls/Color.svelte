@@ -16,20 +16,19 @@
     }
 
     $: if (['rgba(255, 255, 255, 1)', '#fff', '#ffffff'].includes(value)) {
-        style = `background-color: ${value}`
+        style = `background-color: ${value}; box-shadow: inset 0px 0px 0px 1px #0000001a;`
     } else {
-        style = `background-color: ${value}; border-color: transparent;`
+        style = `background-color: ${value}`
     }
 </script>
 
 <style lang="scss">
     button {
-        height: 38px;
-        background-color: #ffffff;
+        height: 36px;
+        background-color: var(--pco-control-bg);
         text-align: center;
         font-size: 16px;
         cursor: pointer;
-        color: #c5cacf;
         border-radius: 30px;
         box-shadow: var(--pco-box-shadow);
         border: var(--pco-control-border);
@@ -45,12 +44,13 @@
             height: 14px;
             border-radius: 20px;
             display: inline-block;
-            border: 1px solid #e8e8e8;
         }
 
         i {
             margin-left: 6px;
             font-size: 12px;
+            color: var(--pco-secondary-text);
+            opacity: .3;
         }
     }
 

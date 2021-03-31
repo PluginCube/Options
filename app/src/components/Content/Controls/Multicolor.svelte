@@ -4,6 +4,10 @@
 
     import merge from 'deepmerge'
 
+    if (!value) {
+        value = {}
+    }
+
     $: args = merge(
         {
             choices: [],
@@ -38,7 +42,7 @@
 <ul>
     {#each args.choices as choice}
         <li>
-            <SvelteTooltip tip={choice.title} color="#ffffff" top>
+            <SvelteTooltip tip={choice.title} color="var(--pco-control-bg)" top>
                 <Color bind:value={value[choice.id]} />
             </SvelteTooltip>
         </li>

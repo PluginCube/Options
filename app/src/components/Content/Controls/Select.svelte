@@ -48,21 +48,29 @@
     }
 </script>
 
-<style>
+<style lang="scss">
     :global(.selectContainer) {
-        width: 100%;
-        max-width: 220px;
+        width: 220px;
+        max-width: 100%;
         font-size: 13px;
         border: var(--pco-control-border) !important;
         box-shadow: var(--pco-box-shadow) !important;
         border-radius: var(--pco-border-radius) !important;
         box-sizing: border-box;
-        --height: 40px;
-        --indicatorWidth: 16px;
-        --indicatorHeight: 16px;
-        --multiItemHeight: 24px;
+
+        --height: 38px;
+        --indicatorWidth: 12px;
+        --indicatorHeight: 12px;
+        --multiItemHeight: 26px;
         --multiItemPadding: 0px 10px;
-        --multiLabelMargin: 0px;
+        --multiLabelMargin: 0px -2px;
+        --multiItemMargin: 6px 12px 0px -8px;
+        --indicatorColor: var(--pco-secondary-text);
+        --inputFontSize: 13px;
+
+        :global(.indicator) {
+            opacity: .35;
+        }
     }
 </style>
 

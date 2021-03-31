@@ -25,12 +25,11 @@
 <style>
     h2 {
         color: var(--pco-primary-text);
-        text-transform: capitalize;
-        margin: 0 0 55px;
-        font-size: 21px;
-        line-height: 20px;
-        font-weight: 800;
-        font-family: 'Nunito', sans-serif;
+            text-transform: capitalize;
+            margin: 5px 0 60px;
+            font-size: 22px;
+            line-height: 22px;
+            font-weight: 800;
     }
 </style>
 

@@ -16,11 +16,13 @@
     textarea {
         max-width: 100%;
         width: 280px;
-        padding: 6px 12px;
+        padding: 8px 12px;
         font-size: 13px;
         border: var(--pco-control-border);
         box-shadow: var(--pco-box-shadow);
         border-radius: var(--pco-border-radius);
+        color: var(--pco-secondary-text);
+        background-color: var(--pco-control-bg);
         margin: 0;
     }
 </style>

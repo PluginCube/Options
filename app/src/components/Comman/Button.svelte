@@ -1,26 +1,33 @@
 <script>
+    export let small = null
     export let style = null
     export let disabled = false
+    export let type = "button"
 </script>
 
 <style lang="scss">
     button {
-        height: 28px;
-        text-align: center;
-        transition: all 0.2s;
-        font-size: 11px;
-        background: var(--pco-primary-text);
-        color: #fff;
-        padding: 0px 12px;
-        border: none;
+        display: inline-block;
+        text-decoration: none;
+        font-size: 12px;
+        min-height: 30px;
+        margin: 0;
+        padding: 0 10px;
         cursor: pointer;
-        border-radius: 5px;
-        outline: none;
-        display: flex;
-        justify-content: center;
-        font-family: 'Nunito', sans-serif;
-        align-items: center;
-        font-weight: 500;
+        border-width: 0px;
+        border-radius: 3px;
+        white-space: nowrap;
+        box-sizing: border-box;
+        background: var(--pco-primary-button-bg);
+        color: var(--pco-primary-button-text);
+        font-weight: 300;
+
+        &.pco-button-small {
+            min-height: 26px;
+            padding: 0 10px;
+            font-size: 11px;
+            padding-top: 1px;
+        }
 
         &:disabled {
             cursor: auto;
@@ -29,6 +36,6 @@
     }
 </style>
 
-<button on:click {disabled} {style}>
+<button on:click {disabled} {style} class:pco-button-small={small} {type}>
     <slot>Text Here</slot>
 </button>

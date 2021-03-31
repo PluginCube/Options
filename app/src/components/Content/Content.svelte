@@ -9,9 +9,10 @@
     div {
         display: block;
         float: right;
-        width: calc(100% - 185px);
+        width: calc(100% - 190px);
         box-sizing: border-box;
-        padding: 0px 0 25px 75px;
+        padding: 40px 45px;
+        min-height: 650px;
     }
 </style>
 

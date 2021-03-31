@@ -24,10 +24,16 @@
 
 <style lang="scss">
     nav {
-        width: 185px;
+        width: 190px;
         margin: 0;
-        float: left;
+        padding: 20px;
+        height: 100%;
         box-sizing: border-box;
+        background: #00000009;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 5px 0px 0px 5px;
 
         ul {
             margin: 0;
@@ -37,39 +43,40 @@
             :global > li {
                 float: left;
                 width: 100%;
-                margin: 0px 0px 5px 0px;
+                margin: 0px 0px 4px 0px;
 
                 &.active a {
-                    color: var(--pco-brand);
-                    background: #dbdee0;
+                    background: #0000000d;
+                    opacity: 1;
                 }
 
                 a {
                     color: var(--pco-primary-text);
                     width: 100%;
                     text-transform: capitalize;
-                    font-weight: 800;
-                    font-size: 13.5px;
+                    font-weight: 900;
+                    font-size: 13px;
                     cursor: pointer;
                     transition: 0.3s;
-                    letter-spacing: .5px;
                     position: relative;
-                    height: 36px;
-                    line-height: 38px;
-                    padding: 0px 12px;
+                    height: 34px;
+                    line-height: 36px;
+                    padding: 0px 10px;
                     box-sizing: border-box;
                     border-radius: var(--pco-border-radius);
                     text-decoration: none;
                     float: left;
                     outline: none;
                     box-shadow: none;
-                    font-family: 'Nunito', sans-serif;                    
+                    opacity: .225;
+                    letter-spacing: .2px;
+
                     i {
                         float: left;
-                        margin-right: 12px;
+                        margin-right: 8px;
                         font-size: 16px;
                         font-weight: 100;
-                        line-height: 37px;
+                        line-height: 34px;
                     }
                 }
             }

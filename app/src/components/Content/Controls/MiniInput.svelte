@@ -31,15 +31,15 @@
             font-size: 14px;
             position: absolute;
             right: 0px;
-            background: #fff;
-            width: 32px;
+            background: var(--pco-control-bg);
+            width: 34px;
             height: 100%;
-            line-height: 36px;
+            line-height: 34px;
             text-align: center;
-            border-left: var(--pco-control-border);
+            border-left: 1px solid #0000000d;
             cursor: pointer;
             padding-right: 1px;
-            color: var(--pco-primary-text);
+            color: var(--pco-secondary-text);
         }
 
         input {

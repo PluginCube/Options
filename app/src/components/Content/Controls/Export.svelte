@@ -3,6 +3,8 @@
 
     import { translation, values, id } from 'store'
 
+    import Button from '../../Comman/Button'
+
     import { saveAs } from 'file-saver'
 
     import merge from 'deepmerge'
@@ -47,6 +49,6 @@
 <style>
 </style>
 
-<button class="button button-primary button-small" on:click={download}>
+<Button small on:click={download}>
     {$translation.download_data}
-</button>
+</Button>
