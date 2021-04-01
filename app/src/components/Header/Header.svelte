@@ -28,16 +28,16 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                padding: 7px 8px 7px 8px;
-                margin-left: 15px;
-                background: #00000013;
+                padding: 8px 10px 6px 9px;
+                margin-left: 18px;
+                background: #00000010;
                 border-radius: 3px;
                 color: var(--pco-secondary-text);
                 font-family: Consolas, monospace;
                 font-weight: bold;
-                font-size: 12px;
+                font-size: 11px;
                 line-height: 12px;
-                margin-top: -4px;
+                margin-top: -5px;
             }
         }
 

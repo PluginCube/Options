@@ -46,7 +46,7 @@
                 margin: 0px 0px 4px 0px;
 
                 &.active a {
-                    background: #0000000d;
+                    background: #0000000f;
                     opacity: 1;
                 }
 
@@ -68,7 +68,7 @@
                     float: left;
                     outline: none;
                     box-shadow: none;
-                    opacity: .225;
+                    opacity: .2;
                     letter-spacing: .2px;
 
                     i {

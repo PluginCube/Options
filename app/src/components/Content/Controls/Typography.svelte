@@ -41,8 +41,8 @@
 
     $: families = items.map((i) => {
         return {
-            id: i.family,
-            title: i.family,
+            value: i.family,
+            label: i.family,
         }
     })
 
@@ -50,8 +50,8 @@
 
     $: variants = selectedFamily.variants.map((i) => {
         return {
-            id: i,
-            title: i,
+            value: i,
+            label: i,
         }
     })
 

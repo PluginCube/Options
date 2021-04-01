@@ -18018,13 +18018,13 @@ function instance($$self, $$props, $$invalidate) {
 
 		if ($$self.$$.dirty & /*selectedFamily*/ 1024) {
 			$: $$invalidate(3, variants = selectedFamily.variants.map(i => {
-				return { id: i, title: i };
+				return { value: i, label: i };
 			}));
 		}
 	};
 
 	$: $$invalidate(2, families = _Typography_google_fonts_json__WEBPACK_IMPORTED_MODULE_6__["items"].map(i => {
-		return { id: i.family, title: i.family };
+		return { value: i.family, label: i.family };
 	}));
 
 	return [
@@ -18851,11 +18851,11 @@ function create_fragment(ctx) {
 				each_blocks[i].c();
 			}
 
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(h1, "class", "svelte-gqih3i");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(span, "class", "svelte-gqih3i");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div, "class", "svelte-gqih3i");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(ul, "class", "svelte-gqih3i");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(header, "class", "svelte-gqih3i");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(h1, "class", "svelte-1qb7bhc");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(span, "class", "svelte-1qb7bhc");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div, "class", "svelte-1qb7bhc");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(ul, "class", "svelte-1qb7bhc");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(header, "class", "svelte-1qb7bhc");
 		},
 		m(target, anchor) {
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["insert"])(target, header, anchor);
@@ -19516,8 +19516,8 @@ function create_fragment(ctx) {
 
 			t = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["space"])();
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["create_component"])(save.$$.fragment);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(ul, "class", "svelte-1j7f5k0");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(nav, "class", "svelte-1j7f5k0");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(ul, "class", "svelte-f9hghn");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(nav, "class", "svelte-f9hghn");
 		},
 		m(target, anchor) {
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["insert"])(target, nav, anchor);
@@ -19739,7 +19739,9 @@ function instance($$self, $$props, $$invalidate) {
         height: 38px;
         bottom: 20px;
         left: 20px;
-        font-weight: 800;`;
+        font-weight: 800;
+        background: #02B875;
+        color: #fff;`;
 
 	let disabled = false;
 
