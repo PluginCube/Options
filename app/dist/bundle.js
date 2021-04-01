@@ -11649,8 +11649,8 @@ function create_fragment(ctx) {
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["create_component"])(navigation.$$.fragment);
 			t1 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["space"])();
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["create_component"])(content.$$.fragment);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(main, "class", "svelte-1gyzq7h");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div, "class", "svelte-1gyzq7h");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(main, "class", "svelte-b13flg");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(div, "class", "svelte-b13flg");
 		},
 		m(target, anchor) {
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["insert"])(target, div, anchor);
@@ -12726,7 +12726,7 @@ function create_else_block(ctx) {
 	};
 }
 
-// (48:8) {#if value}
+// (49:8) {#if value}
 function create_if_block_1(ctx) {
 	let i;
 
@@ -12749,7 +12749,7 @@ function create_if_block_1(ctx) {
 	};
 }
 
-// (53:4) {#if show}
+// (54:4) {#if show}
 function create_if_block(ctx) {
 	let box;
 	let current;
@@ -12784,7 +12784,7 @@ function create_if_block(ctx) {
 	};
 }
 
-// (42:0) <ClickOutside     on:clickoutside={() => {         show = false     }} >
+// (43:0) <ClickOutside     on:clickoutside={() => {         show = false     }} >
 function create_default_slot(ctx) {
 	let button;
 	let t0;
@@ -12813,8 +12813,8 @@ function create_default_slot(ctx) {
 			t1 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["space"])();
 			if (if_block1) if_block1.c();
 			if_block1_anchor = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["empty"])();
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(span, "class", "ri-arrow-down-s-fill svelte-jauku3");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(button, "class", "svelte-jauku3");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(span, "class", "ri-arrow-down-s-fill svelte-14r05fj");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(button, "class", "svelte-14r05fj");
 		},
 		m(target, anchor) {
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["insert"])(target, button, anchor);
@@ -15554,7 +15554,7 @@ function get_each_context(ctx, list, i) {
 	return child_ctx;
 }
 
-// (51:12) <SvelteTooltip tip={choice.title} color="var(--pco-control-bg)" top>
+// (52:12) <SvelteTooltip tip={choice.title} color="var(--pco-control-bg)" top>
 function create_default_slot(ctx) {
 	let img;
 	let img_src_value;
@@ -15565,7 +15565,7 @@ function create_default_slot(ctx) {
 			img = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("img");
 			if (img.src !== (img_src_value = /*choice*/ ctx[3].img)) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(img, "src", img_src_value);
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(img, "alt", img_alt_value = /*choice*/ ctx[3].title);
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(img, "class", "svelte-15vd2ek");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(img, "class", "svelte-1bxtbas");
 		},
 		m(target, anchor) {
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["insert"])(target, img, anchor);
@@ -15585,7 +15585,7 @@ function create_default_slot(ctx) {
 	};
 }
 
-// (44:4) {#each args.choices as choice}
+// (45:4) {#each args.choices as choice}
 function create_each_block(ctx) {
 	let li;
 	let sveltetooltip;
@@ -15613,7 +15613,7 @@ function create_each_block(ctx) {
 			li = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["element"])("li");
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["create_component"])(sveltetooltip.$$.fragment);
 			t = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["space"])();
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(li, "class", "svelte-15vd2ek");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(li, "class", "svelte-1bxtbas");
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["toggle_class"])(li, "selected", /*choice*/ ctx[3].id === /*value*/ ctx[1]);
 		},
 		m(target, anchor) {
@@ -15682,7 +15682,7 @@ function create_fragment(ctx) {
 				each_blocks[i].c();
 			}
 
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(ul, "class", "svelte-15vd2ek");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(ul, "class", "svelte-1bxtbas");
 		},
 		m(target, anchor) {
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["insert"])(target, ul, anchor);
@@ -15829,28 +15829,28 @@ __webpack_require__.r(__webpack_exports__);
 
 function get_each_context(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[16] = list[i];
-	child_ctx[17] = list;
-	child_ctx[18] = i;
+	child_ctx[18] = list[i];
+	child_ctx[19] = list;
+	child_ctx[20] = i;
 	return child_ctx;
 }
 
 function get_each_context_1(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[19] = list[i];
-	child_ctx[20] = list;
-	child_ctx[21] = i;
+	child_ctx[21] = list[i];
+	child_ctx[22] = list;
+	child_ctx[23] = i;
 	return child_ctx;
 }
 
-// (170:0) {#if value.length}
+// (199:0) {#if value.length}
 function create_if_block_1(ctx) {
 	let ul;
 	let each_blocks = [];
 	let each_1_lookup = new Map();
 	let current;
 	let each_value = /*value*/ ctx[0];
-	const get_key = ctx => /*item*/ ctx[16];
+	const get_key = ctx => /*item*/ ctx[18];
 
 	for (let i = 0; i < each_value.length; i += 1) {
 		let child_ctx = get_each_context(ctx, each_value, i);
@@ -15866,7 +15866,7 @@ function create_if_block_1(ctx) {
 				each_blocks[i].c();
 			}
 
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(ul, "class", "pco-repeater-list svelte-ged26y");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(ul, "class", "pco-repeater-list svelte-vduh6z");
 		},
 		m(target, anchor) {
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["insert"])(target, ul, anchor);
@@ -15875,11 +15875,11 @@ function create_if_block_1(ctx) {
 				each_blocks[i].m(ul, null);
 			}
 
-			/*ul_binding*/ ctx[13](ul);
+			/*ul_binding*/ ctx[15](ul);
 			current = true;
 		},
 		p(ctx, dirty) {
-			if (dirty & /*vrfields, value, activeItem, toggle, remove, striptags, Object*/ 341) {
+			if (dirty & /*vrfields, value, activeItem, toggle, duplicate, remove, striptags, Object*/ 853) {
 				each_value = /*value*/ ctx[0];
 				Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["group_outros"])();
 				each_blocks = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["update_keyed_each"])(each_blocks, dirty, get_key, 1, ctx, each_value, each_1_lookup, ul, svelte_internal__WEBPACK_IMPORTED_MODULE_0__["outro_and_destroy_block"], create_each_block, null, get_each_context);
@@ -15909,19 +15909,19 @@ function create_if_block_1(ctx) {
 				each_blocks[i].d();
 			}
 
-			/*ul_binding*/ ctx[13](null);
+			/*ul_binding*/ ctx[15](null);
 		}
 	};
 }
 
-// (188:16) {#if activeItem === item._id}
+// (217:16) {#if activeItem === item._id}
 function create_if_block_2(ctx) {
 	let main;
 	let each_blocks = [];
 	let each_1_lookup = new Map();
 	let current;
 	let each_value_1 = /*vrfields*/ ctx[4];
-	const get_key = ctx => /*field*/ ctx[19].id;
+	const get_key = ctx => /*field*/ ctx[21].id;
 
 	for (let i = 0; i < each_value_1.length; i += 1) {
 		let child_ctx = get_each_context_1(ctx, each_value_1, i);
@@ -15937,7 +15937,7 @@ function create_if_block_2(ctx) {
 				each_blocks[i].c();
 			}
 
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(main, "class", "svelte-ged26y");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(main, "class", "svelte-vduh6z");
 		},
 		m(target, anchor) {
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["insert"])(target, main, anchor);
@@ -15982,7 +15982,7 @@ function create_if_block_2(ctx) {
 	};
 }
 
-// (190:24) {#each vrfields as field (field.id)}
+// (219:24) {#each vrfields as field (field.id)}
 function create_each_block_1(key_1, ctx) {
 	let first;
 	let field;
@@ -15990,7 +15990,7 @@ function create_each_block_1(key_1, ctx) {
 	let current;
 
 	function field_value_binding(value) {
-		/*field_value_binding*/ ctx[12](value, /*i*/ ctx[18], /*field*/ ctx[19]);
+		/*field_value_binding*/ ctx[14](value, /*i*/ ctx[20], /*field*/ ctx[21]);
 	}
 
 	let field_props = {
@@ -15998,13 +15998,13 @@ function create_each_block_1(key_1, ctx) {
 		mini: true,
 		errors: false,
 		args: {
-			.../*field*/ ctx[19],
-			activeItemValues: /*value*/ ctx[0].find(/*func*/ ctx[11])
+			.../*field*/ ctx[21],
+			activeItemValues: /*value*/ ctx[0].find(/*func*/ ctx[13])
 		}
 	};
 
-	if (/*value*/ ctx[0][/*i*/ ctx[18]][/*field*/ ctx[19].id] !== void 0) {
-		field_props.value = /*value*/ ctx[0][/*i*/ ctx[18]][/*field*/ ctx[19].id];
+	if (/*value*/ ctx[0][/*i*/ ctx[20]][/*field*/ ctx[21].id] !== void 0) {
+		field_props.value = /*value*/ ctx[0][/*i*/ ctx[20]][/*field*/ ctx[21].id];
 	}
 
 	field = new _Field__WEBPACK_IMPORTED_MODULE_7__["default"]({ props: field_props });
@@ -16028,13 +16028,13 @@ function create_each_block_1(key_1, ctx) {
 			const field_changes = {};
 
 			if (dirty & /*vrfields, value, activeItem*/ 21) field_changes.args = {
-				.../*field*/ ctx[19],
-				activeItemValues: /*value*/ ctx[0].find(/*func*/ ctx[11])
+				.../*field*/ ctx[21],
+				activeItemValues: /*value*/ ctx[0].find(/*func*/ ctx[13])
 			};
 
 			if (!updating_value && dirty & /*value, vrfields*/ 17) {
 				updating_value = true;
-				field_changes.value = /*value*/ ctx[0][/*i*/ ctx[18]][/*field*/ ctx[19].id];
+				field_changes.value = /*value*/ ctx[0][/*i*/ ctx[20]][/*field*/ ctx[21].id];
 				Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["add_flush_callback"])(() => updating_value = false);
 			}
 
@@ -16056,7 +16056,7 @@ function create_each_block_1(key_1, ctx) {
 	};
 }
 
-// (172:8) {#each value as item, i (item)}
+// (201:8) {#each value as item, i (item)}
 function create_each_block(key_1, ctx) {
 	let li;
 	let header;
@@ -16064,7 +16064,7 @@ function create_each_block(key_1, ctx) {
 	let path;
 	let t0;
 	let span;
-	let t1_value = striptags__WEBPACK_IMPORTED_MODULE_2___default()(/*item*/ ctx[16][Object.keys(/*item*/ ctx[16])[0]]) + "";
+	let t1_value = striptags__WEBPACK_IMPORTED_MODULE_2___default()(/*item*/ ctx[18][Object.keys(/*item*/ ctx[18])[0]]) + "";
 	let t1;
 	let t2;
 	let i0;
@@ -16080,14 +16080,18 @@ function create_each_block(key_1, ctx) {
 	let dispose;
 
 	function click_handler() {
-		return /*click_handler*/ ctx[9](/*item*/ ctx[16]);
+		return /*click_handler*/ ctx[10](/*item*/ ctx[18]);
 	}
 
-	function click_handler_1(...args) {
-		return /*click_handler_1*/ ctx[10](/*item*/ ctx[16], ...args);
+	function click_handler_1() {
+		return /*click_handler_1*/ ctx[11](/*item*/ ctx[18], /*i*/ ctx[20]);
 	}
 
-	let if_block = /*activeItem*/ ctx[2] === /*item*/ ctx[16]._id && create_if_block_2(ctx);
+	function click_handler_2(...args) {
+		return /*click_handler_2*/ ctx[12](/*item*/ ctx[18], ...args);
+	}
+
+	let if_block = /*activeItem*/ ctx[2] === /*item*/ ctx[18]._id && create_if_block_2(ctx);
 
 	return {
 		key: key_1,
@@ -16111,17 +16115,17 @@ function create_each_block(key_1, ctx) {
 			t6 = Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["space"])();
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(path, "d", "M3,2 C2.44771525,2 2,1.55228475 2,1 C2,0.44771525 2.44771525,0 3,0 C3.55228475,0 4,0.44771525 4,1 C4,1.55228475 3.55228475,2 3,2 Z M3,6 C2.44771525,6 2,5.55228475 2,5 C2,4.44771525 2.44771525,4 3,4 C3.55228475,4 4,4.44771525 4,5 C4,5.55228475 3.55228475,6 3,6 Z M3,10 C2.44771525,10 2,9.55228475 2,9 C2,8.44771525 2.44771525,8 3,8 C3.55228475,8 4,8.44771525 4,9 C4,9.55228475 3.55228475,10 3,10 Z M7,2 C6.44771525,2 6,1.55228475 6,1 C6,0.44771525 6.44771525,0 7,0 C7.55228475,0 8,0.44771525 8,1 C8,1.55228475 7.55228475,2 7,2 Z M7,6 C6.44771525,6 6,5.55228475 6,5 C6,4.44771525 6.44771525,4 7,4 C7.55228475,4 8,4.44771525 8,5 C8,5.55228475 7.55228475,6 7,6 Z M7,10 C6.44771525,10 6,9.55228475 6,9 C6,8.44771525 6.44771525,8 7,8 C7.55228475,8 8,8.44771525 8,9 C8,9.55228475 7.55228475,10 7,10 Z");
 			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(svg, "viewBox", "0 0 10 10");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(svg, "class", "svelte-ged26y");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(span, "class", "svelte-ged26y");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(svg, "class", "svelte-vduh6z");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(span, "class", "svelte-vduh6z");
 
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(i0, "class", i0_class_value = "" + (Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["null_to_empty"])(/*activeItem*/ ctx[2] === /*item*/ ctx[16]._id
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(i0, "class", i0_class_value = "" + (Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["null_to_empty"])(/*activeItem*/ ctx[2] === /*item*/ ctx[18]._id
 			? "ri-arrow-up-s-fill"
-			: "ri-arrow-down-s-fill") + " svelte-ged26y"));
+			: "ri-arrow-down-s-fill") + " svelte-vduh6z"));
 
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(i1, "class", "ri-close-circle-fill svelte-ged26y");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(i2, "class", "ri-file-copy-fill svelte-ged26y");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(header, "class", "svelte-ged26y");
-			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(li, "class", "svelte-ged26y");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(i1, "class", "ri-close-circle-fill svelte-vduh6z");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(i2, "class", "ri-file-copy-fill svelte-vduh6z");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(header, "class", "svelte-vduh6z");
+			Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(li, "class", "svelte-vduh6z");
 			this.first = li;
 		},
 		m(target, anchor) {
@@ -16146,7 +16150,8 @@ function create_each_block(key_1, ctx) {
 			if (!mounted) {
 				dispose = [
 					Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["listen"])(i1, "click", Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["stop_propagation"])(click_handler)),
-					Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["listen"])(header, "click", click_handler_1)
+					Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["listen"])(i2, "click", Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["stop_propagation"])(click_handler_1)),
+					Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["listen"])(header, "click", click_handler_2)
 				];
 
 				mounted = true;
@@ -16154,15 +16159,15 @@ function create_each_block(key_1, ctx) {
 		},
 		p(new_ctx, dirty) {
 			ctx = new_ctx;
-			if ((!current || dirty & /*value*/ 1) && t1_value !== (t1_value = striptags__WEBPACK_IMPORTED_MODULE_2___default()(/*item*/ ctx[16][Object.keys(/*item*/ ctx[16])[0]]) + "")) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["set_data"])(t1, t1_value);
+			if ((!current || dirty & /*value*/ 1) && t1_value !== (t1_value = striptags__WEBPACK_IMPORTED_MODULE_2___default()(/*item*/ ctx[18][Object.keys(/*item*/ ctx[18])[0]]) + "")) Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["set_data"])(t1, t1_value);
 
-			if (!current || dirty & /*activeItem, value*/ 5 && i0_class_value !== (i0_class_value = "" + (Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["null_to_empty"])(/*activeItem*/ ctx[2] === /*item*/ ctx[16]._id
+			if (!current || dirty & /*activeItem, value*/ 5 && i0_class_value !== (i0_class_value = "" + (Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["null_to_empty"])(/*activeItem*/ ctx[2] === /*item*/ ctx[18]._id
 			? "ri-arrow-up-s-fill"
-			: "ri-arrow-down-s-fill") + " svelte-ged26y"))) {
+			: "ri-arrow-down-s-fill") + " svelte-vduh6z"))) {
 				Object(svelte_internal__WEBPACK_IMPORTED_MODULE_0__["attr"])(i0, "class", i0_class_value);
 			}
 
-			if (/*activeItem*/ ctx[2] === /*item*/ ctx[16]._id) {
+			if (/*activeItem*/ ctx[2] === /*item*/ ctx[18]._id) {
 				if (if_block) {
 					if_block.p(ctx, dirty);
 
@@ -16203,7 +16208,7 @@ function create_each_block(key_1, ctx) {
 	};
 }
 
-// (208:0) {:else}
+// (237:0) {:else}
 function create_else_block(ctx) {
 	let button;
 	let current;
@@ -16229,7 +16234,7 @@ function create_else_block(ctx) {
 		p(ctx, dirty) {
 			const button_changes = {};
 
-			if (dirty & /*$$scope, $translation*/ 4194336) {
+			if (dirty & /*$$scope, $translation*/ 16777248) {
 				button_changes.$$scope = { dirty, ctx };
 			}
 
@@ -16250,7 +16255,7 @@ function create_else_block(ctx) {
 	};
 }
 
-// (206:0) {#if args.limit && args.limit_link && value.length >= args.limit}
+// (235:0) {#if args.limit && args.limit_link && value.length >= args.limit}
 function create_if_block(ctx) {
 	let link;
 	let current;
@@ -16287,7 +16292,7 @@ function create_if_block(ctx) {
 	};
 }
 
-// (209:4) <Button small on:click={add}>
+// (238:4) <Button small on:click={add}>
 function create_default_slot(ctx) {
 	let t_value = /*$translation*/ ctx[5].add_item + "";
 	let t;
@@ -16420,7 +16425,7 @@ function instance($$self, $$props, $$invalidate) {
 	let activeItem = window._active_item || null;
 	let generateId = () => "_" + Math.random().toString(36).substring(7);
 
-	let toggle = (item, e) => {
+	let toggle = item => {
 		if (activeItem === item._id) {
 			$$invalidate(2, activeItem = null);
 			window._active_item = null;
@@ -16449,10 +16454,30 @@ function instance($$self, $$props, $$invalidate) {
 
 		if (confirm(alertMsg)) {
 			$$invalidate(0, value = value.filter(i => i._id !== item._id));
-
-			// activeItem = null
 			window._active_item = null;
 		}
+	};
+
+	let duplicate = (item, i) => {
+		item = JSON.parse(JSON.stringify(item));
+
+		let changeIds = item => {
+			for (const field in item) {
+				if (field == "_id") {
+					item[field] = generateId();
+				}
+
+				if (Array.isArray(item[field])) {
+					item[field] = item[field].map(i => changeIds(i));
+				}
+			}
+
+			return item;
+		};
+
+		item = changeIds(item);
+		$$invalidate(0, value = [...value.slice(0, i), item, ...value.slice(i)]);
+		toggle(item);
 	};
 
 	let initSortable = () => {
@@ -16497,7 +16522,8 @@ function instance($$self, $$props, $$invalidate) {
 	});
 
 	const click_handler = item => remove(item);
-	const click_handler_1 = (item, e) => toggle(item, e);
+	const click_handler_1 = (item, i) => duplicate(item, i);
+	const click_handler_2 = (item, e) => toggle(item, e);
 	const func = i => i._id == activeItem;
 
 	function field_value_binding(value$1, i, field) {
@@ -16541,8 +16567,10 @@ function instance($$self, $$props, $$invalidate) {
 		toggle,
 		add,
 		remove,
+		duplicate,
 		click_handler,
 		click_handler_1,
+		click_handler_2,
 		func,
 		field_value_binding,
 		ul_binding
@@ -17187,7 +17215,7 @@ function create_if_block_7(ctx) {
 	};
 }
 
-// (167:8) {#if args.variant}
+// (171:8) {#if args.variant}
 function create_if_block_6(ctx) {
 	let select;
 	let updating_value;
@@ -17241,7 +17269,7 @@ function create_if_block_6(ctx) {
 	};
 }
 
-// (176:8) {#if args.size}
+// (180:8) {#if args.size}
 function create_if_block_5(ctx) {
 	let miniinput;
 	let updating_value;
@@ -17294,7 +17322,7 @@ function create_if_block_5(ctx) {
 	};
 }
 
-// (180:8) {#if args.lineHeight}
+// (184:8) {#if args.lineHeight}
 function create_if_block_4(ctx) {
 	let miniinput;
 	let updating_value;
@@ -17347,7 +17375,7 @@ function create_if_block_4(ctx) {
 	};
 }
 
-// (184:8) {#if args.letterSpacing}
+// (188:8) {#if args.letterSpacing}
 function create_if_block_3(ctx) {
 	let miniinput;
 	let updating_value;
@@ -17400,7 +17428,7 @@ function create_if_block_3(ctx) {
 	};
 }
 
-// (191:8) {#if args.wordSpacing}
+// (195:8) {#if args.wordSpacing}
 function create_if_block_2(ctx) {
 	let miniinput;
 	let updating_value;
@@ -17453,7 +17481,7 @@ function create_if_block_2(ctx) {
 	};
 }
 
-// (197:8) {#if args.alignment}
+// (201:8) {#if args.alignment}
 function create_if_block_1(ctx) {
 	let radioicon;
 	let updating_value;
@@ -17506,7 +17534,7 @@ function create_if_block_1(ctx) {
 	};
 }
 
-// (201:8) {#if args.decoration}
+// (205:8) {#if args.decoration}
 function create_if_block(ctx) {
 	let radioicon;
 	let updating_value;
@@ -17861,22 +17889,34 @@ function instance($$self, $$props, $$invalidate) {
 
 	let sizeInput = {
 		icon: "ri-font-size-2",
-		attributes: { placeholder: $translation.size }
+		attributes: {
+			placeholder: $translation.size,
+			type: "number"
+		}
 	};
 
 	let lineHeight = {
 		icon: "ri-line-height",
-		attributes: { placeholder: $translation.line_height }
+		attributes: {
+			placeholder: $translation.line_height,
+			type: "number"
+		}
 	};
 
 	let letterSpacing = {
 		icon: "ri-text-spacing",
-		attributes: { placeholder: $translation.letter_spacing }
+		attributes: {
+			placeholder: $translation.letter_spacing,
+			type: "number"
+		}
 	};
 
 	let wordSpacing = {
 		icon: "ri-text-direction-l",
-		attributes: { placeholder: $translation.word_spacing }
+		attributes: {
+			placeholder: $translation.word_spacing,
+			type: "number"
+		}
 	};
 
 	let alignment = {

@@ -28,6 +28,7 @@
         position: relative;
         padding-top: 85px;
         font-family: 'Nunito', sans-serif;
+        color: var(--pco-primary-text);
 
         --pco-brand: #001fff;
         --pco-primary-text: #1d2327;

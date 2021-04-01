@@ -43,12 +43,13 @@
             img {
                 float: left;
                 max-width: 100%;
+                border-radius: 5px;
             }
 
             &.selected img {
                 float: left;
                 box-sizing: border-box;
-                outline: 3px solid #ccc;
+                box-shadow: 0px 0px 0px 2px var(--pco-primary-text);
             }
         }
     }

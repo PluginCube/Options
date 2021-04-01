@@ -37,8 +37,9 @@
         span {
             margin-left: 5px;
             font-size: 12px;
+            color: var(--pco-secondary-text);
+            opacity: .3;
             float: right;
-            color: #c5cacf;
         }
     }
 </style>

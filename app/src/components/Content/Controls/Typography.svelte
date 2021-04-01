@@ -59,6 +59,7 @@
         icon: 'ri-font-size-2',
         attributes: {
             placeholder: $translation.size,
+            type: "number"
         },
     }
 
@@ -66,6 +67,7 @@
         icon: 'ri-line-height',
         attributes: {
             placeholder: $translation.line_height,
+            type: "number"
         },
     }
 
@@ -73,6 +75,7 @@
         icon: 'ri-text-spacing',
         attributes: {
             placeholder: $translation.letter_spacing,
+            type: "number"
         },
     }
 
@@ -80,6 +83,7 @@
         icon: 'ri-text-direction-l',
         attributes: {
             placeholder: $translation.word_spacing,
+            type: "number"
         },
     }
 

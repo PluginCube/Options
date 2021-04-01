@@ -303,54 +303,72 @@ $options->add('field', [
     ]
 ]);
 
-// $options->add('field', [
-//     'id' => 'preset',
-//     'type' => 'preset',
-//     'title' => 'Preset',
-//     'section' => 'general',
-//     'priority' => 0,
-//     'presets' => [
-//         [
-//             'title' => 'Dark',
-//             'img' => 'http://localhost/wp-content/themes/twentytwenty/screenshot.png',
-//             'data' => [
-//                 'general' => [
-//                     'text' => 'Dark theme import successfuly.'
-//                 ]
-//             ]
-//         ],
-//         [
-//             'title' => 'Minimal',
-//             'img' => 'http://localhost/wp-content/themes/twentynineteen/screenshot.png',
-//             'data' => [
-//                 'general' => [
-//                     'text' => 'Minimal theme import successfuly.'
-//                 ]
-//             ]
-//         ]
-//     ]
-// ]);
+$options->add('field', [
+    'id' => 'radioimage',
+    'type' => 'radio-image',
+    'title' => 'Radio Image',
+    'section' => 'general',
+    'default' => 'second',
+    'choices' => [
+        [
+            'title' => 'First',
+            'img' => 'http://localhost/wp-content/themes/twentytwenty/screenshot.png',
+            'id' => 'first'
+        ],
+        [
+            'title' => 'Second',
+            'img' => 'http://localhost/wp-content/themes/twentynineteen/screenshot.png',
+            'id' => 'second'
+        ]
+    ]
+]);
 
-// $options->add('field', [
-//     'id' => 'export',
-//     'type' => 'export',
-//     'title' => 'Export',
-//     'section' => 'general',
-// ]);
+$options->add('field', [
+    'id' => 'preset',
+    'type' => 'preset',
+    'title' => 'Preset',
+    'section' => 'general',
+    'presets' => [
+        [
+            'title' => 'Dark',
+            'img' => 'http://localhost/wp-content/themes/twentytwenty/screenshot.png',
+            'data' => [
+                'general' => [
+                    'text' => 'Dark theme import successfuly.'
+                ]
+            ]
+        ],
+        [
+            'title' => 'Minimal',
+            'img' => 'http://localhost/wp-content/themes/twentynineteen/screenshot.png',
+            'data' => [
+                'general' => [
+                    'text' => 'Minimal theme import successfuly.'
+                ]
+            ]
+        ]
+    ]
+]);
 
-// $options->add('field', [
-//     'id' => 'import',
-//     'type' => 'import',
-//     'title' => 'Import',
-//     'section' => 'general',
+$options->add('field', [
+    'id' => 'export',
+    'type' => 'export',
+    'title' => 'Export',
+    'section' => 'general',
+]);
 
-// ]);
+$options->add('field', [
+    'id' => 'import',
+    'type' => 'import',
+    'title' => 'Import',
+    'section' => 'general',
 
-// $options->add('field', [
-//     'id' => 'html',
-//     'type' => 'html',
-//     'title' => 'html',
-//     'section' => 'general',
-//     'content' => '<i>hello world!</i>',
-//     'priority' => 0
-// ]);
+]);
+
+$options->add('field', [
+    'id' => 'html',
+    'type' => 'html',
+    'title' => 'html',
+    'section' => 'general',
+    'content' => '<i>hello world!</i>',
+]);
