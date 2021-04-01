@@ -24,7 +24,7 @@
 
     let generateId = () => '_' + Math.random().toString(36).substring(7);
 
-    let toggle = (item, e) => {        
+    let toggle = (item) => {        
         if (activeItem === item._id) {
             activeItem = null
             window._active_item = null
@@ -51,9 +51,36 @@
         
         if (confirm(alertMsg)) {
             value = value.filter((i) => i._id !== item._id)
-            // activeItem = null
             window._active_item = null
         }
+    }
+
+    let duplicate = (item, i) => {
+        item = JSON.parse(JSON.stringify(item));
+
+        let changeIds = (item) => {
+            for (const field in item) {
+                if (field == '_id') {
+                    item[field] = generateId();
+                }
+
+                if (Array.isArray(item[field])) {
+                    item[field] = item[field].map(i => changeIds(i))
+                }
+            }
+
+            return item;
+        }
+
+        item = changeIds(item);
+
+        value = [
+            ...value.slice(0, i),
+            item,
+            ...value.slice(i)
+        ]
+
+        toggle(item)
     }
 
     let initSortable = () => {
@@ -165,6 +192,10 @@
                     color: var(--pco-secondary-text);
                     opacity: .35;
                     margin-left: 5px;
+
+                    &:hover {
+                        opacity: .5;
+                    }
                 }
             }
 
@@ -196,7 +227,7 @@
 
                     <i class="ri-close-circle-fill" on:click|stopPropagation={() => remove(item)}></i>
 
-                    <i class="ri-file-copy-fill"></i>
+                    <i class="ri-file-copy-fill" on:click|stopPropagation={() => duplicate(item, i)}></i>
                 </header>
 
                 {#if activeItem === item._id}
