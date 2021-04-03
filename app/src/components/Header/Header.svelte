@@ -1,7 +1,8 @@
 <script>
-    import { notifications, titles, display_version } from 'store'
+    import { titles, display_version } from 'store'
 
-    import Notification from './Notification'
+    import Notifications from "./Notifications"
+
 </script>
 
 <style lang="scss">
@@ -41,17 +42,6 @@
                 margin-top: -6px;
             }
         }
-
-        ul {
-            z-index: 9999999;
-            margin: 0;
-            padding: 0;
-            transition: all 0.3s;
-            position: fixed;
-            float: right;
-            width: inherit;
-            right: 50px;
-        }
     }
 </style>
 
@@ -60,9 +50,6 @@
         <h1>{$titles.page}</h1>
         <span>{$display_version}</span>
     </div>
-    <ul>
-        {#each $notifications as item}
-            <Notification {...item} />
-        {/each}
-    </ul>
+
+    <Notifications />
 </header>
