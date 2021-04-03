@@ -53,15 +53,16 @@
         box-shadow: var(--pco-box-shadow);
         border: var(--pco-control-border);
         border-radius: var(--pco-border-radius);
-
+        background: var(--pco-control-bg);
+        
         li {
             float: left;
             margin: 0px;
-            color: var(--pco-primary-text);
+            color: var(--pco-secondary-text);
             line-height: 12px;
-
+            
             &.selected i {
-                background: #f8f5f5;
+                background: #00000009;
                 color: var(--pco-brand);
             }
 
@@ -70,19 +71,8 @@
                 line-height: 36px;
                 width: 40px;
                 text-align: center;
-                background: var(--pco-control-bg);
                 font-size: 15px;
                 cursor: pointer;
-            }
-
-            &:first-of-type i {
-                border-radius: var(--pco-border-radius) 0 0
-                    var(--pco-border-radius);
-            }
-
-            &:last-of-type i {
-                border-radius: 0 var(--pco-border-radius)
-                    var(--pco-border-radius) 0;
             }
 
             &:global {

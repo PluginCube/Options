@@ -3,6 +3,8 @@
 
     import { translation, values } from 'store'
 
+    import Button from '../../Comman/Button'
+
     import { save } from 'methods'
 
     import merge from 'deepmerge'
@@ -87,12 +89,9 @@
             <div>
                 {#if preset.title}<span>{preset.title}</span>{/if}
 
-                <button
-                    class="button button-primary button-small"
-                    on:click={() => load(preset.data)}
-                >
+                <Button small on:click={() => load(preset.data)}>
                     {$translation.import}
-                </button>
+                </Button>
             </div>
         </li>
     {/each}

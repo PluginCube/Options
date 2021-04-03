@@ -46,12 +46,12 @@
                 margin: 0px 0px 4px 0px;
 
                 &.active a {
-                    background: #0000000f;
+                    background: #00000010;
                     opacity: 1;
                 }
 
                 a {
-                    color: var(--pco-primary-text);
+                    color: var(--pco-secondary-text);
                     width: 100%;
                     text-transform: capitalize;
                     font-weight: 900;

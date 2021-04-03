@@ -24,12 +24,12 @@
 
 <style>
     h2 {
-        color: var(--pco-primary-text);
-            text-transform: capitalize;
-            margin: 5px 0 60px;
-            font-size: 22px;
-            line-height: 22px;
-            font-weight: 800;
+        color: var(--pco-secondary-text);
+        text-transform: capitalize;
+        margin: 0px 0 60px;
+        font-size: 22px;
+        line-height: 22px;
+        font-weight: 800;
     }
 </style>
 

@@ -49,7 +49,7 @@
             &.selected img {
                 float: left;
                 box-sizing: border-box;
-                box-shadow: 0px 0px 0px 2px var(--pco-primary-text);
+                box-shadow: 0px 0px 0px 3px var(--pco-primary-button-bg);
             }
         }
     }

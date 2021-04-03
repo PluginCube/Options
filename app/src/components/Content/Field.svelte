@@ -18,19 +18,18 @@
     div {
         float: left;
         width: 100%;
-        padding-bottom: 55px;
+        padding-bottom: 50px;
         min-height: 40px;
                         
         header {
             float: left;
-            width: 200px;
+            width: 245px;
             font-weight: 800;
             font-size: 14px;
             color: var(--pco-secondary-text);
-            padding-right: 15px;
+            padding-right: 30px;
             box-sizing: border-box;
-            margin-right: 40px;
-                        
+
             p {
                 font-size: 12px;
                 line-height: 16px;
@@ -42,7 +41,7 @@
 
         main {
             float: left;
-            width: calc(100% - 240px);
+            width: calc(100% - 245px);
 
             > p {
                 color: red;
@@ -52,7 +51,7 @@
         &.mini {
             padding: 16px;
             margin-bottom: 5px;
-            background: #00000014;
+            background: #00000012;
             box-sizing: border-box;
             border-radius: 3px;
             width: inherit;

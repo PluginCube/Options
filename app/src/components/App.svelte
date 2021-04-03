@@ -26,15 +26,15 @@
         width: 800px;
         margin: 0 auto;
         position: relative;
-        padding-top: 85px;
+        padding-top: 90px;
         font-family: 'Nunito', sans-serif;
         color: var(--pco-primary-text);
 
         --pco-brand: #001fff;
         --pco-primary-text: #1d2327;
-        --pco-secondary-text: #414850;
-        --pco-tertiary-text: #8d96a2;
-        --pco-primary-button-bg: #1d2327;
+        --pco-secondary-text: #3c434a;
+        --pco-tertiary-text: #999999;
+        --pco-primary-button-bg: #2271b1;
         --pco-primary-button-text: #fff;
 
         --pco-control-bg: #ffffff;
@@ -49,9 +49,9 @@
     main {
         float: left;
         width: 100%;
-        margin-top: 50px;
+        margin-top: 45px;
         position: relative;
-        background: rgba(0, 0, 0, .05);
+        background: #0000000d;
         border-radius: 5px;
     }
 

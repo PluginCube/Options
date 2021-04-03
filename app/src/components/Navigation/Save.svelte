@@ -11,9 +11,9 @@
         height: 38px;
         bottom: 20px;
         left: 20px;
-        font-weight: 800;
-        background: #02B875;
-        color: #fff;`
+        font-weight: 700;
+        color: #ffffff;
+        background-color: #02b875;`
 
     let disabled = false
 

@@ -200,7 +200,7 @@
             }
 
             main {
-                padding: 15px 15px 10px;
+                padding: 16px 16px 10px;
                 box-sizing: border-box;
                 display: block;
                 float: left;

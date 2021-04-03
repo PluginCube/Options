@@ -21,7 +21,8 @@
                 line-height: 25px;
                 margin: 0;
                 padding: 0;
-                color: var(--pco-primary-text);
+                color: var(--pco-secondary-text);
+                letter-spacing: -0.1px;
             }
 
             span {
@@ -37,7 +38,7 @@
                 font-weight: bold;
                 font-size: 11px;
                 line-height: 12px;
-                margin-top: -5px;
+                margin-top: -6px;
             }
         }
 

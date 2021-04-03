@@ -134,17 +134,17 @@ $options->add('field', [
     'description' => 'A short description that will be displayed under the title.',
 ]);
 
-$options->add('field', [
-    'id' => 'textarea',
-    'type' => 'textarea',
-    'title' => 'Textarea',
-    'section' => 'general',
-    'default' => 'This is the textarea field.',
-    'attributes' => [
-        'placeholder' => 'Insert here ...',
-    ],
-    'description' => 'A short description that will be displayed under the title.',
-]);
+// $options->add('field', [
+//     'id' => 'textarea',
+//     'type' => 'textarea',
+//     'title' => 'Textarea',
+//     'section' => 'general',
+//     'default' => 'This is the textarea field.',
+//     'attributes' => [
+//         'placeholder' => 'Insert here ...',
+//     ],
+//     'description' => 'A short description that will be displayed under the title.',
+// ]);
 
 $options->add('field', [
     'id' => 'color',

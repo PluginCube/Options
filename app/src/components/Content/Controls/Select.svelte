@@ -56,18 +56,21 @@
         border: var(--pco-control-border) !important;
         box-shadow: var(--pco-box-shadow) !important;
         border-radius: var(--pco-border-radius) !important;
-        box-sizing: border-box;
 
-        --height: 38px;
+        box-sizing: border-box;
+        --height: 36px;
         --indicatorWidth: 12px;
         --indicatorHeight: 12px;
         --multiItemHeight: 26px;
-        --multiItemPadding: 0px 10px;
+        --padding: 0 12px !important;
+        --multiItemPadding: 0px 12px;
         --multiLabelMargin: 0px -2px;
         --multiItemMargin: 6px 12px 0px -8px;
         --indicatorColor: var(--pco-secondary-text);
+        --indicatorRight: 12px;
+        --multiSelectPadding: 0px 14px;
         --inputFontSize: 13px;
-
+        
         :global(.indicator) {
             opacity: .35;
         }
