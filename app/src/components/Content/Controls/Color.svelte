@@ -49,7 +49,7 @@
         i {
             margin-left: 6px;
             font-size: 12px;
-            color: var(--pco-secondary-text);
+            color: var(--pco-primary-text);
             opacity: .3;
         }
     }

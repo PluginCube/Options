@@ -21,7 +21,7 @@
         border: var(--pco-control-border);
         box-shadow: var(--pco-box-shadow);
         border-radius: var(--pco-border-radius);
-        color: var(--pco-secondary-text);
+        color: var(--pco-primary-text);
         background-color: var(--pco-control-bg);
         margin: 0;
     }

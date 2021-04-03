@@ -32,26 +32,30 @@
             position: absolute;
             right: 0px;
             background: var(--pco-control-bg);
-            width: 34px;
+            width: 32px;
             height: 100%;
             line-height: 34px;
             text-align: center;
-            border-left: 1px solid #0000000d;
+            border-left: 1px solid #00000010;
             cursor: pointer;
             padding-right: 1px;
-            color: var(--pco-secondary-text);
+            color: var(--pco-primary-text);
         }
 
         input {
             float: left;
             width: 125px;
             max-width: 100%;
-            padding: 5px 12px;
+            padding: 0px 10px;
             font-size: 13px;
             border: none;
+            line-height: 34px;
+            height: 34px;
             box-shadow: none;
             border-radius: var(--pco-border-radius);
             margin: 0;
+            font-size: 11px;
+            padding-top: 2px;
         }
     }
 </style>

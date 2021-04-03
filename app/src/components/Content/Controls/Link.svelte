@@ -13,22 +13,19 @@
         }
     }
 
-    $: style = `font-weight: 700; padding: 0px 10px; margin-top: 10px; background: ${color};`;
+    $: style = `font-weight: 800; line-height: 1; background: ${color};`;
 </script>
 
 <style>
     i {
         margin-right: 5px;
         font-weight: 100;
-    }
-
-    :global(.tooltip.top) {
-        margin-top: -5px !important;
+        float: left;
     }
 </style>
 
 <SvelteTooltip tip={msg} top color="var(--pco-control-bg)">
-    <Button on:click={click} {style}>
+    <Button on:click={click} {style} small>
         {#if args.icon}
             <i class={args.icon}></i>
         {/if}

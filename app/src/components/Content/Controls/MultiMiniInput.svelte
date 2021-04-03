@@ -27,6 +27,10 @@
             float: left;
             margin: 0px 10px 10px 0px;
             max-width: calc(50% - 10px);
+
+            :global(input) {
+                width: 100%;
+            }
         }
     }
 </style>

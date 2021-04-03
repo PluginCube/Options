@@ -69,7 +69,7 @@
                 span {
                     font-size: 11px;
                     float: left;
-                    color: var(--pco-secondary-text);
+                    color: var(--pco-primary-text);
                     text-transform: capitalize;
                 }
 

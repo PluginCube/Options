@@ -51,7 +51,7 @@
                 }
 
                 a {
-                    color: var(--pco-secondary-text);
+                    color: var(--pco-primary-text);
                     width: 100%;
                     text-transform: capitalize;
                     font-weight: 900;

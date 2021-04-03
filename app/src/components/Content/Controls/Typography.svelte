@@ -136,7 +136,7 @@
 
 <style lang="scss">
     div.selects {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
 
         :global {
             .selectContainer  {
@@ -152,7 +152,7 @@
 
     div.mini-inputs {
         float: left;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         margin-right: -10px;
 
         :global {
@@ -163,7 +163,7 @@
                 width: calc(50% - 10px);
 
                 input {
-                    font-size: 12px;
+                    width: 100%;
                 }
             }
         }

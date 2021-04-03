@@ -9,7 +9,7 @@ $options = new PluginCube\Options([
         'page' => 'Cora',
         'menu' => 'Cora'
     ],
-    'display_version' => '1.0.0'
+    'display_version' => 'free'
 ]);
 
 /**
@@ -156,6 +156,14 @@ $options->add('field', [
 ]);
 
 $options->add('field', [
+    'id' => 'icon',
+    'type' => 'icon',
+    'title' => 'Icon',
+    'section' => 'general',
+    'description' => 'A short description that will be displayed under the title.',
+]);
+
+$options->add('field', [
     'id' => 'switch',
     'type' => 'switch',
     'title' => 'Switch',
@@ -172,11 +180,11 @@ $options->add('field', [
     'choices' => [
         [
             'value' => 'menu',
-            'label' => __('Open menu', 'supportbubble')
+            'label' => 'Open menu'
         ],
         [
             'value' => 'first_item',
-            'label' => __('Launch first item', 'supportbubble')
+            'label' => 'Launch first item'
         ],
     ],
     'attributes' => [
@@ -187,18 +195,45 @@ $options->add('field', [
 ]);
 
 $options->add('field', [
+    'id' => 'multi_mini_input',
+    'type' => 'multi-mini-input',
+    'title' => 'Mlti Mini Input',
+    'section' => 'general',
+    'choices' => [
+        [
+            'id' => 'size',
+            'icon' => 'ri-font-size-2',
+            'placeholder' => 'Size',        
+        ],
+        [
+            'id' => 'hight',
+            'placeholder' => 'Hight',        
+        ]
+    ],
+    'description' => 'A short description that will be displayed under the title.',
+]);
+
+
+$options->add('field', [
     'id' => 'repeater',
     'type' => 'repeater',
     'title' => 'Repeater',
     'section' => 'general',
+    'limit'   => 5,
+    'limit_link' => [
+        'icon' => '',
+        'text' => 'Go Pro',
+        'msg'  => 'Upgrade to the Pro plan to get unlimited items.',
+        'url' => 'facebook.com'
+    ],
     'fields' => [
         [
             'id' => 'message',
             'type' => 'text',
-            'title' => __('Title', 'supportbubble'),
-            'default' => __('New Item', 'supportbubble'),
+            'title' => 'Title',
+            'default' => 'New Item',
             'attributes' => [
-                'placeholder' => __('Inset title...', 'supportbubble'),
+                'placeholder' => 'Inset title...',
             ],
         ],
         [
@@ -215,10 +250,10 @@ $options->add('field', [
                 [
                     'id' => 'message',
                     'type' => 'text',
-                    'title' => __('Title', 'supportbubble'),
-                    'default' => __('New Item', 'supportbubble'),
+                    'title' => 'Title',
+                    'default' => 'New Item',
                     'attributes' => [
-                        'placeholder' => __('Inset title...', 'supportbubble'),
+                        'placeholder' => 'Inset title...',
                     ],
                 ],
                 [

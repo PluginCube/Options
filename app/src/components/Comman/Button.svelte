@@ -12,10 +12,10 @@
         font-size: 12px;
         min-height: 30px;
         margin: 0;
-        padding: 0 10px;
+        padding: 0 12px;
         cursor: pointer;
         border-width: 0px;
-        border-radius: 3px;
+        border-radius: 5px;
         white-space: nowrap;
         box-sizing: border-box;
         background: var(--pco-primary-button-bg);
@@ -23,8 +23,7 @@
         font-weight: 300;
 
         &.pco-button-small {
-            min-height: 26px;
-            padding: 0 10px;
+            min-height: 28px;
             font-size: 11px;
             padding-top: 1px;
         }

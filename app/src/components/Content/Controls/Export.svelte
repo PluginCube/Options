@@ -49,6 +49,6 @@
 <style>
 </style>
 
-<Button small on:click={download}>
+<Button on:click={download}>
     {$translation.download_data}
 </Button>

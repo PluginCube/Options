@@ -66,7 +66,7 @@
         --multiItemPadding: 0px 12px;
         --multiLabelMargin: 0px -2px;
         --multiItemMargin: 6px 12px 0px -8px;
-        --indicatorColor: var(--pco-secondary-text);
+        --indicatorColor: var(--pco-primary-text);
         --indicatorRight: 12px;
         --multiSelectPadding: 0px 14px;
         --inputFontSize: 13px;

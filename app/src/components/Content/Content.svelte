@@ -11,7 +11,7 @@
         float: right;
         width: calc(100% - 190px);
         box-sizing: border-box;
-        padding: 45px;
+        padding: 50px;
         min-height: 650px;
     }
 </style>

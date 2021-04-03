@@ -37,7 +37,7 @@
         span {
             margin-left: 5px;
             font-size: 12px;
-            color: var(--pco-secondary-text);
+            color: var(--pco-primary-text);
             opacity: .3;
             float: right;
         }

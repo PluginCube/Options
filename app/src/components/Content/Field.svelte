@@ -18,7 +18,7 @@
     div {
         float: left;
         width: 100%;
-        padding-bottom: 50px;
+        padding-bottom: 45px;
         min-height: 40px;
                         
         header {
@@ -26,16 +26,16 @@
             width: 245px;
             font-weight: 800;
             font-size: 14px;
-            color: var(--pco-secondary-text);
+            color: var(--pco-primary-text);
             padding-right: 30px;
             box-sizing: border-box;
 
             p {
                 font-size: 12px;
-                line-height: 16px;
+                line-height: 18px;
                 font-weight: 300;
                 color: var(--pco-tertiary-text);
-                margin: 14px 0px 0px 0px;
+                margin: 15px 0px 0px 0px;
             }
         }
 
@@ -74,7 +74,6 @@
                     font-size: 12.5px;
                     float: left;
                     font-weight: 800;
-                    color: var(--pco-primary-text);
                 }
             }
         }

@@ -58,7 +58,7 @@
 <label>
     <input on:change={change} bind:this={input} type="file" accept="application/json" />
 
-    <Button small type="input" on:click={() => input.click()}>
+    <Button type="input" on:click={() => input.click()}>
         {$translation.select_file}
     </Button>
 </label>

@@ -140,7 +140,7 @@
             box-shadow: var(--pco-box-shadow);
             background: var(--pco-control-bg);
             border-radius: var(--pco-border-radius);
-            margin-bottom: 4%;
+            margin-bottom: 5%;
             width: 100%;
             margin-right: auto;
             border: var(--pco-control-border);
@@ -161,20 +161,20 @@
                     width: 10px;
                     height: 10px;
                     display: block;
-                    fill: var(--pco-secondary-text);
+                    fill: var(--pco-primary-text);
                     flex-shrink: 0;
                     backface-visibility: hidden;
                     margin-top: 17px;
                     margin-right: 12px;
                     cursor: move;
                     float: left;
-                    opacity: .5;
+                    opacity: .35;
                 }
 
                 > span {
                     font-weight: 800;
-                    font-size: 14px;
-                    color: var(--pco-secondary-text);
+                    font-size: 13px;
+                    color: var(--pco-primary-text);
                     position: relative;
                     white-space: nowrap;
                     text-overflow: ellipsis;
@@ -183,16 +183,17 @@
                     float: left;
                     padding-right: 10px;
                     overflow: hidden;
+                    opacity: .9;
                 }
 
                 i {
                     float: right;
                     line-height: inherit;
                     font-size: 12px;
-                    color: var(--pco-secondary-text);
-                    opacity: .35;
-                    margin-left: 5px;
-
+                    color: var(--pco-primary-text);
+                    opacity: .2;
+                    margin-left: 6px;
+                    
                     &:hover {
                         opacity: .5;
                     }

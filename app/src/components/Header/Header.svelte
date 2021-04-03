@@ -22,7 +22,7 @@
                 line-height: 25px;
                 margin: 0;
                 padding: 0;
-                color: var(--pco-secondary-text);
+                color: var(--pco-primary-text);
                 letter-spacing: -0.1px;
             }
 
@@ -30,16 +30,18 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                padding: 8px 10px 6px 9px;
+                padding: 7px 10px 6px 10px;
                 margin-left: 18px;
                 background: #00000010;
                 border-radius: 3px;
-                color: var(--pco-secondary-text);
+                color: var(--pco-primary-text);
                 font-family: Consolas, monospace;
+                text-transform: uppercase;
                 font-weight: bold;
                 font-size: 11px;
                 line-height: 12px;
-                margin-top: -6px;
+                margin-top: -5px;
+                letter-spacing: 1px;
             }
         }
     }

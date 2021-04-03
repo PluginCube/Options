@@ -16,12 +16,14 @@
     input {
         width: 220px;
         max-width: 100%;
-        padding: 4px 12px;
-        font-size: 13px;
+        padding: 0px 12px;
+        line-height: 1;
+        height: 36px;
+        font-size: 12px;
         border: var(--pco-control-border) !important;
         box-shadow: var(--pco-box-shadow) !important;
         border-radius: var(--pco-border-radius);
-        color: var(--pco-secondary-text);
+        color: var(--pco-primary-text);
         background-color: var(--pco-control-bg);
         margin: 0;
     }

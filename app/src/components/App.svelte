@@ -31,10 +31,9 @@
         color: var(--pco-primary-text);
 
         --pco-brand: #001fff;
-        --pco-primary-text: #1d2327;
-        --pco-secondary-text: #3c434a;
+        --pco-primary-text: #3c434a;
         --pco-tertiary-text: #999999;
-        --pco-primary-button-bg: #2271b1;
+        --pco-primary-button-bg: #23282d;
         --pco-primary-button-text: #fff;
 
         --pco-control-bg: #ffffff;
@@ -63,6 +62,11 @@
         div#wpfooter {
             display: none;
         }
+        
+        .tooltip.top {
+            box-shadow: var(--pco-box-shadow);
+            margin-top: -10px !important;
+        }
     }
     
     // Load fonts
@@ -78,4 +82,6 @@
         <Navigation />
         <Content />
     </main>
+
+    <div class="clear"></div>
 </div>

@@ -29,7 +29,7 @@
         li {
             float: left;
             margin-right: 10px;
-            color: var(--pco-secondary-text);
+            color: var(--pco-primary-text);
 
             &:global .tooltip {
                 box-shadow: var(--pco-box-shadow);
