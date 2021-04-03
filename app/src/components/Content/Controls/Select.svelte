@@ -52,27 +52,26 @@
     :global(.selectContainer) {
         width: 220px;
         max-width: 100%;
-        font-size: 13px;
+        font-size: 12px;
         border: var(--pco-control-border) !important;
         box-shadow: var(--pco-box-shadow) !important;
         border-radius: var(--pco-border-radius) !important;
-
         box-sizing: border-box;
         --height: 36px;
-        --indicatorWidth: 12px;
-        --indicatorHeight: 12px;
+        --indicatorWidth: 10px;
+        --indicatorHeight: 10px;
         --multiItemHeight: 26px;
         --padding: 0 12px !important;
+        --indicatorTop: 10px;
         --multiItemPadding: 0px 12px;
         --multiLabelMargin: 0px -2px;
         --multiItemMargin: 6px 12px 0px -8px;
         --indicatorColor: var(--pco-primary-text);
         --indicatorRight: 12px;
         --multiSelectPadding: 0px 14px;
-        --inputFontSize: 13px;
-        
+        --inputFontSize: 12px;
         :global(.indicator) {
-            opacity: .35;
+            opacity: .65;
         }
     }
 </style>

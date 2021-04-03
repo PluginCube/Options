@@ -187,32 +187,12 @@ $options->add('field', [
             'label' => 'Launch first item'
         ],
     ],
-    'attributes' => [
-        'isMulti' => true,
-        'isCreatable' => true,
-    ],
+    // 'attributes' => [
+    //     'isMulti' => true,
+    //     'isCreatable' => true,
+    // ],
     'description' => 'A short description that will be displayed under the title.',
 ]);
-
-$options->add('field', [
-    'id' => 'multi_mini_input',
-    'type' => 'multi-mini-input',
-    'title' => 'Mlti Mini Input',
-    'section' => 'general',
-    'choices' => [
-        [
-            'id' => 'size',
-            'icon' => 'ri-font-size-2',
-            'placeholder' => 'Size',        
-        ],
-        [
-            'id' => 'hight',
-            'placeholder' => 'Hight',        
-        ]
-    ],
-    'description' => 'A short description that will be displayed under the title.',
-]);
-
 
 $options->add('field', [
     'id' => 'repeater',

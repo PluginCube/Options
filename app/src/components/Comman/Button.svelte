@@ -9,7 +9,7 @@
     button {
         display: inline-block;
         text-decoration: none;
-        font-size: 12px;
+        font-size: 11px;
         min-height: 30px;
         margin: 0;
         padding: 0 12px;
@@ -20,7 +20,7 @@
         box-sizing: border-box;
         background: var(--pco-primary-button-bg);
         color: var(--pco-primary-button-text);
-        font-weight: 300;
+        font-weight: 500;
 
         &.pco-button-small {
             min-height: 28px;

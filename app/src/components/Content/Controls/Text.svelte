@@ -14,12 +14,12 @@
 
 <style>
     input {
-        width: 220px;
+        width: 225px;
         max-width: 100%;
         padding: 0px 12px;
         line-height: 1;
-        height: 36px;
-        font-size: 12px;
+        height: 35px;
+        font-size: 12.4px;
         border: var(--pco-control-border) !important;
         box-shadow: var(--pco-box-shadow) !important;
         border-radius: var(--pco-border-radius);

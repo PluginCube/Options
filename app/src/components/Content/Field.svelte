@@ -18,30 +18,35 @@
     div {
         float: left;
         width: 100%;
-        padding-bottom: 45px;
+        padding-bottom: 52px;
         min-height: 40px;
-                        
+
         header {
             float: left;
-            width: 245px;
-            font-weight: 800;
-            font-size: 14px;
-            color: var(--pco-primary-text);
-            padding-right: 30px;
+            width: 45%;
             box-sizing: border-box;
+            padding-right: 50px;
+            line-height: 1;
 
+            span {
+                font-weight: 800;
+                font-size: 14px;
+                color: var(--pco-primary-text);
+                line-height: 1;
+            }
+            
             p {
                 font-size: 12px;
                 line-height: 18px;
                 font-weight: 300;
                 color: var(--pco-tertiary-text);
-                margin: 15px 0px 0px 0px;
+                margin: 12px 0px 0px 0px;
             }
         }
 
         main {
             float: left;
-            width: calc(100% - 245px);
+            width: 55%;
 
             > p {
                 color: red;

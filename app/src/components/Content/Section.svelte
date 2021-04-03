@@ -28,8 +28,9 @@
         text-transform: capitalize;
         margin: 0px 0 60px;
         font-size: 22px;
-        line-height: 22px;
+        line-height: 1;
         font-weight: 800;
+        /* letter-spacing: .5px; */
     }
 </style>
 

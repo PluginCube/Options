@@ -19,11 +19,11 @@
 
 <style lang="scss">
     button {
-        height: 38px;
-        line-height: 37px;
+        height: 36px;
+        line-height: 36px;
         background-color: var(--pco-control-bg);
         text-align: center;
-        font-size: 16px;
+        font-size: 14px;
         cursor: pointer;
         color: var(--pco-primary-text);
         border-radius: 30px;
@@ -35,7 +35,7 @@
         padding: 0px 10px;
         
         span {
-            margin-left: 5px;
+            margin-left: 8px;
             font-size: 12px;
             color: var(--pco-primary-text);
             opacity: .3;

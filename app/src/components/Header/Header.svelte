@@ -32,7 +32,7 @@
                 align-items: center;
                 padding: 7px 10px 6px 10px;
                 margin-left: 18px;
-                background: #00000010;
+                background: #00000015;
                 border-radius: 3px;
                 color: var(--pco-primary-text);
                 font-family: Consolas, monospace;
