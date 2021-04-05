@@ -7,11 +7,8 @@
 
 <style lang="scss">
     button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         text-decoration: none;
-        font-size: 11px;
+        font-size: 12px;
         min-height: 30px;
         margin: 0;
         padding: 0 12px;
@@ -23,11 +20,11 @@
         background: var(--pco-button-bg);
         color: var(--pco-button-text);
         font-weight: 500;
+        line-height: 1;
 
         &.pco-button-small {
-            min-height: 28px;
+            min-height: 29px;
             font-size: 11px;
-            padding: 0 10px;
         }
 
         &:disabled {

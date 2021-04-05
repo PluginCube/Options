@@ -128,7 +128,7 @@
 
 <style lang="scss">
     ul.pco-repeater-list {
-        margin-bottom: 5%;
+        margin-bottom: 6%;
         margin-top: 0;
         padding: 0;
         float: left;
@@ -140,7 +140,7 @@
             box-shadow: var(--pco-box-shadow);
             background: var(--pco-control-bg);
             border-radius: var(--pco-border-radius);
-            margin-bottom: 5%;
+            margin-bottom: 4%;
             width: 100%;
             margin-right: auto;
             border: var(--pco-control-border);
@@ -154,7 +154,7 @@
                 line-height: 48px;
                 height: 48px;
                 cursor: pointer;
-                padding: 0px 15px;
+                padding: 0px 14px;
                 overflow: hidden;
                                                 
                 > svg {
@@ -183,7 +183,6 @@
                     float: left;
                     padding-right: 10px;
                     overflow: hidden;
-                    opacity: .95;
                 }
 
                 i {
@@ -191,10 +190,10 @@
                     line-height: inherit;
                     font-size: 12px;
                     color: var(--pco-primary-text);
-                    opacity: .2;
-                    margin-left: 4px;
+                    opacity: .25;
+                    margin-left: 5px;
                     
-                    &.ri-arrow-down-s-fill {
+                    &.ri-arrow-down-s-fill, &.ri-arrow-up-s-fill {
                         margin-left: 3px;
                     }
 

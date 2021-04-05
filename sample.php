@@ -201,7 +201,7 @@ $options->add('field', [
     'section' => 'general',
     'limit'   => 5,
     'limit_link' => [
-        'icon' => '',
+        'icon' => 'ri-coin-fill',
         'text' => 'Go Pro',
         'msg'  => 'Upgrade to the Pro plan to get unlimited items.',
         'url' => 'facebook.com'

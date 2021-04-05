@@ -13,7 +13,7 @@
         }
     }
 
-    $: style = `font-weight: 800; line-height: 1; background: ${color};`;
+    $: style = `font-weight: 900; background: ${color};`;
 </script>
 
 <style>
