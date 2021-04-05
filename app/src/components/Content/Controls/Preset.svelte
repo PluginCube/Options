@@ -56,7 +56,7 @@
             }
 
             div {
-                padding: 10px;
+                padding: 8px;
                 float: left;
                 display: flex;
                 width: 100%;

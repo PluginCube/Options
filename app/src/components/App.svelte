@@ -32,9 +32,9 @@
 
         --pco-brand: #001fff;
         --pco-primary-text: #3c434a;
-        --pco-tertiary-text: #999999;
-        --pco-primary-button-bg: #23282d;
-        --pco-primary-button-text: #fff;
+        --pco-seondary-text: #999999;
+        --pco-button-bg: #2271b1;
+        --pco-button-text: #fff;
 
         --pco-control-bg: #ffffff;
 

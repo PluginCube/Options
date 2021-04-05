@@ -93,7 +93,7 @@ class AJAX
      */
     public function save($data)
     {
-        $errors = $this->parent->get_errors($data['values']);
+        $errors = $this->parent->validate($data['values']);
         
         if (! empty($errors)) {
             $this->respond(false, [

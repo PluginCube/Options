@@ -39,7 +39,7 @@
                 font-size: 12px;
                 line-height: 18px;
                 font-weight: 300;
-                color: var(--pco-tertiary-text);
+                color: var(--pco-seondary-text);
                 margin: 12px 0px 0px 0px;
             }
         }

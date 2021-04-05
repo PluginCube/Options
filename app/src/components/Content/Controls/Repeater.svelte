@@ -128,7 +128,7 @@
 
 <style lang="scss">
     ul.pco-repeater-list {
-        margin-bottom: 4%;
+        margin-bottom: 5%;
         margin-top: 0;
         padding: 0;
         float: left;
@@ -151,8 +151,8 @@
                 width: 100%;
                 float: left;
                 box-sizing: border-box;
-                line-height: 46px;
-                height: 46px;
+                line-height: 48px;
+                height: 48px;
                 cursor: pointer;
                 padding: 0px 15px;
                 overflow: hidden;
@@ -164,7 +164,7 @@
                     fill: var(--pco-primary-text);
                     flex-shrink: 0;
                     backface-visibility: hidden;
-                    margin-top: 17px;
+                    margin-top: 18px;
                     margin-right: 12px;
                     cursor: move;
                     float: left;
@@ -183,7 +183,7 @@
                     float: left;
                     padding-right: 10px;
                     overflow: hidden;
-                    opacity: .9;
+                    opacity: .95;
                 }
 
                 i {
@@ -192,8 +192,12 @@
                     font-size: 12px;
                     color: var(--pco-primary-text);
                     opacity: .2;
-                    margin-left: 6px;
+                    margin-left: 4px;
                     
+                    &.ri-arrow-down-s-fill {
+                        margin-left: 3px;
+                    }
+
                     &:hover {
                         opacity: .5;
                     }

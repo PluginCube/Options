@@ -50,7 +50,7 @@
 
 <style lang="scss">
     :global(.selectContainer) {
-        width: 220px;
+        width: 215px;
         max-width: 100%;
         font-size: 12px;
         border: var(--pco-control-border) !important;
@@ -70,8 +70,9 @@
         --indicatorRight: 12px;
         --multiSelectPadding: 0px 14px;
         --inputFontSize: 12px;
+        
         :global(.indicator) {
-            opacity: .65;
+            opacity: .5;
         }
     }
 </style>

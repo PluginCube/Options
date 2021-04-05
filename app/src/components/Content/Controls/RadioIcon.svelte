@@ -71,7 +71,7 @@
                 line-height: 36px;
                 width: 40px;
                 text-align: center;
-                font-size: 12px;
+                font-size: 14px;
                 cursor: pointer;
             }
 

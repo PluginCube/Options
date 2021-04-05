@@ -214,7 +214,7 @@ class Options
             'menu' => $this->args['menu'],
             'sections' => $this->args['sections'],
             'values' => $this->get_values(),
-            'errors' => $this->get_errors(),
+            'errors' => $this->validate(),
             'defaults' => $this->get_defaults(),
             'translation' => wp_parse_args($this->translation, $strings),
             'nonce' => wp_create_nonce($this->args['id']),
@@ -278,7 +278,7 @@ class Options
      * 
      * @return array
      */
-    public function get_errors($values = NULL)
+    public function validate($values = NULL)
     {
         $errors = [];
         is_array($values) ?: $values = $this->get_values();
